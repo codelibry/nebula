@@ -1,7 +1,18 @@
 .services
     margin-bottom: 278px
+    position: relative
+    &::before 
+        content: ""
+        background: #1b233c
+        left: 0
+        width: 100%
+        top: -300px
+        bottom: -500px
+        position: absolute
     .container 
         max-width: 1685px
+        position: relative
+        z-index: 1
     &__top
         max-width: 1235px
         margin: 0 auto
@@ -10,6 +21,7 @@
             line-height: 1.05
             text-align: center
             margin-bottom: 40px
+            font-weight: 300
         &Text 
             font-size: 24px
             line-height: 1.4
@@ -33,30 +45,180 @@
             padding-top: 60px
             padding-left: 30px
             padding-right: 30px
+            position: relative
+            border-radius: 25px 
+            border: 3px solid #1B233C
+            overflow: hidden
             &__wrapper
                 padding: 0
+                position: relative
+                max-width: 380px
                 &:nth-child(4n + 1)
+                    .services__cardsItem__title
+                        color: #702F8A
+                    &::after
+                        content: ""
+                        position: absolute
+                        right: -3px
+                        top: 50%
+                        width: 68px
+                        height: 68px
+                        background-image: url(../assets/images/card_puzzle.png)
+                        -webkit-transform: translateY(-50%)
+                        transform: translateY(-50%)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                        z-index: 1
                     .services__cardsItem
-                        background-image: url('../assets/images/card_background_1.png')
+                        background: #D75EFF
+                        &::before 
+                            content: ""
+                            background-image: url('../assets/images/card_layout.png')
+                            width: 100%
+                            height: 100%
+                            background-size: cover 
+                            background-position: center
+                            position: absolute
+                            left: 0
+                            top: 0
+                        &::after 
+                            content: ""
+                            width: 73px
+                            height: 73px
+                            -webkit-transform: translateY(-50%)
+                            transform: translateY(-50%)
+                            top: 50%
+                            right: -7px
+                            border-radius: 50%
+                            position: absolute
+                            background: #1b233c
                 &:nth-child(4n + 2)
+                    .services__cardsItem__title
+                        color: #1B233C
                     .services__cardsItem
-                        margin: 0 -65px
-                        padding: 0 65px
-                        background-image: url('../assets/images/card_background_2.png')
+                        background: #CC03DF
+                        &::before 
+                            content: ""
+                            background-image: url('../assets/images/card_2_layout.png')
+                            width: 100%
+                            height: 100%
+                            background-size: cover 
+                            background-position: center
+                            position: absolute
+                            left: 0
+                            top: 0
                 &:nth-child(4n + 3)
+                    .services__cardsItem__title
+                        color: #D75EFF
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: -3px
+                        top: 50%
+                        width: 68px
+                        height: 68px
+                        background-image: url(../assets/images/card_puzzle_2.png)
+                        -webkit-transform: translateY(-50%)
+                        transform: translateY(-50%)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                        z-index: 1
+                    &::before  
+                        content: ""
+                        width: 73px
+                        height: 73px
+                        -webkit-transform: translateY(-50%)
+                        transform: translateY(-50%)
+                        top: 50%
+                        right: -7px
+                        border-radius: 50%
+                        position: absolute
+                        background: #1b233c
+                        z-index: 1
                     .services__cardsItem
-                        background-image: url('../assets/images/card_background_3.png')
+                        background: #702F8A
+                        position: relative
+                        border-radius: 25px 
+                        border: 3px solid #1B233C
+                        overflow: hidden
+                        &::before 
+                            content: ""
+                            background-image: url('../assets/images/card_layout_3.png')
+                            width: 100%
+                            height: 100%
+                            background-size: cover 
+                            background-position: center
+                            position: absolute
+                            left: 0
+                            top: 0
+                        &::after 
+                            content: ""
+                            width: 73px
+                            height: 73px
+                            -webkit-transform: translateY(-50%)
+                            transform: translateY(-50%)
+                            top: 50%
+                            left: -7px
+                            border-radius: 50%
+                            position: absolute
+                            background: #1b233c
                 &:nth-child(4n + 4)
+                    padding-left: 60px
+                    margin-top: -30px
+                    max-width: 440px
+                    flex: 0 0 calc( 25% + 60px )
+                    transform: translateX(10px)
+                    .services__cardsItem__title
+                        color: #1B233C
+                        text-align: center
+                        margin-top: 18px
+                    .services__cardsItem__text
+                        margin-top: 5.4px
+                        padding-left: 12px
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 4.49px
+                        top: 50%
+                        width: 65px
+                        height: 65px
+                        background-image: url(../assets/images/card_puzzle_4_1.png)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                        z-index: 1
+                        transform: rotate(-8.87deg) translateY(-25%)
                     .services__cardsItem
-                        background-image: url('../assets/images/card_background_4.png')
+                        background: #0C869D
+                        border: 4px solid #1b233c
+                        transform: rotate(-8.87deg)
+                        &::before 
+                            content: ""
+                            background-image: url('../assets/images/card_layout_4.png') 
+                            background-size: cover 
+                            background-position: center
+                            width: 100%
+                            height: 100%
+                            left: 0
+                            top: 0
+                            position: absolute
             &__text 
                 font-size: 20px
                 line-height: 1.4
                 margin-top: 26px
+                z-index: 1
+                position: relative
+            &__image 
+                z-index: 1
+                position: relative
             &__title 
                 font-size: 36px
                 line-height: 1.05
                 margin-top: 46px
+                z-index: 1
+                position: relative
     &__text 
         max-width: 1235px
         margin: 0 auto 
