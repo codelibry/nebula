@@ -1,0 +1,72 @@
+.services
+    margin-bottom: 278px
+    .container 
+        max-width: 1685px
+    &__top
+        max-width: 1235px
+        margin: 0 auto
+        &Title 
+            font-size: 70px
+            line-height: 1.05
+            text-align: center
+            margin-bottom: 40px
+        &Text 
+            font-size: 24px
+            line-height: 1.4
+            p 
+                margin-bottom: 24px
+                &:last-child
+                    margin-bottom: 0
+            strong 
+                color: $s-pink
+    &__cards
+        margin-top: 122px
+        margin-left: 0
+        margin-right: 0
+        &Item 
+            background-size: cover
+            background-position: center
+            min-height: 525.34px
+            display: flex 
+            align-items: center
+            flex-direction: column
+            padding-top: 60px
+            padding-left: 30px
+            padding-right: 30px
+            &__wrapper
+                padding: 0
+                &:nth-child(4n + 1)
+                    .services__cardsItem
+                        background-image: url('../assets/images/card_background_1.png')
+                &:nth-child(4n + 2)
+                    .services__cardsItem
+                        margin: 0 -65px
+                        padding: 0 65px
+                        background-image: url('../assets/images/card_background_2.png')
+                &:nth-child(4n + 3)
+                    .services__cardsItem
+                        background-image: url('../assets/images/card_background_3.png')
+                &:nth-child(4n + 4)
+                    .services__cardsItem
+                        background-image: url('../assets/images/card_background_4.png')
+            &__text 
+                font-size: 20px
+                line-height: 1.4
+                margin-top: 26px
+            &__title 
+                font-size: 36px
+                line-height: 1.05
+                margin-top: 46px
+    &__text 
+        max-width: 1235px
+        margin: 0 auto 
+        font-size: 24px
+        margin-top: 112px
+        line-height: 1.4
+        p 
+            margin-bottom: 24px
+            &:last-child
+                margin-bottom: 0
+    &__btn
+        text-align: center
+        margin-top: 53.5px

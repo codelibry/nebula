@@ -1,0 +1,73 @@
+.guidelines
+    position: relative
+    margin-bottom: 400px
+    .container
+        position: relative
+        z-index: 1
+        max-width: 1470px
+    &::before 
+        content: ""
+        top: -805px
+        bottom: -1009px
+        left: 0
+        width: 100%
+        background-image: url('../assets/images/White_clouds_2nd_section.png')
+        background-size: cover
+        background-position: center
+        position: absolute
+    &__title 
+        color: $space-lila
+        font-size: 70px
+        line-height: 1.05
+        font-weight: 300
+        text-align: center
+    &__text
+        color: $dark-space
+        font-size: 24px
+        line-height: 1.4
+        margin-top: 40px
+        p
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        strong 
+            color: $s-pink
+    &__top 
+        max-width: 1235px
+        margin: 0 auto
+    &__testimonial 
+        background: linear-gradient(169.31deg, #702F8A 7.94%, #1B233C 50.27%)
+        padding: 70px 89px 70px 270px
+        border-radius: 30px
+        margin-top: 140px
+        position: relative
+        color: $white 
+        &Title 
+            font-size: 50px
+            line-height: 1.25
+            font-weight: 300
+        &Text 
+            margin-top: 40px
+            line-height: 1.4
+            font-size: 20px
+            p 
+                margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+        &Owner 
+            opacity: 0.7 
+            margin-top: 40px
+            font-size: 20px
+            line-height: 1.25
+            font-style: italic
+            padding-bottom: 13px
+        &Robbot 
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translate(-45%, -50%)
+            img 
+                width: 401px
+    &__btn
+        margin-top: 101px
+        text-align: center

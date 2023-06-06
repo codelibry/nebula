@@ -1,0 +1,55 @@
+.processes
+    margin-bottom: 465px
+    position: relative
+    &::before 
+        content: ""
+        background-image: url('../assets/images/White_Clouds_bg_before_footer.png')
+        background-size: cover 
+        background-position: center
+        left: 0
+        width: 100%
+        top: -874px
+        bottom: -708px
+        position: absolute
+    .container
+        position: relative
+        z-index: 1
+        max-width: 1420px 
+
+    &__title 
+        font-size: 70px
+        line-height: 1.05
+        margin-bottom: 8px
+        color: $space-lila
+        text-align: center
+    &__item 
+        display: flex 
+        max-width: 350px
+        &Content
+            margin-left: 33px
+            padding-top: 30px
+        &Number 
+            font-size: 100px
+            line-height: 1.4
+            color: #D866FD
+            position: relative
+            &::after 
+                content: ""
+                position: absolute
+                right: -15px 
+                top: 30px 
+                width: 2px 
+                height: 50%
+                background: #D866FD
+                border-radius: 2px 
+        &Title 
+            color: #D866FD
+            font-weight: 700
+        &Text 
+            color: #141F38
+            font-size: 20px
+            line-height: 1.4
+            margin-top: 4px
+    &__button 
+        margin-top: 35px
+        text-align: center

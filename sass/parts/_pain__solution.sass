@@ -1,0 +1,81 @@
+.pain__solution
+    margin-bottom: 245px
+    position: relative
+    &::before 
+        top: 274px 
+        bottom: -441px 
+        content: ""
+        background-image: url('../assets/images/pain__solution_clouds.png')
+        background-size: cover 
+        background-position: center
+        position: absolute
+        left: 0
+        width: 100%
+        z-index: 1
+    .container
+        max-width: 1350px 
+    &Block 
+        padding: 60px 120px 
+        border-radius: 25px 
+        &__wrapper
+            position: relative
+    &Title 
+        font-size: 70px
+        line-height: 1.05
+        margin-bottom: 40px
+    &Text 
+        font-size: 20px
+        line-height: 1.4
+        p 
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        li
+            padding-left: 31px
+            position: relative
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &::before 
+                content: ""
+                width: 10px
+                height: 10px
+                background: $light-lila
+                position: absolute
+                left: 0 
+                top: 7px
+                border-radius: 50%
+
+.pain 
+    background: $space-lila 
+    padding-right: 250px
+    margin-bottom: 161px
+    &__wrapper 
+        padding-right: 87px
+        padding-left: 17px
+    &__image 
+        position: absolute 
+        top: -22px 
+        bottom: 35px 
+        right: -16%
+.solution 
+    background: $turquoise
+    padding-left: 250px
+    position: relative
+    z-index: 1
+    &__wrapper 
+        padding-left: 117px
+        &::before 
+            content: ""
+            background-image: url('../assets/images/purple_planet.png')
+            width: 586px 
+            height: 586px
+            top: 47%
+            position: absolute
+            transform: translateY(-50%)
+            left: -21%
+    &__image 
+        position: absolute 
+        left: -20%
+        top: 52%
+        transform: translateY(-50%)
