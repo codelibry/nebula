@@ -1,6 +1,10 @@
 .processes
     margin-bottom: 465px
     position: relative
+    +max-screen($breakpoint-sm)
+        background: #fff
+        margin-bottom: 0
+        padding-bottom: 104px
     &::before 
         content: ""
         background-image: url('../assets/images/White_Clouds_bg_before_footer.png')
@@ -11,6 +15,9 @@
         top: -874px
         bottom: -708px
         position: absolute
+        +max-screen($breakpoint-sm)
+            top: -140px
+            bottom: calc( 100% - 244px )
     .container
         position: relative
         z-index: 1
@@ -23,11 +30,22 @@
         color: $space-lila
         text-align: center
         font-weight: 300
+        +max-screen($breakpoint-sm)
+            font-size: 32px
+            text-align: left
+    &__list 
+        +max-screen($breakpoint-sm)
+            max-width: 360px 
+            margin: auto
     &__item 
         display: flex 
         &Content
             margin-left: 33px
             padding-top: 23px
+            +max-screen($breakpoint-sm)
+                margin-left: 17px
+                padding-top: 10px
+                max-width: calc( 100% - 33px )
         &Number 
             font-size: 100px
             line-height: 1
@@ -38,6 +56,10 @@
             justify-content: flex-end
             min-width: 42px 
             font-weight: 700
+            +max-screen($breakpoint-sm)
+                font-size: 36px
+                width: 16px
+                min-width: 16px
             &::after 
                 content: ""
                 position: absolute
@@ -47,32 +69,84 @@
                 bottom: 0
                 background: #D866FD
                 border-radius: 2px 
+                +max-screen($breakpoint-sm)
+                    right: -8px
+                    top: 8px
         &Title 
             color: #D866FD
             font-weight: 700
+            +max-screen($breakpoint-sm)
+                font-size: 10px
+                line-height: 1.4
         &Text 
             color: #141F38
             font-size: 20px
             line-height: 1.4
             margin-top: 4px
+            +max-screen($breakpoint-sm)
+                font-size: 8px
+                line-height: 1.4
+                margin-top: 2.5px
+                br 
+                    display: none
     &__image
         position: absolute
         top: 47%
         transform: translateY(-50%)
         left: 40px 
         width: 80%
+        +max-screen($breakpoint-sm) 
+            width: 55%
+            top: 54px 
+            transform: translateX(-50%)
+            left: 50%
+            bottom: 128px 
+        +max-screen(450px)
+            left: 54%
         img
             width: 100%
+            +max-screen($breakpoint-sm) 
+                max-height: 100%
+                object-fit: contain
+        &.desktop 
+            +max-screen($breakpoint-sm)
+                display: none
+        &.mobile 
+            display: none 
+            +max-screen($breakpoint-sm)
+                display: block 
     &__button 
         margin-top: 35px
         text-align: center
+        +max-screen($breakpoint-sm)
+            margin-top: 77px
+    &__list 
+        +max-screen($breakpoint-sm)
+            padding-top: 45px
     &__column 
+        +max-screen($breakpoint-sm)
+            display: flex 
         &:nth-child(1)
             .processes__item
                 max-width: 355px
+                +max-screen($breakpoint-sm)
+                    flex-wrap: wrap
                 &:nth-child(1)
                     margin-bottom: 532px
+                    +max-screen($breakpoint-sm)
+                        margin-bottom: 0
+                        width: 40%
+                    &::after 
+                        +max-screen($breakpoint-sm)
+                            content: ""
+                            padding-bottom: calc( 100% - 38px )
+                            display: block
+                            width: 100%
                 &:nth-child(2)
+                    +max-screen($breakpoint-sm)
+                        margin-top: auto
+                        width: 44.5%
+                        margin-left: auto
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #CC03DF
@@ -80,8 +154,12 @@
                         background: #CC03DF
         &:nth-child(2)
             margin-top: 50px
+            +max-screen($breakpoint-sm)
+                margin-top: 12px
             .processes__item
                 max-width: 372px
+                +max-screen($breakpoint-sm)
+                    max-width: 39.5%
             .processes__itemTitle,
             .processes__itemNumber
                 color: #9A3BA3
@@ -90,10 +168,17 @@
         &:nth-child(3)
             display: flex 
             flex-direction: column-reverse
+            +max-screen($breakpoint-sm)
+                margin-top: 12px
+                flex-direction: column
             .processes__item
                 max-width: 345px
                 &:nth-child(1)
                     margin-top: 124px
+                    +max-screen($breakpoint-sm)
+                        margin-left: auto
+                        margin-top: 0
+                        max-width: 41.5%
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #702F8A
@@ -101,6 +186,10 @@
                         background: #702F8A
                 &:nth-child(2)
                     margin-left: auto
+                    +max-screen($breakpoint-sm)
+                        margin-top: 23px
+                        max-width: 41.75%
+                        margin-left: 0
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #372C4E

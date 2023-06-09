@@ -10,21 +10,21 @@ $copywriting = get_field('footer_copywriting', 'options');
     <div class="container">
         <div class="footer__content row">
             <?php if($logo): ?>
-                <div class="footer__logo col-2">
+                <div class="footer__logo col-lg-2 col-12">
                     <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['title']; ?>">
                 </div>
             <?php endif; ?>
-            <div class="footer__menuWrapper col-6">
+            <div class="footer__menuWrapper col-lg-6 col-12">
                 <div class="footer__menuTitle footer-title">INFORMATION</div>
                 <div class="footer__menu"><?php wp_nav_menu(array('menu' => 'footer-menu')); ?></div>
             </div>
             <?php if($contact): ?>
-                <div class="footer__contact col-2">
+                <div class="footer__contact col-lg-2 col-12">
                     <div class="footer__contactTitle footer-title">Contact</div>
                     <div class="footer__contactText"><?php echo $contact ?></div>
                 </div>
             <?php endif; ?>
-            <div class="footer__goUpBtn col-2">
+            <div class="footer__goUpBtn col-lg-2 col-12">
                 <a href="#"><span>go up</span><img src="<?php echo get_template_directory_uri() . '/assets/images/to_top.svg' ?>" alt=""></a>
             </div>
         </div>

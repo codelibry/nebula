@@ -2,6 +2,9 @@
     padding-top: 20px
     padding-bottom: 306px
     position: relative
+    +max-screen($breakpoint-sm)
+        padding-top: 59.5px
+        padding-bottom: 182px
     &::before 
         content: ""
         background-image: url('../assets/images/hero_background.png')
@@ -15,17 +18,33 @@
     .container 
         max-width: 1660px
     &__image 
+        +max-screen($breakpoint-sm)
+            padding-left: 97.5px
+            padding-right: 97.5px
+            margin-bottom: 49.5px
         img 
             width: 100%
+    &_content 
+        +max-screen($breakpoint-sm)
+            flex-direction: column-reverse
+    &__button 
+        padding-right: 3px
     &__text 
         color: $white 
         font-size: 54px
         line-height: 1.25
         margin-bottom: 82px 
         font-weight: 300
+        +max-screen($breakpoint-sm)
+            font-size: 34px
+            line-height: 1.35
+            margin-bottom: 35px
         &Wrapper 
             padding-left: 90px
             padding-top: 32px
             display: flex 
             flex-direction: column 
             justify-content: center
+            +max-screen($breakpoint-sm)
+                padding-top: 0
+                padding-left: 15px

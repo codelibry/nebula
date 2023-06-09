@@ -1,6 +1,8 @@
 .services
     margin-bottom: 278px
     position: relative
+    +max-screen($breakpoint-sm)
+        margin-bottom: 99px
     &::before 
         content: ""
         background: #1b233c
@@ -9,6 +11,9 @@
         top: -300px
         bottom: -500px
         position: absolute
+        +max-screen($breakpoint-sm)
+            top: -100px
+            bottom: -100px
     .container 
         max-width: 1685px
         position: relative
@@ -22,9 +27,18 @@
             text-align: center
             margin-bottom: 40px
             font-weight: 300
+            +max-screen($breakpoint-sm)
+                font-size: 26px
+                line-height: 1.2
+                margin-bottom: 20px
+                text-align: left
         &Text 
             font-size: 24px
             line-height: 1.4
+            +max-screen($breakpoint-sm)
+                font-size: 16px
+                line-height: 1.45
+                
             p 
                 margin-bottom: 24px
                 &:last-child
@@ -35,6 +49,8 @@
         margin-top: 122px
         margin-left: 0
         margin-right: 0
+        +max-screen($breakpoint-sm)
+            margin-top: 20px
         &Item 
             background-size: cover
             background-position: center
@@ -49,10 +65,17 @@
             border-radius: 25px 
             border: 3px solid #1B233C
             overflow: hidden
+            +max-screen($breakpoint-sm)
+                padding-top: 17px
+                padding-bottom: 17px
+                height: 100%
+                min-height: auto
             &__wrapper
                 padding: 0
                 position: relative
                 max-width: 380px
+                +max-screen($breakpoint-sm)
+                    max-width: 50%
                 &:nth-child(4n + 1)
                     .services__cardsItem__title
                         color: #702F8A
@@ -64,14 +87,30 @@
                         width: 68px
                         height: 68px
                         background-image: url(../assets/images/card_puzzle.png)
-                        -webkit-transform: translateY(-50%)
                         transform: translateY(-50%)
                         background-size: cover
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen($breakpoint-sm)
+                            width: 22px 
+                            height: 22px 
+                    &::before 
+                        +max-screen($breakpoint-sm)
+                            content: ""
+                            width: 25px
+                            height: 25px
+                            transform: translateX(-50%)
+                            left: 50%
+                            bottom: -7px
+                            border-radius: 50%
+                            position: absolute
+                            background: #1b233c
+                            z-index: 1
                     .services__cardsItem
                         background: #D75EFF
+                        padding-left: 24px
+                        padding-right: 16px
                         &::before 
                             content: ""
                             background-image: url('../assets/images/card_layout.png')
@@ -93,6 +132,9 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen($breakpoint-sm)
+                                width: 26px 
+                                height: 26px 
                 &:nth-child(4n + 2)
                     .services__cardsItem__title
                         color: #1B233C
@@ -109,6 +151,8 @@
                             left: 0
                             top: 0
                 &:nth-child(4n + 3)
+                    +max-screen($breakpoint-sm)
+                        z-index: 1
                     .services__cardsItem__title
                         color: #D75EFF
                     &::after
@@ -119,12 +163,19 @@
                         width: 68px
                         height: 68px
                         background-image: url(../assets/images/card_puzzle_2.png)
-                        -webkit-transform: translateY(-50%)
                         transform: translateY(-50%)
                         background-size: cover
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen($breakpoint-sm)
+                            width: 25px
+                            height: 22px
+                            background-image: url(../assets/images/card_puzzle_3_mobile.png)
+                            position: absolute
+                            left: 50%
+                            transform: translateX(-50%)
+                            top: -17.7px
                     &::before  
                         content: ""
                         width: 73px
@@ -137,12 +188,18 @@
                         position: absolute
                         background: #1b233c
                         z-index: 1
+                        +max-screen($breakpoint-sm)
+                            width: 24px 
+                            height: 24px 
+                            right: -2px 
                     .services__cardsItem
                         background: #702F8A
                         position: relative
                         border-radius: 25px 
                         border: 3px solid #1B233C
                         overflow: hidden
+                        padding-left: 14px
+                        padding-right: 14px
                         &::before 
                             content: ""
                             background-image: url('../assets/images/card_layout_3.png')
@@ -153,6 +210,8 @@
                             position: absolute
                             left: 0
                             top: 0
+                            +max-screen($breakpoint-sm)
+                                background-image: url('../assets/images/card_3_mobile_background.png')
                         &::after 
                             content: ""
                             width: 73px
@@ -164,19 +223,47 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen($breakpoint-sm)
+                                content: none
                 &:nth-child(4n + 4)
                     padding-left: 60px
                     margin-top: -30px
                     max-width: 440px
                     flex: 0 0 calc( 25% + 60px )
                     transform: translateX(10px)
+                    +max-screen($breakpoint-sm)
+                        max-width: 50%
+                        margin-top: 0
+                        transform: translate(5px, -10px )
+                        z-index: 2
+                        flex: none
+                        padding-left: 0
                     .services__cardsItem__title
                         color: #1B233C
                         text-align: center
                         margin-top: 18px
+                        +max-screen($breakpoint-sm)
+                            padding: 0 4.5px 
                     .services__cardsItem__text
                         margin-top: 5.4px
                         padding-left: 12px
+                        +max-screen($breakpoint-sm)
+                            padding-left: 9px
+                    &::before 
+                        +max-screen($breakpoint-sm)
+                            content: ""
+                            background-image: url('../assets/images/mobile_4_card_puzzle.png')
+                            width: 27px
+                            height: 30px
+                            background-size: contain
+                            background-position: 50%
+                            position: absolute
+                            left: 50%
+                            -webkit-transform: rotate(-6.09deg) translate(-100%,2%)
+                            transform: rotate(-6.09deg) translate(-100%,-6%)
+                            top: -2px
+                            z-index: 3
+                            background-repeat: no-repeat
                     &::after
                         content: ""
                         position: absolute
@@ -190,10 +277,23 @@
                         background-position: center
                         z-index: 1
                         transform: rotate(-8.87deg) translateY(-25%)
+                        +max-screen($breakpoint-sm)
+                            width: 22px
+                            height: 22px 
+                            transform: none
+                            left: -18px
+                            transform: rotate(-6.09deg) translate(4%, -17%)
+                            z-index: 3
                     .services__cardsItem
                         background: #0C869D
                         border: 4px solid #1b233c
                         transform: rotate(-8.87deg)
+                        +max-screen($breakpoint-sm)
+                            transform: rotate(-6.09deg)
+                            padding-left: 10px
+                            padding-right: 10px
+                            padding-top: 29px
+                            z-index: 2
                         &::before 
                             content: ""
                             background-image: url('../assets/images/card_layout_4.png') 
@@ -210,23 +310,39 @@
                 margin-top: 26px
                 z-index: 1
                 position: relative
+                +max-screen($breakpoint-sm)
+                    font-size: 9px
+                    line-height: 1.4
+                    margin-top: 10px
             &__image 
                 z-index: 1
                 position: relative
+                img 
+                    +max-screen($breakpoint-sm)
+                        max-width: 60px
             &__title 
                 font-size: 36px
                 line-height: 1.05
                 margin-top: 46px
                 z-index: 1
                 position: relative
+                +max-screen($breakpoint-sm)
+                    font-size: 14px
+                    margin-top: 18px
     &__text 
         max-width: 1235px
         margin: 0 auto 
         font-size: 24px
         margin-top: 112px
         line-height: 1.4
+        +max-screen($breakpoint-sm)
+            font-size: 16px
+            line-height: 1.45
+            margin-top: 20px
         p 
             margin-bottom: 24px
+            +max-screen($breakpoint-sm)
+                margin-bottom: 22px
             &:last-child
                 margin-bottom: 0
     &__btn

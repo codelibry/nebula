@@ -1,9 +1,14 @@
 .btn
     display: inline-block
-    padding: 21.5px 53.5px 
+    padding: 17.5px 53.5px 
     border-radius: 10px 
     font-size: 30px 
     line-height: 1.2
     text-transform: uppercase
     background: $s-pink
     font-weight: 700
+    +max-screen($breakpoint-sm)
+        font-size: 20px
+        line-height: 1.25
+        width: 100%
+        text-align: center

@@ -1,9 +1,13 @@
 .guidelines
     position: relative
     margin-bottom: 400px
+    +max-screen($breakpoint-sm)
+        background: #fff
+        margin-bottom: 0
+        padding-bottom: 144px
     .container
         position: relative
-        z-index: 1
+        z-index: 2
         max-width: 1470px
     &::before 
         content: ""
@@ -16,17 +20,42 @@
         background-position: center
         position: absolute
         z-index: 1
+        +max-screen($breakpoint-sm)
+            background-image: url('../assets/images/mobile_guidelines_clouds_4.png')
+            top: -242px
+            background-position: 41%
+            bottom: calc( 100% - 148px )
+    &::after 
+        +max-screen($breakpoint-sm)
+            content: ""
+            background-image: url('../assets/images/guidelines_mobile_bottom_clouds.png')
+            position: absolute
+            left: 0
+            width: 100%
+            background-size: cover 
+            background-repeat: no-repeat
+            background-position: 70%
+            top: calc( 100% - 227px )
+            bottom: -30px
+            z-index: 1
     &__title 
         color: $space-lila
         font-size: 70px
         line-height: 1.05
         font-weight: 300
         text-align: center
+        +max-screen($breakpoint-sm)
+            font-size: 32px
+            text-align: left
     &__text
         color: $dark-space
         font-size: 24px
         line-height: 1.4
         margin-top: 40px
+        +max-screen($breakpoint-sm)
+            margin-top: 20px
+            font-size: 16px
+            line-height: 1.45
         p
             margin-bottom: 20px
             &:last-child
@@ -43,14 +72,24 @@
         margin-top: 140px
         position: relative
         color: $white 
+        +max-screen($breakpoint-sm)
+            padding: 40px 36px 100px
+            margin-top: 40px
         &Title 
             font-size: 50px
             line-height: 1.25
             font-weight: 300
+            +max-screen($breakpoint-sm)
+                font-size: 23px
+                line-height: 1.2
         &Text 
             margin-top: 40px
             line-height: 1.4
             font-size: 20px
+            +max-screen($breakpoint-sm)
+                margin-top: 20px
+                font-size: 14px
+                line-height: 1.5
             p 
                 margin-bottom: 20px
                 &:last-child
@@ -62,13 +101,27 @@
             line-height: 1.25
             font-style: italic
             padding-bottom: 13px
+            +max-screen($breakpoint-sm)
+                margin-top: 30px
+                font-size: 14px
+                line-height: 1.25
+                padding-bottom: 0
         &Robbot 
             position: absolute
             left: 0
             top: 50%
             transform: translate(-45%, -50%)
+            +max-screen($breakpoint-sm)
+                top: auto
+                left: 50%
+                bottom: -150px
+                transform: translateX(-50%)
             img 
                 width: 401px
+                +max-screen($breakpoint-sm)
+                    width: 147px
     &__btn
         margin-top: 101px
         text-align: center
+        +max-screen($breakpoint-sm)
+            margin-top: 168px

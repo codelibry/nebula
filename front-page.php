@@ -102,7 +102,7 @@ $button = get_field('about_services_btn');
                     $image = get_sub_field('image');
                     $text = get_sub_field('text');
                     ?>
-                    <div class="services__cardsItem__wrapper col-lg-3">
+                    <div class="services__cardsItem__wrapper col-lg-3 col-6">
                         <div class="services__cardsItem">
                             <?php if($image): ?>
                                 <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
@@ -216,7 +216,7 @@ $image = get_field('processes_image');
                 $text = get_sub_field('text');
                 ?>
                 <?php if($i == 1 || $i == 3 || $i == 4): ?>
-                    <div class="processes__column col-4">
+                    <div class="processes__column col-lg-4 col-12">
                 <?php endif; ?>
                     <div class="processes__item">
                         <div class="processes__itemNumber"><?php echo $i; ?></div>
@@ -236,11 +236,10 @@ $image = get_field('processes_image');
                 <?php endif; ?>
                 <?php $i++; endwhile; ?>
             </div>
-            <?php if($image): ?>
-                <div class="processes__image">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
-                </div>
-            <?php endif; ?>
+            <div class="processes__image desktop">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/processes_image.png' ?>" alt="">
+            </div>
+            <div class="processes__image mobile"><img src="<?php echo get_template_directory_uri() . '/assets/images/mobile_process_image.png' ?>" alt=""></div>
         <?php endif; ?>
         <?php if($button): ?>
             <div class="processes__button"><a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a></div>

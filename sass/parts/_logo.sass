@@ -1,6 +1,9 @@
 .logo 
     margin-bottom: 385px
     position: relative
+    z-index: 1
+    +max-screen($breakpoint-sm)
+        margin-bottom: 88px
     &::before 
         content: ""
         background-image: url('../assets/images/logo_clouds.png')
@@ -10,10 +13,18 @@
         bottom: -405px
         width: 100%
         position: absolute
+        +max-screen($breakpoint-sm)
+            top: -100px 
+            bottom: -66px
+            background-position: 61%
     &__wrapper 
         padding: 40px 69px 83px
         text-align: center
         position: relative
         z-index: 1
+        +max-screen($breakpoint-sm)
+            padding: 8px 14px 16px
         img 
             height: 153px
+            +max-screen($breakpoint-sm)
+                height: 31px
