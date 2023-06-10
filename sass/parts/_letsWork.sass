@@ -1,6 +1,8 @@
 .letsWork 
     margin-bottom: 305px
     position: relative
+    +max-screen($breakpoint-md)
+        margin-bottom: 155px
     +max-screen($breakpoint-sm)
         margin-bottom: 137px
     &::before 
@@ -14,15 +16,27 @@
         position: absolute
         width: 100%
         left: 0
+        +max-screen($breakpoint-md)
+            background-image: url('../assets/images/lets_work_tablet_background.png')
+            top: -131px 
+            bottom: -100px
+        +max-screen($breakpoint-md)
+            background-image: url('../assets/images/lets_work_mobile_background.png')
+            top: -121px 
+            bottom: -90px 
     .container 
         max-width: 1475px
         position: relative
         z-index: 1
+        +max-screen($breakpoint-md)
+            max-width: 610px
     &__title 
         font-size: 70px
         line-height: 1.05
         margin-bottom: 40px
         font-weight: 300
+        +max-screen($breakpoint-md)
+            font-size: 52px
         +max-screen($breakpoint-sm)
             font-size: 32px
             margin-bottom: 20px
@@ -30,6 +44,8 @@
         font-size: 24px
         line-height: 1.4
         font-weight: 300
+        +max-screen($breakpoint-md)
+            font-size: 20px
         +max-screen($breakpoint-sm)
             font-size: 16px
             line-height: 1.45
@@ -40,5 +56,7 @@
     &__button 
         margin-top: 112px
         text-align: center
+        +max-screen($breakpoint-md)
+            margin-top: 56px
         +max-screen($breakpoint-sm)
             margin-top: 25px

@@ -1,8 +1,11 @@
 .processes
     margin-bottom: 465px
     position: relative
-    +max-screen($breakpoint-sm)
+    +max-screen($breakpoint-md)
+        padding-bottom: 163px
+        margin-bottom: 0
         background: #fff
+    +max-screen($breakpoint-sm)
         margin-bottom: 0
         padding-bottom: 104px
     &::before 
@@ -15,6 +18,9 @@
         top: -874px
         bottom: -708px
         position: absolute
+        +max-screen($breakpoint-md)
+            top: -271px
+            bottom: calc( 100% - 484px)
         +max-screen($breakpoint-sm)
             top: -140px
             bottom: calc( 100% - 244px )
@@ -22,7 +28,12 @@
         position: relative
         z-index: 1
         max-width: 1420px 
-
+        +max-screen($breakpoint-md)
+            max-width: 706px 
+            padding-right: 39px
+        +max-screen($breakpoint-sm)
+            max-width: 405px 
+            padding-right: 20px
     &__title 
         font-size: 70px
         line-height: 1.05
@@ -30,13 +41,23 @@
         color: $space-lila
         text-align: center
         font-weight: 300
+        +max-screen($breakpoint-md)
+            font-size: 52px
+            padding-left: 47px
+            text-align: left
+            margin-bottom: 0
         +max-screen($breakpoint-sm)
             font-size: 32px
             text-align: left
+            margin-bottom: 20px
+            padding-left: 0
     &__list 
+        +max-screen($breakpoint-md)
+            padding-top: 100px
         +max-screen($breakpoint-sm)
             max-width: 360px 
             margin: auto
+            padding-top: 45px
     &__item 
         display: flex 
         &Content
@@ -56,6 +77,8 @@
             justify-content: flex-end
             min-width: 42px 
             font-weight: 700
+            +max-screen($breakpoint-md)
+                font-size: 70px
             +max-screen($breakpoint-sm)
                 font-size: 36px
                 width: 16px
@@ -75,6 +98,8 @@
         &Title 
             color: #D866FD
             font-weight: 700
+            +max-screen($breakpoint-md)
+                font-size: 16px
             +max-screen($breakpoint-sm)
                 font-size: 10px
                 line-height: 1.4
@@ -83,6 +108,11 @@
             font-size: 20px
             line-height: 1.4
             margin-top: 4px
+            +max-screen($breakpoint-md)
+                font-size: 10px
+                margin-top: 10px
+                br 
+                    display: none
             +max-screen($breakpoint-sm)
                 font-size: 8px
                 line-height: 1.4
@@ -95,14 +125,29 @@
         transform: translateY(-50%)
         left: 40px 
         width: 80%
+        background-image: url('../assets/images/processes_image.png')
+        background-size: contain
+        background-position: center 
+        background-repeat: no-repeat
+        height: 100%
+        +max-screen($breakpoint-md)
+            background-image: url('../assets/images/processes_tablet_image.png')
+            top: 94px 
+            bottom: 118px 
+            height: calc( 100% - 212px )
+            transform: none
+            left: 50%
+            transform: translateX(-50%)
         +max-screen($breakpoint-sm) 
             width: 55%
             top: 54px 
             transform: translateX(-50%)
             left: 50%
             bottom: 128px 
+            height: calc( 100% - 182px )
+            background-image: url('../assets/images/mobile_process_image.png')
         +max-screen(450px)
-            left: 54%
+            left: 53%
         img
             width: 100%
             +max-screen($breakpoint-sm) 
@@ -118,35 +163,48 @@
     &__button 
         margin-top: 35px
         text-align: center
+        +max-screen($breakpoint-md)
+            margin-top: 97px
         +max-screen($breakpoint-sm)
             margin-top: 77px
-    &__list 
-        +max-screen($breakpoint-sm)
-            padding-top: 45px
     &__column 
         +max-screen($breakpoint-sm)
             display: flex 
         &:nth-child(1)
             .processes__item
                 max-width: 355px
+                &Number 
+                    +max-screen($breakpoint-md)
+                        width: 29px
+                        min-width: 29px
+                    +max-screen($breakpoint-sm)
+                        width: 16px
+                        min-width: 16px
+                +max-screen($breakpoint-md)
+                    max-width: 250px
                 +max-screen($breakpoint-sm)
                     flex-wrap: wrap
                 &:nth-child(1)
                     margin-bottom: 532px
+                    +max-screen($breakpoint-md)
+                        margin-bottom: 50px
+                        max-width: 242px
                     +max-screen($breakpoint-sm)
                         margin-bottom: 0
                         width: 40%
                     &::after 
                         +max-screen($breakpoint-sm)
                             content: ""
-                            padding-bottom: calc( 100% - 38px )
+                            padding-bottom: calc( 100% - 16px )
                             display: block
                             width: 100%
                 &:nth-child(2)
+                    +max-screen($breakpoint-md)
+                        margin-left: auto
+                        
                     +max-screen($breakpoint-sm)
                         margin-top: auto
                         width: 44.5%
-                        margin-left: auto
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #CC03DF
@@ -154,10 +212,14 @@
                         background: #CC03DF
         &:nth-child(2)
             margin-top: 50px
+            +max-screen($breakpoint-md)
+                margin-top: 69px
             +max-screen($breakpoint-sm)
                 margin-top: 12px
             .processes__item
                 max-width: 372px
+                +max-screen($breakpoint-md)
+                    max-width: 250px
                 +max-screen($breakpoint-sm)
                     max-width: 39.5%
             .processes__itemTitle,
@@ -168,13 +230,21 @@
         &:nth-child(3)
             display: flex 
             flex-direction: column-reverse
+            +max-screen($breakpoint-md)
+                margin-top: 102px
+                flex-direction: column
             +max-screen($breakpoint-sm)
                 margin-top: 12px
-                flex-direction: column
             .processes__item
                 max-width: 345px
+                +max-screen($breakpoint-md)
+                    max-width: 250px
                 &:nth-child(1)
                     margin-top: 124px
+                    +max-screen($breakpoint-md)
+                        margin-right: 0
+                        margin-left: auto
+                        margin-top: 0
                     +max-screen($breakpoint-sm)
                         margin-left: auto
                         margin-top: 0
@@ -186,6 +256,10 @@
                         background: #702F8A
                 &:nth-child(2)
                     margin-left: auto
+                    +max-screen($breakpoint-md)
+                        margin-top: 120px
+                        margin-left: 0
+                        margin-right: auto
                     +max-screen($breakpoint-sm)
                         margin-top: 23px
                         max-width: 41.75%

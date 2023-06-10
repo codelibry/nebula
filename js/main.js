@@ -10,6 +10,7 @@ import { appearence } from './animations/appearence';
 // Blocks
 import { videoBlock } from './template-parts/blocks/video';
 import { scrollToTop } from './template-parts/blocks/scrollToTop';
+import { readMore } from './template-parts/blocks/readMore';
 
 
 // Parts
@@ -24,7 +25,8 @@ appearence();
 
 //blocks
 videoBlock();
-scrollToTop()
+scrollToTop();
+readMore();
 
 // Parts
 initPopups();

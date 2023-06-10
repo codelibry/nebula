@@ -8,7 +8,7 @@ $image = get_field('hero_image');
 <section class="hero">
     <div class="container">
         <div class="row hero_content">
-            <div class="hero__textWrapper col-lg-8">
+            <div class="hero__textWrapper col-lg-8 col-12">
                 <?php if($text): ?>
                     <div class="hero__text">
                         <?php echo $text; ?>
@@ -21,7 +21,7 @@ $image = get_field('hero_image');
                 <?php endif; ?>
             </div>
             <?php if($image): ?>
-                <div class="hero__image col-lg-4">
+                <div class="hero__image col-lg-4 col-7">
                     <img src="<?php echo $image['url']; ?>" alt="">
                 </div>
             <?php endif; ?>
@@ -60,6 +60,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                 <?php if($testimonial_text): ?>
                     <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
                 <?php endif; ?>
+                <div class="guidelines__readMore">Read more...</div>
                 <?php if($testimonial_owner): ?>
                     <div class="guidelines__testimonialOwner">
                         <?php echo $testimonial_owner; ?>
@@ -102,7 +103,7 @@ $button = get_field('about_services_btn');
                     $image = get_sub_field('image');
                     $text = get_sub_field('text');
                     ?>
-                    <div class="services__cardsItem__wrapper col-lg-3 col-6">
+                    <div class="services__cardsItem__wrapper col-sm-3 col-6">
                         <div class="services__cardsItem">
                             <?php if($image): ?>
                                 <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
@@ -140,17 +141,24 @@ $solution = get_field('solution');
 $pain_title = $pain['title'];
 $pain_text = $pain['text'];
 $pain_image = $pain['image'];
+$pain_tablet_image = $pain['tablet_image'];
 $solution_title = $solution['title'];
 $solution_text = $solution['text'];
 $solution_image = $solution['image'];
+$solution_tablet_image = $solution['tablet_image'];
 ?>
 <section class="pain__solution">
     <div class="container">
         <?php if($pain_title || $pain_text || $pain_image): ?>
             <div class="pain__wrapper pain__solutionBlock__wrapper">
                 <div class="pain pain__solutionBlock">
-                    <?php if($pain_image): ?>
+                    <?php if($pain_image && $pain_tablet_image): ?>
                         <div class="pain__image"><img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>"></div>
+                        <div class="pain__image tablet"><img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>"></div>
+                    <?php elseif($pain_tablet_image): ?>
+                        <div class="pain__image no-desktop"><img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>"></div>
+                    <?php elseif($pain_image): ?>
+                        <div class="pain__image no-tablet"><img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>"></div>
                     <?php endif; ?>
                     <?php if($pain_title): ?>
                         <div class="pain__solutionTitle"><?php echo $pain_title; ?></div>
@@ -164,8 +172,13 @@ $solution_image = $solution['image'];
         <?php if($solution_image || $solution_text || $solution_title): ?>
             <div class="solution__wrapper pain__solutionBlock__wrapper">
                 <div class="solution pain__solutionBlock">
-                    <?php if($solution_image): ?>
+                    <?php if($solution_image && $solution_tablet_image): ?>
                         <div class="solution__image"><img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>"></div>
+                        <div class="solution__image tablet"><img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>"></div>
+                    <?php elseif($solution_tablet_image): ?>
+                        <div class="solution__image no-desktop"><img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>"></div>
+                    <?php elseif($solution_image): ?>
+                        <div class="solution__image no-tablet"><img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>"></div>
                     <?php endif; ?>
                     <?php if($solution_title): ?>
                         <div class="pain__solutionTitle"><?php echo $solution_title; ?></div>
@@ -236,10 +249,8 @@ $image = get_field('processes_image');
                 <?php endif; ?>
                 <?php $i++; endwhile; ?>
             </div>
-            <div class="processes__image desktop">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/processes_image.png' ?>" alt="">
+            <div class="processes__image">
             </div>
-            <div class="processes__image mobile"><img src="<?php echo get_template_directory_uri() . '/assets/images/mobile_process_image.png' ?>" alt=""></div>
         <?php endif; ?>
         <?php if($button): ?>
             <div class="processes__button"><a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a></div>

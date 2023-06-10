@@ -1,6 +1,8 @@
 .services
     margin-bottom: 278px
     position: relative
+    +max-screen($breakpoint-md)
+        margin-bottom: 120px
     +max-screen($breakpoint-sm)
         margin-bottom: 99px
     &::before 
@@ -18,15 +20,23 @@
         max-width: 1685px
         position: relative
         z-index: 1
+        +max-screen($breakpoint-md)
+            max-width: 768px
+            padding-left: 15px
+            padding-right: 15px
     &__top
         max-width: 1235px
         margin: 0 auto
+        +max-screen($breakpoint-md)
+            max-width: 581px
         &Title 
             font-size: 70px
             line-height: 1.05
             text-align: center
             margin-bottom: 40px
             font-weight: 300
+            +max-screen($breakpoint-md)
+                font-size: 52px
             +max-screen($breakpoint-sm)
                 font-size: 26px
                 line-height: 1.2
@@ -35,6 +45,8 @@
         &Text 
             font-size: 24px
             line-height: 1.4
+            +max-screen($breakpoint-md)
+                font-size: 20px
             +max-screen($breakpoint-sm)
                 font-size: 16px
                 line-height: 1.45
@@ -49,6 +61,8 @@
         margin-top: 122px
         margin-left: 0
         margin-right: 0
+        +max-screen($breakpoint-md)
+            margin-top: 68px
         +max-screen($breakpoint-sm)
             margin-top: 20px
         &Item 
@@ -65,11 +79,14 @@
             border-radius: 25px 
             border: 3px solid #1B233C
             overflow: hidden
+            +max-screen($breakpoint-md)
+                padding: 25px 13.6px 15px 13.6px
+                min-height: auto
+                height: 100%
             +max-screen($breakpoint-sm)
                 padding-top: 17px
                 padding-bottom: 17px
                 height: 100%
-                min-height: auto
             &__wrapper
                 padding: 0
                 position: relative
@@ -92,6 +109,9 @@
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen($breakpoint-md)
+                            width: 23px 
+                            height: 23px 
                         +max-screen($breakpoint-sm)
                             width: 22px 
                             height: 22px 
@@ -109,8 +129,9 @@
                             z-index: 1
                     .services__cardsItem
                         background: #D75EFF
-                        padding-left: 24px
-                        padding-right: 16px
+                        +max-screen($breakpoint-sm)
+                            padding-left: 24px
+                            padding-right: 16px
                         &::before 
                             content: ""
                             background-image: url('../assets/images/card_layout.png')
@@ -132,6 +153,9 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen($breakpoint-md)
+                                width: 26px 
+                                height: 26px 
                             +max-screen($breakpoint-sm)
                                 width: 26px 
                                 height: 26px 
@@ -150,6 +174,7 @@
                             position: absolute
                             left: 0
                             top: 0
+                            background-position: bottom
                 &:nth-child(4n + 3)
                     +max-screen($breakpoint-sm)
                         z-index: 1
@@ -168,6 +193,9 @@
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen($breakpoint-md)
+                            width: 23px 
+                            height: 23px 
                         +max-screen($breakpoint-sm)
                             width: 25px
                             height: 22px
@@ -188,6 +216,9 @@
                         position: absolute
                         background: #1b233c
                         z-index: 1
+                        +max-screen($breakpoint-md)
+                            width: 26px 
+                            height: 26px 
                         +max-screen($breakpoint-sm)
                             width: 24px 
                             height: 24px 
@@ -223,6 +254,9 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen($breakpoint-md)
+                                width: 25px 
+                                height: 25px 
                             +max-screen($breakpoint-sm)
                                 content: none
                 &:nth-child(4n + 4)
@@ -231,6 +265,13 @@
                     max-width: 440px
                     flex: 0 0 calc( 25% + 60px )
                     transform: translateX(10px)
+                    +max-screen($breakpoint-md)
+                        padding-left: 23px
+                        flex: 0 0 28%
+                        margin-left: -10px
+                        z-index: 2
+                        margin-top: 0
+                        transform: translateY(-15px)
                     +max-screen($breakpoint-sm)
                         max-width: 50%
                         margin-top: 0
@@ -242,11 +283,18 @@
                         color: #1B233C
                         text-align: center
                         margin-top: 18px
+                        +max-screen($breakpoint-md)
+                            margin-top: 9px
+                            padding: 0 5px 
                         +max-screen($breakpoint-sm)
                             padding: 0 4.5px 
                     .services__cardsItem__text
                         margin-top: 5.4px
                         padding-left: 12px
+                        +max-screen($breakpoint-md)
+                            padding-left: 0
+                            br 
+                                display: none
                         +max-screen($breakpoint-sm)
                             padding-left: 9px
                     &::before 
@@ -277,6 +325,9 @@
                         background-position: center
                         z-index: 1
                         transform: rotate(-8.87deg) translateY(-25%)
+                        +max-screen($breakpoint-md)
+                            width: 23px
+                            height: 23px
                         +max-screen($breakpoint-sm)
                             width: 22px
                             height: 22px 
@@ -304,12 +355,23 @@
                             left: 0
                             top: 0
                             position: absolute
+                            background-position: top
+                &:nth-child(4n + 1),
+                &:nth-child(4n + 2),
+                &:nth-child(4n + 3)
+                    +max-screen($breakpoint-md)
+                        flex: 0 0 24%
+                    +max-screen($breakpoint-md)
+                        flex: 0 0 50%
             &__text 
                 font-size: 20px
                 line-height: 1.4
                 margin-top: 26px
                 z-index: 1
                 position: relative
+                +max-screen($breakpoint-md)
+                    font-size: 9.57px
+                    margin-top: 12px
                 +max-screen($breakpoint-sm)
                     font-size: 9px
                     line-height: 1.4
@@ -318,6 +380,8 @@
                 z-index: 1
                 position: relative
                 img 
+                    +max-screen($breakpoint-md)
+                        max-width: 68px
                     +max-screen($breakpoint-sm)
                         max-width: 60px
             &__title 
@@ -326,6 +390,9 @@
                 margin-top: 46px
                 z-index: 1
                 position: relative
+                +max-screen($breakpoint-md)
+                    font-size: 16.32px
+                    margin-top: 22px
                 +max-screen($breakpoint-sm)
                     font-size: 14px
                     margin-top: 18px
@@ -335,6 +402,11 @@
         font-size: 24px
         margin-top: 112px
         line-height: 1.4
+        +max-screen($breakpoint-md)
+            margin-top: 40px
+            max-width: 581px
+            margin-left: auto
+            margin-right: auto
         +max-screen($breakpoint-sm)
             font-size: 16px
             line-height: 1.45
@@ -348,3 +420,5 @@
     &__btn
         text-align: center
         margin-top: 53.5px
+        +max-screen($breakpoint-md)
+            margin-top: 40px
