@@ -6,7 +6,7 @@
     background: #1B233C
     position: relative
     z-index: 1
-    +max-screen($breakpoint-md)
+    +max-screen($breakpoint-lg)
         padding-top: 38px
         padding-bottom: 50px
     +max-screen($breakpoint-sm)
@@ -22,6 +22,9 @@
         left: 0
         position: absolute
         bottom: 0
+        +max-screen($breakpoint-lg)
+            top: -320px
+            bottom: calc( 100% - 135px)
         +max-screen($breakpoint-md)
             top: -250px
             bottom: calc( 100% - 90px )
@@ -37,7 +40,7 @@
         opacity: 0.5 
         font-size: 16px
         margin-bottom: 16px
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 10px
             line-height: 1.6
             margin-bottom: 8px
@@ -48,13 +51,15 @@
             margin-bottom: 4px
     .container 
         max-width: 1480px 
+        +max-screen($breakpoint-lg)
+            max-width: 829px
     &__logo 
         +max-screen($breakpoint-sm)
             margin-bottom: 18.5px
             text-align: center
         img
             max-width: 119px 
-            +max-screen($breakpoint-md)
+            +max-screen($breakpoint-lg)
                 max-width: 65px
             +max-screen($breakpoint-sm)
                 max-width: 32px
@@ -69,7 +74,7 @@
                 width: 33%
                 line-height: 1
                 margin-bottom: 16px
-                +max-screen($breakpoint-md)
+                +max-screen($breakpoint-lg)
                     font-size: 10px
                     line-height: 1.6
                     margin-bottom: 8px
@@ -84,7 +89,7 @@
                 margin-bottom: 15px
     &__contact 
         &Text 
-            +max-screen($breakpoint-md)
+            +max-screen($breakpoint-lg)
                 font-size: 10px
                 line-height: 1.4
             +max-screen($breakpoint-sm)
@@ -99,9 +104,11 @@
         margin-top: 96px
         height: 48px 
         position: relative
+        +max-screen($breakpoint-lg)
+            margin-top: 52px
+            height: 26px
         +max-screen($breakpoint-md)
             margin-top: 62px
-            height: 26px
         +max-screen($breakpoint-sm)
             flex-direction: column-reverse
             margin-top: 0
@@ -114,20 +121,20 @@
         left: 50%
         transform: translateX(-50%)
         top: 0
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             margin: 0 -6.8px
         +max-screen($breakpoint-sm)
             position: static
             transform: none
     &__icon 
         margin: 0 12.5px 
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             margin: 0 6.8px
         +max-screen($breakpoint-sm)
             margin-top: 14px
         img 
             width: 48px 
-            +max-screen($breakpoint-md)
+            +max-screen($breakpoint-lg)
                 width: 26px 
                 height: 26px
             +max-screen($breakpoint-sm)
@@ -139,7 +146,7 @@
     &__copywriting 
         font-size: 14px 
         opacity: 0.5 
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
             font-size: 12px
@@ -148,7 +155,7 @@
     &__email 
         color: #7BA4DB
         font-size: 14px
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
             font-size: 12px
@@ -157,7 +164,7 @@
         font-size: 14px
         position: relative
         padding-left: 15px
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
             padding-left: 0
@@ -191,8 +198,14 @@
             align-items: center
         span 
             opacity: 0.5
+            +max-screen($breakpoint-lg)
+                font-size: 10px
             +max-screen($breakpoint-md)
                 display: none
         img 
             width: 54px 
             margin-left: 10px
+            +max-screen($breakpoint-lg)
+                width: 30px 
+            +max-screen($breakpoint-md)
+                width: 52px

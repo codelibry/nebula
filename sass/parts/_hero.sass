@@ -2,6 +2,9 @@
     padding-top: 20px
     padding-bottom: 306px
     position: relative
+    +max-screen($breakpoint-lg)
+        padding-top: 70px
+        padding-bottom: 355px
     +max-screen($breakpoint-md)
         padding-top: 94px
         padding-bottom: 159px
@@ -18,15 +21,24 @@
         top: -125px
         width: 100%
         bottom: 60px
+        +max-screen($breakpoint-lg)
+            background-image: url('../assets/images/landscape_hero_background.png')
+            bottom: 58px
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/hero_tablet.png')
         +max-screen($breakpoint-sm)
             background-position: 60%
     .container 
         max-width: 1660px
+        +max-screen($breakpoint-lg)
+            max-width: 911px 
     &__image 
+        +max-screen($breakpoint-lg)
+            flex: 0 0 37.83333%
+            max-width: 37.83333%
+            margin-left: -4.5%
         +max-screen($breakpoint-md)
-            padding-right: 128px
+            margin-right: 128px
             text-align: right
             margin-top: -51px
             margin-left: auto
@@ -52,9 +64,13 @@
         line-height: 1.25
         margin-bottom: 82px 
         font-weight: 300
+        +max-screen($breakpoint-lg)
+            font-size: 32px
+            margin-bottom: 30px
+            line-height: 1.2
+            max-width: 470px
         +max-screen($breakpoint-md)
             font-size: 50px
-            line-height: 1.2
         +max-screen($breakpoint-sm)
             font-size: 34px
             line-height: 1.35
@@ -67,6 +83,9 @@
             display: flex 
             flex-direction: column 
             justify-content: center
+            +max-screen($breakpoint-lg)
+                padding-left: 42px
+                padding-top: 71px
             +max-screen($breakpoint-md)
                 padding-top: 0
                 padding-left: 88px
@@ -74,3 +93,4 @@
             +max-screen($breakpoint-sm)
                 padding-top: 0
                 padding-left: 15px
+                padding-right: 0

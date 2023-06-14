@@ -1,6 +1,8 @@
 .letsWork 
     margin-bottom: 305px
     position: relative
+    +max-screen($breakpoint-lg)
+        margin-bottom: 206px
     +max-screen($breakpoint-md)
         margin-bottom: 155px
     +max-screen($breakpoint-sm)
@@ -16,6 +18,10 @@
         position: absolute
         width: 100%
         left: 0
+        +max-screen($breakpoint-lg)
+            background-image: url('../assets/images/landscape_lets_work_background.png')
+            top: -302px
+            bottom: -189px
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/lets_work_tablet_background.png')
             top: -131px 
@@ -28,6 +34,8 @@
         max-width: 1475px
         position: relative
         z-index: 1
+        +max-screen($breakpoint-lg)
+            max-width: 830px
         +max-screen($breakpoint-md)
             max-width: 610px
     &__title 
@@ -35,7 +43,7 @@
         line-height: 1.05
         margin-bottom: 40px
         font-weight: 300
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 52px
         +max-screen($breakpoint-sm)
             font-size: 32px
@@ -44,7 +52,7 @@
         font-size: 24px
         line-height: 1.4
         font-weight: 300
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             font-size: 20px
         +max-screen($breakpoint-sm)
             font-size: 16px
@@ -56,6 +64,8 @@
     &__button 
         margin-top: 112px
         text-align: center
+        +max-screen($breakpoint-lg)
+            margin-top: 50px
         +max-screen($breakpoint-md)
             margin-top: 56px
         +max-screen($breakpoint-sm)

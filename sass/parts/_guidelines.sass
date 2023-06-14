@@ -1,14 +1,16 @@
 .guidelines
     position: relative
     margin-bottom: 400px
-    +max-screen($breakpoint-md)
+    +max-screen($breakpoint-lg)
         background-color: #f9f9f9
+        padding-bottom: 70px
+        margin-bottom: 170px
+        z-index: 1
+    +max-screen($breakpoint-md)
         margin-bottom: 0
         padding-bottom: 39px
         margin-bottom: 160px
-        z-index: 1
     +max-screen($breakpoint-sm)
-        background: #fff
         margin-bottom: 0
         padding-bottom: 144px
         z-index: auto
@@ -16,8 +18,14 @@
         position: relative
         z-index: 2
         max-width: 1470px
+        +max-screen($breakpoint-lg)
+            max-width: 920px
+            padding-left: 75px
+            padding-right: 75px
         +max-screen($breakpoint-md)
             max-width: 670px
+            padding-left: 22.5px
+            padding-right: 22.5px
     &::before 
         content: ""
         top: -805px
@@ -29,28 +37,38 @@
         background-position: center
         position: absolute
         z-index: 1
+        +max-screen($breakpoint-lg)
+            top: -317px
+            bottom: calc( 100% - 351px )
+            background-position: top right 32%
+            background-size: 116%
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/guidelines_tablet_clouds.png')
             top: -283px
             bottom: calc( 100% - 270px )
-            
+            background-size: cover
         +max-screen($breakpoint-sm)
             background-image: url('../assets/images/mobile_guidelines_clouds_4.png')
             top: -242px
             background-position: 41%
             bottom: calc( 100% - 148px )
+            background-repeat: no-repeat
     &::after 
-        +max-screen($breakpoint-md)
+        +max-screen($breakpoint-lg)
             content: ""
-            background-image: url('../assets/images/tablet_clouds.png')
             position: absolute
             left: 0
             width: 100%
             background-size: cover 
             background-repeat: no-repeat
+            z-index: 1
+            background-image: url('../assets/images/landscape_guidelines_clouds.png')
+            top: calc( 100% - 298px )
+            bottom: -300px
+        +max-screen($breakpoint-md)
+            background-image: url('../assets/images/tablet_clouds.png')
             top: calc( 100% - 269px )
             bottom: -270px
-            z-index: 1
         +max-screen($breakpoint-sm)
             content: ""
             background-image: url('../assets/images/guidelines_mobile_bottom_clouds.png')
@@ -63,10 +81,11 @@
         line-height: 1.05
         font-weight: 300
         text-align: center
+        +max-screen($breakpoint-lg)
+            font-size: 52px
         +max-screen($breakpoint-md)
             padding-left: 20px
             padding-right: 20px
-            font-size: 52px
         +max-screen($breakpoint-sm)
             font-size: 32px
             text-align: left
@@ -77,10 +96,14 @@
         font-size: 24px
         line-height: 1.4
         margin-top: 40px
+        +max-screen($breakpoint-lg)
+            font-size: 18px
+            max-width: 630px 
+            margin-left: auto
+            margin-right: auto
         +max-screen($breakpoint-md)
             padding-left: 20px
             padding-right: 20px
-            font-size: 18px
         +max-screen($breakpoint-sm)
             margin-top: 20px
             font-size: 16px
@@ -97,11 +120,16 @@
         max-width: 1235px
         margin: 0 auto
     &__readMore 
-        font-size: 16px
-        line-height: 1.4
-        text-transform: uppercase
-        text-align: right
-        margin-top: 20px
+        display: none
+        +max-screen($breakpoint-lg)
+            margin-top: 40px
+            display: block
+            font-size: 16px
+            line-height: 1.4
+            text-transform: uppercase
+            text-align: right
+        +max-screen($breakpoint-md)
+            margin-top: 20px
     &__testimonial 
         background: linear-gradient(169.31deg, #702F8A 7.94%, #1B233C 50.27%)
         padding: 70px 89px 70px 270px
@@ -109,6 +137,9 @@
         margin-top: 140px
         position: relative
         color: $white 
+        +max-screen($breakpoint-lg)
+            margin-top: 110px
+            padding: 50px 70px 50px 200px
         +max-screen($breakpoint-md)
             margin-top: 62px
             margin-left: 128px
@@ -121,6 +152,9 @@
             font-size: 50px
             line-height: 1.25
             font-weight: 300
+            +max-screen($breakpoint-lg)
+                font-size: 38px
+                line-height: 1.05
             +max-screen($breakpoint-md)
                 font-size: 32px
                 line-height: 1.2
@@ -133,11 +167,13 @@
             font-size: 20px
             &.opened 
                 max-height: 100%
+            +max-screen($breakpoint-lg)
+                font-size: 16px
+                max-height: 6em
+                overflow: hidden
             +max-screen($breakpoint-md)
                 margin-top: 20px
-                font-size: 16px
                 max-height: 8.6em
-                overflow: hidden
             +max-screen($breakpoint-sm)
                 margin-top: 20px
                 font-size: 14px
@@ -153,10 +189,11 @@
             line-height: 1.25
             font-style: italic
             padding-bottom: 13px
-            +max-screen($breakpoint-md)
+            +max-screen($breakpoint-lg)
                 font-size: 16px
-                margin-top: 50px
                 padding-bottom: 0
+            +max-screen($breakpoint-md)
+                margin-top: 50px
             +max-screen($breakpoint-sm)
                 margin-top: 30px
                 font-size: 14px
@@ -167,6 +204,11 @@
             left: 0
             top: 50%
             transform: translate(-45%, -50%)
+            +max-screen($breakpoint-lg)
+                left: -75px
+                bottom: 85px
+                top: auto
+                transform: none
             +max-screen($breakpoint-md)
                 bottom: 55px
                 left: -8.5%
@@ -179,13 +221,15 @@
                 transform: translateX(-50%)
             img 
                 width: 401px
-                +max-screen($breakpoint-md)
+                +max-screen($breakpoint-lg)
                     width: 193px
                 +max-screen($breakpoint-sm)
                     width: 147px
     &__btn
         margin-top: 101px
         text-align: center
+        +max-screen($breakpoint-lg)
+            margin-top: 62px
         +max-screen($breakpoint-md)
             margin-top: 66px
         +max-screen($breakpoint-sm)

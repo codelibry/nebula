@@ -8,7 +8,7 @@ $image = get_field('hero_image');
 <section class="hero">
     <div class="container">
         <div class="row hero_content">
-            <div class="hero__textWrapper col-lg-8 col-12">
+            <div class="hero__textWrapper col-lg-8 col-md-8 col-12">
                 <?php if($text): ?>
                     <div class="hero__text">
                         <?php echo $text; ?>
@@ -21,7 +21,7 @@ $image = get_field('hero_image');
                 <?php endif; ?>
             </div>
             <?php if($image): ?>
-                <div class="hero__image col-lg-4 col-7">
+                <div class="hero__image col-lg-4 col-md-4 col-7">
                     <img src="<?php echo $image['url']; ?>" alt="">
                 </div>
             <?php endif; ?>
@@ -221,37 +221,39 @@ $image = get_field('processes_image');
         <?php if($title): ?>
             <div class="processes__title"><?php echo $title; ?></div>
         <?php endif; ?>
-        <?php if(have_rows('processes')): ?>
-            <div class="processes__list row">
-                <?php $i = 1; while(have_rows('processes')): the_row(); ?>
-                <?php 
-                $title = get_sub_field('title');
-                $text = get_sub_field('text');
-                ?>
-                <?php if($i == 1 || $i == 3 || $i == 4): ?>
-                    <div class="processes__column col-lg-4 col-12">
-                <?php endif; ?>
-                    <div class="processes__item">
-                        <div class="processes__itemNumber"><?php echo $i; ?></div>
-                        <?php if($title || $text): ?>
-                            <div class="processes__itemContent">
-                                <?php if($title): ?>
-                                    <div class="processes__itemTitle"><?php echo $title; ?></div>
-                                <?php endif; ?>
-                                <?php if($text): ?>
-                                    <div class="processes__itemText"><?php echo $text; ?></div>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php if($i == 2 || $i == 3 || $i == 5): ?>
-                    </div>
-                <?php endif; ?>
-                <?php $i++; endwhile; ?>
-            </div>
-            <div class="processes__image">
-            </div>
-        <?php endif; ?>
+        <div class="processes__content">
+            <?php if(have_rows('processes')): ?>
+                <div class="processes__list row">
+                    <?php $i = 1; while(have_rows('processes')): the_row(); ?>
+                    <?php 
+                    $title = get_sub_field('title');
+                    $text = get_sub_field('text');
+                    ?>
+                    <?php if($i == 1 || $i == 3 || $i == 4): ?>
+                        <div class="processes__column col-lg-4 col-12">
+                    <?php endif; ?>
+                        <div class="processes__item">
+                            <div class="processes__itemNumber"><?php echo $i; ?></div>
+                            <?php if($title || $text): ?>
+                                <div class="processes__itemContent">
+                                    <?php if($title): ?>
+                                        <div class="processes__itemTitle"><?php echo $title; ?></div>
+                                    <?php endif; ?>
+                                    <?php if($text): ?>
+                                        <div class="processes__itemText"><?php echo $text; ?></div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php if($i == 2 || $i == 3 || $i == 5): ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php $i++; endwhile; ?>
+                </div>
+                <div class="processes__image">
+                </div>
+            <?php endif; ?>
+        </div>
         <?php if($button): ?>
             <div class="processes__button"><a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a></div>
         <?php endif; ?>
