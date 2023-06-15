@@ -4,13 +4,16 @@
     position: relative
     +max-screen($breakpoint-lg)
         padding-top: 70px
-        padding-bottom: 355px
+        padding-bottom: 155px 
+        margin-bottom: 200px
     +max-screen($breakpoint-md)
         padding-top: 94px
-        padding-bottom: 159px
+        padding-bottom: 89px
+        margin-bottom: 70px
     +max-screen($breakpoint-sm)
         padding-top: 59.5px
-        padding-bottom: 182px
+        padding-bottom: 68px
+        margin-bottom: 114px
     &::before 
         content: ""
         background-image: url('../assets/images/hero_background.png')
@@ -23,11 +26,13 @@
         bottom: 60px
         +max-screen($breakpoint-lg)
             background-image: url('../assets/images/landscape_hero_background.png')
-            bottom: 58px
+            bottom: -130px
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/hero_tablet.png')
+            bottom: 0
         +max-screen($breakpoint-sm)
             background-position: 60%
+            bottom: -50px
     .container 
         max-width: 1660px
         +max-screen($breakpoint-lg)
@@ -46,6 +51,10 @@
             padding-left: 97.5px
             padding-right: 97.5px
             margin-bottom: 49.5px
+            flex: 0 0 100%
+            max-width: 100%
+            margin-left: 0
+            margin-top: 0
         img 
             width: 100%
             +max-screen($breakpoint-sm)

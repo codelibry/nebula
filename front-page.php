@@ -21,7 +21,7 @@ $image = get_field('hero_image');
                 <?php endif; ?>
             </div>
             <?php if($image): ?>
-                <div class="hero__image col-lg-4 col-md-4 col-7">
+                <div class="hero__image col-lg-4 col-md-4 col-12">
                     <img src="<?php echo $image['url']; ?>" alt="">
                 </div>
             <?php endif; ?>
