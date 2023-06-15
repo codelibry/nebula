@@ -31,6 +31,12 @@
     &__top
         max-width: 1235px
         margin: 0 auto
+        +max-screen(1200px)
+            padding-left: 80px
+            padding-right: 80px
+        +max-screen($breakpoint-lg)
+            padding-left: 0
+            padding-right: 0
         +max-screen($breakpoint-md)
             max-width: 581px
         &Title 
@@ -64,6 +70,8 @@
         margin-top: 122px
         margin-left: 0
         margin-right: 0
+        +max-screen(1200px)
+            margin-top: 72px
         +max-screen($breakpoint-lg)
             margin-top: 92px
         +max-screen($breakpoint-md)
@@ -84,6 +92,10 @@
             border-radius: 25px 
             border: 3px solid #1B233C
             overflow: hidden
+            height: 100%
+            +max-screen(1200px)
+                min-height: auto
+                padding: 32px 18px 18px 
             +max-screen($breakpoint-lg)
                 padding: 25px 13.6px 15px 13.6px
                 min-height: auto
@@ -95,7 +107,8 @@
             &__wrapper
                 padding: 0
                 position: relative
-                max-width: 380px
+                max-width: 23.5%
+                flex: 0 0 23.5%
                 +max-screen($breakpoint-sm)
                     max-width: 50%
                 &:nth-child(4n + 1)
@@ -114,6 +127,9 @@
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen(1200px)
+                            width: 32px 
+                            height: 32px 
                         +max-screen($breakpoint-lg)
                             width: 25px 
                             height: 25px 
@@ -165,6 +181,9 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen(1200px)
+                                width: 36px 
+                                height: 36px
                             +max-screen($breakpoint-lg)
                                 width: 27px 
                                 height: 27px 
@@ -214,6 +233,9 @@
                         background-repeat: no-repeat
                         background-position: center
                         z-index: 1
+                        +max-screen(1200px)
+                            width: 32px 
+                            height: 32px 
                         +max-screen($breakpoint-lg)
                             width: 25px 
                             height: 25px 
@@ -240,6 +262,9 @@
                         position: absolute
                         background: #1b233c
                         z-index: 1
+                        +max-screen(1200px)
+                            width: 36px 
+                            height: 36px 
                         +max-screen($breakpoint-lg)
                             width: 28px 
                             height: 28px 
@@ -283,6 +308,9 @@
                             border-radius: 50%
                             position: absolute
                             background: #1b233c
+                            +max-screen(1200px)
+                                width: 36px 
+                                height: 36px 
                             +max-screen($breakpoint-lg)
                                 width: 28px 
                                 height: 28px 
@@ -294,9 +322,12 @@
                 &:nth-child(4n + 4)
                     padding-left: 60px
                     margin-top: -30px
-                    max-width: 440px
-                    flex: 0 0 calc( 25% + 60px )
+                    max-width: 29.5%
+                    flex: 0 0 29.5%
                     transform: translateX(10px)
+                    +max-screen(1200px)
+                        padding-left: 32px
+                        transform: none
                     +max-screen($breakpoint-lg)
                         flex: 0 0 28%
                         max-width: 28%
@@ -369,6 +400,10 @@
                         background-position: center
                         z-index: 1
                         transform: rotate(-8.87deg) translateY(-25%)
+                        +max-screen(1200px)
+                            width: 32px 
+                            height: 32px 
+                            right: 6px
                         +max-screen($breakpoint-lg)
                             width: 25px
                             height: 25px
@@ -388,6 +423,8 @@
                         background: #0C869D
                         border: 4px solid #1b233c
                         transform: rotate(-8.87deg)
+                        +max-screen(1200px)
+                            height: 97%
                         +max-screen($breakpoint-sm)
                             transform: rotate(-6.09deg)
                             padding-left: 10px
@@ -424,6 +461,8 @@
                 margin-top: 26px
                 z-index: 1
                 position: relative
+                +max-screen(1200px)
+                    font-size: 16px
                 +max-screen($breakpoint-lg)
                     font-size: 10px
                     margin-top: 12px
@@ -437,6 +476,8 @@
                 z-index: 1
                 position: relative
                 img 
+                    +max-screen(1200px)
+                        max-width: 100px
                     +max-screen($breakpoint-lg)
                         max-width: 71px
                     +max-screen($breakpoint-md)
@@ -449,6 +490,9 @@
                 margin-top: 46px
                 z-index: 1
                 position: relative
+                +max-screen(1200px)
+                    font-size: 26px
+                    margin-top: 24px
                 +max-screen($breakpoint-lg)
                     font-size: 17.05px
                     margin-top: 22px
@@ -463,9 +507,15 @@
         font-size: 24px
         margin-top: 112px
         line-height: 1.4
+        +max-screen(1200px)
+            padding-left: 80px
+            padding-right: 80px
+            margin-top: 62px
         +max-screen($breakpoint-lg)
             margin-top: 50px
             font-size: 20px
+            padding-left: 0
+            padding-right: 0
         +max-screen($breakpoint-md)
             margin-top: 40px
             max-width: 581px

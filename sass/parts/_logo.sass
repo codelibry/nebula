@@ -2,6 +2,8 @@
     margin-bottom: 385px
     position: relative
     z-index: 1
+    +max-screen(1200px)
+        margin-bottom: 300px
     +max-screen($breakpoint-lg) 
         margin-bottom: 206px
     +max-screen($breakpoint-md) 
@@ -17,6 +19,9 @@
         bottom: -405px
         width: 100%
         position: absolute
+        +max-screen(1200px) 
+            top: -240px
+            bottom: -165px
         +max-screen($breakpoint-lg)
             top: -165px
             bottom: -109px
@@ -33,6 +38,8 @@
         text-align: center
         position: relative
         z-index: 1
+        +max-screen(1200px)
+            padding: 20px 54px 42px
         +max-screen($breakpoint-lg)
             padding: 13px 22px 26px 
         +max-screen($breakpoint-md)
@@ -41,8 +48,10 @@
             padding: 8px 14px 16px
         img 
             height: 153px
+            +max-screen(1200px)
+                height: 100px
             +max-screen($breakpoint-lg)
-                max-height: 49px
+                height: 49px
             +max-screen($breakpoint-md)
                 height: 35px
             +max-screen($breakpoint-sm)

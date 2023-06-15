@@ -13,11 +13,16 @@
             display: block
     .container 
         max-width: 1420px
+        +max-screen(1200px)
+            padding-left: 120px
+            padding-right: 120px
     &__content
         display: flex 
         position: relative
         justify-content: space-between
         height: 94px 
+        +max-screen(1200px)
+            height: 72px
         +max-screen($breakpoint-lg)
             display: none
     &__logo
@@ -27,6 +32,8 @@
         transform: translate(-50%, -50%)
         img 
             height: 94px
+            +max-screen(1200px)
+                height: 72px
     &__right 
         display: flex 
     .menu 
@@ -34,26 +41,44 @@
         padding-top: 28px
         margin-left: -70px
         margin-right: -70px
+        +max-screen(1200px)
+            margin-left: -32px
+            margin-right: -32px
         li 
             margin-left: 70px
             margin-right: 70px
+            +max-screen(1200px)
+                margin-left: 32px
+                margin-right: 32px
             a 
                 font-size: 24px
                 text-transform: uppercase
+                +max-screen(1200px)
+                    font-size: 20px
+                +max-screen($breakpoint-lg)
+                    font-size: 24px
     .header-btn
         margin-left: 70px
         margin-right: 70px
+        +max-screen(1200px)
+            margin-left: 32px
+            margin-right: 32px
         a
             font-size: 24px
             padding: 10px 20px 
             background-color: $turquoise
             border-radius: 10px 
             line-height: 1.172
+            +max-screen(1200px)
+                font-size: 20px
     &__right
         display: flex 
         align-items: center
         margin-left: -70px
         margin-right: -70px
+        +max-screen(1200px)
+            margin-left: -32px
+            margin-right: -32px
         &Menu 
             .menu 
                 padding-top: 0

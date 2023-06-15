@@ -1,8 +1,12 @@
 .guidelines
     position: relative
     margin-bottom: 400px
-    +max-screen($breakpoint-lg)
+    +max-screen(1200px)
         background-color: #f9f9f9
+        padding-bottom: 80px
+        margin-bottom: 180px
+        z-index: 1
+    +max-screen($breakpoint-lg)
         padding-bottom: 70px
         margin-bottom: 170px
         z-index: 1
@@ -17,7 +21,7 @@
     .container
         position: relative
         z-index: 2
-        max-width: 1470px
+        max-width: 76.5%
         +max-screen($breakpoint-lg)
             max-width: 920px
             padding-left: 75px
@@ -37,11 +41,16 @@
         background-position: center
         position: absolute
         z-index: 1
+        +max-screen(1200px)
+            background-image: url(../assets/images/guidelines_tablet_clouds.png)
+            top: -350px
+            bottom: calc(100% - 550px)
         +max-screen($breakpoint-lg)
             top: -317px
             bottom: calc( 100% - 351px )
             background-position: top right 32%
             background-size: 116%
+            background-image: url('../assets/images/White_clouds_2nd_section.png')
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/guidelines_tablet_clouds.png')
             top: -283px
@@ -54,7 +63,7 @@
             bottom: calc( 100% - 148px )
             background-repeat: no-repeat
     &::after 
-        +max-screen($breakpoint-lg)
+        +max-screen(1200px)
             content: ""
             position: absolute
             left: 0
@@ -63,7 +72,7 @@
             background-repeat: no-repeat
             z-index: 1
             background-image: url('../assets/images/landscape_guidelines_clouds.png')
-            top: calc( 100% - 298px )
+            top: calc( 100% - 315px )
             bottom: -300px
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/tablet_clouds.png')
@@ -117,8 +126,11 @@
         strong 
             color: $s-pink
     &__top 
-        max-width: 1235px
         margin: 0 auto
+        max-width: 1235px
+        +max-screen($breakpoint-lg)
+            margin-left: 0
+            margin-right: 0
     &__readMore 
         display: none
         +max-screen($breakpoint-lg)
@@ -137,9 +149,14 @@
         margin-top: 140px
         position: relative
         color: $white 
+        +max-screen(1200px)
+            margin-top: 90px
+            padding: 50px 60px 50px 180px
         +max-screen($breakpoint-lg)
             margin-top: 110px
             padding: 50px 70px 50px 200px
+            margin-left: 0
+            margin-right: 0
         +max-screen($breakpoint-md)
             margin-top: 62px
             margin-left: 128px
@@ -221,6 +238,8 @@
                 transform: translateX(-50%)
             img 
                 width: 401px
+                +max-screen(1200px)
+                    width: 320px
                 +max-screen($breakpoint-lg)
                     width: 193px
                 +max-screen($breakpoint-sm)

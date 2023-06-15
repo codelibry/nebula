@@ -1,6 +1,8 @@
 .processes
     margin-bottom: 465px
     position: relative
+    +max-screen(1200px)
+        margin-bottom: 265px
     +max-screen($breakpoint-lg)
         padding-bottom: 170px
         margin-bottom: 0
@@ -28,6 +30,7 @@
             bottom: calc( 100% - 484px)
         +max-screen($breakpoint-sm)
             top: -140px
+            background-position: top center
             bottom: calc( 100% - 244px )
     .container
         position: relative
@@ -170,6 +173,7 @@
             transform: none
             left: 50%
             transform: translateX(-50%)
+            width: 100%
         +max-screen($breakpoint-sm) 
             width: 55%
             top: 54px 
