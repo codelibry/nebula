@@ -29,7 +29,7 @@
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/lets_work_mobile_background.png')
             top: -121px 
-            bottom: -90px 
+            bottom: -115px 
     .container 
         max-width: 76.8%
         position: relative
@@ -43,6 +43,10 @@
         line-height: 1.05
         margin-bottom: 40px
         font-weight: 300
+        +max-screen($breakpoint-xl)
+            font-size: 64px
+        +max-screen(1200px)
+            font-size: 58px
         +max-screen($breakpoint-lg)
             font-size: 52px
         +max-screen($breakpoint-sm)
@@ -52,7 +56,7 @@
         font-size: 24px
         line-height: 1.4
         font-weight: 300
-        +max-screen($breakpoint-lg)
+        +max-screen(1200px)
             font-size: 20px
         +max-screen($breakpoint-sm)
             font-size: 16px

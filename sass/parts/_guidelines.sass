@@ -1,8 +1,11 @@
 .guidelines
     position: relative
     margin-bottom: 400px
-    +max-screen(1200px)
+    +max-screen($breakpoint-xl)
         background-color: #f9f9f9
+        padding-bottom: 120px
+        margin-bottom: 240px
+    +max-screen(1200px)
         padding-bottom: 80px
         margin-bottom: 180px
         z-index: 1
@@ -21,7 +24,9 @@
     .container
         position: relative
         z-index: 2
-        max-width: 76.5%
+        max-width: 1414px
+        +max-screen($breakpoint-xxl)
+            max-width: 77.4%
         +max-screen($breakpoint-lg)
             max-width: 920px
             padding-left: 75px
@@ -41,9 +46,15 @@
         background-position: center
         position: absolute
         z-index: 1
-        +max-screen(1200px)
+        +max-screen($breakpoint-xxl)
+            +min-screen(1660px)
+                top: -840px
+        +max-screen(1660px)
+            top: -905px 
+            bottom: -1055px
+        +max-screen($breakpoint-xl)
             background-image: url(../assets/images/guidelines_tablet_clouds.png)
-            top: -350px
+            top: -370px
             bottom: calc(100% - 550px)
         +max-screen($breakpoint-lg)
             top: -317px
@@ -63,7 +74,7 @@
             bottom: calc( 100% - 148px )
             background-repeat: no-repeat
     &::after 
-        +max-screen(1200px)
+        +max-screen($breakpoint-xl)
             content: ""
             position: absolute
             left: 0
@@ -72,8 +83,12 @@
             background-repeat: no-repeat
             z-index: 1
             background-image: url('../assets/images/landscape_guidelines_clouds.png')
+            top: calc( 100% - 442px )
+            bottom: -144px
+        +max-screen(1250px)
+            top: calc( 100% - 420px )
+        +max-screen(1200px)
             top: calc( 100% - 315px )
-            bottom: -300px
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/tablet_clouds.png')
             top: calc( 100% - 269px )
@@ -90,6 +105,10 @@
         line-height: 1.05
         font-weight: 300
         text-align: center
+        +max-screen($breakpoint-xl)
+            font-size: 64px
+        +max-screen(1200px)
+            font-size: 58px
         +max-screen($breakpoint-lg)
             font-size: 52px
         +max-screen($breakpoint-md)
@@ -105,6 +124,10 @@
         font-size: 24px
         line-height: 1.4
         margin-top: 40px
+        +max-screen($breakpoint-xl)
+            font-size: 22px
+        +max-screen(1200px) 
+            font-size: 20px
         +max-screen($breakpoint-lg)
             font-size: 18px
             max-width: 630px 
@@ -128,6 +151,9 @@
     &__top 
         margin: 0 auto
         max-width: 1235px
+        +max-screen($breakpoint-xxl)
+            +min-screen(1660px)
+                max-width: 90%
         +max-screen($breakpoint-lg)
             margin-left: 0
             margin-right: 0
@@ -149,6 +175,9 @@
         margin-top: 140px
         position: relative
         color: $white 
+        +max-screen($breakpoint-xl) 
+            padding: 55px 72px 55px 170px
+            margin-top: 100px
         +max-screen(1200px)
             margin-top: 90px
             padding: 50px 60px 50px 180px
@@ -169,6 +198,10 @@
             font-size: 50px
             line-height: 1.25
             font-weight: 300
+            +max-screen($breakpoint-xl)
+                font-size: 46px
+            +max-screen(1200px)
+                font-size: 42px
             +max-screen($breakpoint-lg)
                 font-size: 38px
                 line-height: 1.05
@@ -184,6 +217,8 @@
             font-size: 20px
             &.opened 
                 max-height: 100%
+            +max-screen(1200px)
+                font-size: 18px
             +max-screen($breakpoint-lg)
                 font-size: 16px
                 max-height: 6em
@@ -206,6 +241,8 @@
             line-height: 1.25
             font-style: italic
             padding-bottom: 13px
+            +max-screen(1200px)
+                font-size: 18px
             +max-screen($breakpoint-lg)
                 font-size: 16px
                 padding-bottom: 0
@@ -238,7 +275,7 @@
                 transform: translateX(-50%)
             img 
                 width: 401px
-                +max-screen(1200px)
+                +max-screen($breakpoint-xl)
                     width: 320px
                 +max-screen($breakpoint-lg)
                     width: 193px
@@ -247,6 +284,8 @@
     &__btn
         margin-top: 101px
         text-align: center
+        +max-screen($breakpoint-xl)
+            margin-top: 81px
         +max-screen($breakpoint-lg)
             margin-top: 62px
         +max-screen($breakpoint-md)

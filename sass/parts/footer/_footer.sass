@@ -6,6 +6,8 @@
     background: #1B233C
     position: relative
     z-index: 1
+    +max-screen($breakpoint-xl)
+        padding-top: 80px
     +max-screen($breakpoint-lg)
         padding-top: 38px
         padding-bottom: 50px
@@ -22,6 +24,10 @@
         left: 0
         position: absolute
         bottom: 0
+        +max-screen($breakpoint-xxl)
+            top: -870px
+        +max-screen($breakpoint-xl)
+            top: -750px
         +max-screen(1200px)
             top: -800px
         +max-screen($breakpoint-lg)
@@ -53,6 +59,10 @@
             margin-bottom: 4px
     .container 
         max-width: 1480px 
+        +max-screen($breakpoint-xl)
+            max-width: 90%
+        +max-screen(1200px)
+            max-width: 1480px
         +max-screen($breakpoint-lg)
             max-width: 829px
     &__logo 
