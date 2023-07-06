@@ -1,0 +1,48 @@
+.textCards
+    margin-bottom: 437px
+    +max-screen($breakpoint-lg)
+        margin-bottom: 346px
+    .container
+        // max-width: 1475px
+    &__item
+        border: 5px solid #48CCD3
+        padding: 60px 86px
+        border-radius: 25px
+        margin-bottom: 60px
+        +max-screen($breakpoint-xxs)
+            padding: 40px 66px
+        +max-screen($breakpoint-lg)
+            padding: 60px 82px 60px 97px
+            margin-bottom: 65px
+        +max-screen($breakpoint-sm)
+            padding: 40px 32px
+        &:last-child
+            margin-bottom: 0
+        &Title
+        &Text
+            margin-top: 40px
+            +max-screen($breakpoint-sm)
+                margin-top: 20px
+            li
+                padding-left: 34px
+                position: relative
+                margin-bottom: 21px
+                +max-screen($breakpoint-lg)
+                    padding-left: 19px
+                &:last-child
+                    margin-bottom: 0
+                &::before
+                    content: ""
+                    top: 10.5px
+                    width: 10px
+                    height: 10px
+                    background: $cian
+                    position: absolute
+                    left: 0
+                    border-radius: 50%
+                    +max-screen($breakpoint-lg)
+                        width: 5px
+                        height: 5px
+
+            strong
+                color: $cian

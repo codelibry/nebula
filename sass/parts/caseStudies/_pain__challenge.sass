@@ -1,0 +1,193 @@
+.pain__challenge
+    margin-bottom: 302px
+    position: relative
+    +max-screen($breakpoint-lg)
+        background-color: $white
+        margin-bottom: 102px
+    &::before
+        content: ""
+        background-image: url('../assets/images/pain_challenge_background.png')
+        position: absolute
+        left: 0
+        right: 0
+        background-size: cover
+        background-position: center
+        top: -840px
+        bottom: -618px
+        +max-screen($breakpoint-lg)
+            width: 100%
+            height: 100%
+            background-size: 100vw
+            background-position: top
+            background-repeat: no-repeat
+            top: -400px
+            bottom: auto
+            background-image: url('../assets/images/solutions/White_clouds_2nd_section_tablet.png')
+        +max-screen($breakpoint-ls)
+            top: -380px
+        +max-screen($breakpoint-md)
+            top: -18%
+        +max-screen(660px)
+            top: -30%
+            background-size: 200vw
+        +max-screen($breakpoint-sm)
+            background-size: 100%
+            top: -15%
+        +max-screen(505px)
+            background-size: 250%
+            top: -35%
+        +max-screen(475px)
+            background-size: cover
+            top: -34%
+    &::after
+
+        +max-screen($breakpoint-lg)
+            position: absolute
+            content: ""
+            left: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background-size: 100vw
+            background-position: bottom
+            background-repeat: no-repeat
+            top: auto
+            bottom: -200px
+            background-image: url('../assets/images/solutions/White_clouds_middle_section_tablet.png')
+        +max-screen($breakpoint-md)
+            bottom: -150px
+        +max-screen($breakpoint-sm)
+            background-size: 140vw
+            bottom: -170px
+        +max-screen(475px)
+            background-size: 400%
+            bottom: -350px
+            background-position: bottom
+    &Title
+
+    &Block
+        padding: 74px 90px
+        padding-right: 220px
+        border-radius: 30px
+        +max-screen($breakpoint-lg)
+            padding: 60px 170px 60px 100px
+        +max-screen($breakpoint-md)
+            padding: 100px 85px 60px 70px
+        +max-screen($breakpoint-sm)
+            padding: 100px 38px 60px 38px
+        &__wrapper
+            padding-left: 62px
+            position: relative
+            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-md)
+                padding-left: 0
+    &Text
+        margin-top: 40px
+        +max-screen($breakpoint-sm)
+            margin-top: 20px
+        li
+            padding-left: 34px
+            position: relative
+            margin-bottom: 25px
+            +max-screen($breakpoint-lg)
+                padding-left: 19px
+                margin-bottom: 21px
+            &:last-child
+                margin-bottom: 0
+            &::before
+                content: ""
+                width: 10px
+                height: 10px
+                background: $light-lila
+                position: absolute
+                left: 0
+                top: 12px
+                border-radius: 50%
+                +max-screen($breakpoint-lg)
+                    top: 10.5px
+                    width: 5px
+                    height: 5px
+    &Image
+    .container
+        position: relative
+        z-index: 2
+        max-width: 1600px
+.pain
+    &__block
+        background: $space-lila
+        &Image
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            +max-screen($breakpoint-md)
+                top: -50px
+                right: calc( 50% - 127px )
+                transform: none
+            +max-screen($breakpoint-sm)
+                right: calc( 50% - 87px )
+            img
+                width: 520px
+                +max-screen($breakpoint-xl)
+                    width: 385px
+                +max-screen($breakpoint-md)
+                    width: 254.704px
+                +max-screen($breakpoint-sm)
+                    width: 174px
+
+        &Text
+            strong
+                color: $light-lila
+        &Wrapper
+            padding-right: 332px
+            margin-bottom: 114px
+            +max-screen($breakpoint-xl)
+                padding-right: 232px
+                margin-bottom: 109px
+            +max-screen($breakpoint-lg)
+                padding-top: 20%
+            +max-screen($breakpoint-ls)
+                padding-top: 25%
+            +max-screen($breakpoint-md)
+                padding-right: 0
+                margin-bottom: 225px
+
+.challenge
+    &__block
+        background: $turquoise
+        &Image
+            bottom: 0
+            position: absolute
+            right: 43px
+            +max-screen($breakpoint-md)
+                top: -170px
+                bottom: auto
+                right: calc( 50% - 110px )
+            +max-screen($breakpoint-sm)
+                right: calc( 50% - 75px )
+                top: -110px
+            img
+                width: 450px
+                +max-screen($breakpoint-xl)
+                    width: 385px
+                +max-screen($breakpoint-md)
+                    width: 220.995px
+                +max-screen($breakpoint-sm)
+                    width: 150px
+        &Text
+            li
+                margin-bottom: 38px
+                &:last-child
+                    margin-bottom: 0
+                &::before
+                    background: #4AE3D9
+        &Wrapper
+            padding-right: 317px
+            +max-screen($breakpoint-xl)
+                padding-right: 232px
+                margin-bottom: 109px
+            +max-screen($breakpoint-lg)
+                padding-bottom: 60px
+            +max-screen($breakpoint-md)
+                padding-right: 0
+                margin-bottom: 209px

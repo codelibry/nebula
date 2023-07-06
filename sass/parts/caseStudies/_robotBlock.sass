@@ -1,0 +1,73 @@
+.robotBlock
+    margin-bottom: 392px
+    position: relative
+    +max-screen($breakpoint-lg)
+        margin-bottom: 232px
+    +max-screen($breakpoint-md)
+        margin-bottom: 332px
+    &::before
+        content: ""
+        background-image: url('../assets/images/transformation_block_background.png')
+        left: 0
+        right: 0
+        top: -889px
+        bottom: -630px
+        position: absolute
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        +max-screen($breakpoint-lg)
+            background-size: 300vw
+        +max-screen($breakpoint-ls)
+            background-size: 400vw
+        +max-screen($breakpoint-md)
+            background-size: cover
+        .page-template-case_studies &
+            z-index: 1
+    .container
+        max-width: 90%
+        // max-width: 1475px
+    &__content
+        background: linear-gradient(169.31deg,#702f8a 7.94%,#1b233c 50.27%)
+        padding: 89px 180px
+        border-radius: 30px
+        position: relative
+        .page-template-case_studies &
+            z-index: 2
+        +max-screen($breakpoint-lg)
+            padding: 62px 70px 62px 130px
+        +max-screen($breakpoint-md)
+            padding: 65px 65px 65px 85px
+            margin-left: 140px
+        +max-screen($breakpoint-sm)
+            padding: 60px 35px 80px 35px
+            margin-left: 0
+        &Title
+        &Text
+            margin-top: 40px
+            +max-screen($breakpoint-sm)
+                margin-top: 20px
+            p
+                margin-bottom: 32px
+                &:last-child
+                    margin-bottom: 0
+        &Image
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -10.5%
+            +max-screen($breakpoint-md)
+                left: -27.5%
+            +max-screen($breakpoint-sm)
+                top: auto
+                bottom: -140px
+                left: calc(50% - 69px)
+                transform: none
+            img
+                width: 340px
+                +max-screen($breakpoint-xl)
+                    width: 285px
+                +max-screen($breakpoint-lg)
+                    width: 218px
+                +max-screen($breakpoint-sm)
+                    width: 138.978px

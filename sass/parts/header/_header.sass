@@ -9,11 +9,11 @@
         padding: 0
         overflow: visible
     &__mobile,
-    &__mobileMenu 
+    &__mobileMenu
         display: none
         +max-screen($breakpoint-lg)
             display: block
-    .container 
+    .container
         max-width: 1420px
         +max-screen($breakpoint-xl)
             padding-left: 100px
@@ -22,12 +22,12 @@
             padding-left: 80px
             padding-right: 80px
     &__content
-        display: flex 
+        display: flex
         position: relative
         justify-content: space-between
-        height: 94px 
+        height: 94px
         +max-screen($breakpoint-xl)
-            height: 80px 
+            height: 80px
         +max-screen(1200px)
             height: 72px
         +max-screen($breakpoint-lg)
@@ -37,18 +37,18 @@
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-        img 
+        img
             height: 94px
             +max-screen($breakpoint-xl)
-                height: 80px 
+                height: 80px
             +max-screen(1200px)
                 height: 72px
     &__left
         +max-screen($breakpoint-xl)
-            display: flex 
+            display: flex
             align-items: center
-    .menu 
-        display: flex 
+    .menu
+        display: flex
         padding-top: 28px
         margin-left: -70px
         margin-right: -70px
@@ -59,7 +59,7 @@
         +max-screen(1200px)
             margin-left: -42px
             margin-right: -42px
-        li 
+        li
             margin-left: 70px
             margin-right: 70px
             +max-screen($breakpoint-xl)
@@ -68,18 +68,18 @@
             +max-screen(1200px)
                 margin-left: 42px
                 margin-right: 42px
-            a 
+            a
                 font-size: 24px
                 text-transform: uppercase
                 +max-screen($breakpoint-xl)
                     font-size: 20px
                 +max-screen($breakpoint-lg)
                     font-size: 24px
-    &__right 
+    &__right
         padding-top: 28px
         margin-left: -70px
         margin-right: -70px
-        display: flex 
+        display: flex
         +max-screen($breakpoint-xl)
             align-items: center
             padding-top: 0
@@ -88,8 +88,8 @@
         +max-screen(1200px)
             margin-left: -32px
             margin-right: -32px
-        &Menu 
-            .menu 
+        &Menu
+            .menu
                 padding-top: 0
                 margin-left: 0
                 margin-right: 0
@@ -104,14 +104,14 @@
             margin-right: 42px
         a
             font-size: 24px
-            padding: 10px 20px 
+            padding: 10px 20px
             background-color: $turquoise
-            border-radius: 10px 
+            border-radius: 10px
             line-height: 1.172
             +max-screen($breakpoint-xl)
                 font-size: 20px
-    &__mobile 
-        padding: 13px 22.5px 
+    &__mobile
+        padding: 13px 22.5px
         position: absolute
         left: 0
         top: 0
@@ -119,20 +119,37 @@
         z-index: 99
         background: linear-gradient(93.2deg, #702F8A 6.72%, #1B233C 93.41%)
         box-shadow: 0px -4px 4px rgba(20, 31, 56, 0.2)
+        +max-screen($breakpoint-xl)
+        +max-screen($breakpoint-lg)
+            .page-template-case_studies &
+                top: 70vw
+        +max-screen($breakpoint-ls)
+            .page-template-case_studies &
+                top: 73vw
         +max-screen($breakpoint-md)
-            padding: 7px 15px 
+            padding: 7px 15px
+            .page-template-case_studies &
+                top: 132vw
         +max-screen($breakpoint-sm)
-            padding: 13px 22.5px 
+            padding: 13px 22.5px
+            .page-template-case_studies &
+                top: 155vw
+        +max-screen(475px)
+            .page-template-case_studies &
+                top: 175vw
+        +max-screen(375px)
+            .page-template-case_studies &
+                top: 205vw
         .container
             +max-screen($breakpoint-lg)
-                max-width: 830px 
-                display: flex 
+                max-width: 830px
+                display: flex
                 justify-content: space-between
                 align-items: center
             +max-screen($breakpoint-md)
                 padding: 0
 
-        &Menu 
+        &Menu
             position: fixed
             right: -100vw
             top: 0
@@ -145,37 +162,37 @@
             flex-direction: column
             transition: .3s
             z-index: 100
-            background-size: cover 
+            background-size: cover
             background-position: center
             +max-screen($breakpoint-lg)
                 background-image: url('../assets/images/landscape_hero_background.png')
             +max-screen($breakpoint-md)
                 background-image: url(../assets/images/hero_tablet.png)
-            &.opened 
+            &.opened
                 right: 0
             & > div:first-child
-                .menu 
+                .menu
                     margin-top: -18px
-            .menu 
+            .menu
                 display: flex
                 align-items: center
                 flex-direction: column
                 padding-top: 0
                 li
                     margin-top: 18px
-    &__phone 
-        a 
+    &__phone
+        a
             display: block
-            padding: 10px 20px 
+            padding: 10px 20px
             background: $turquoise
             box-shadow: 0px 0px 5px rgba(44, 59, 78, 0.4)
-            border-radius: 10px 
+            border-radius: 10px
         img
-            width: 24px 
-            height: 24px 
-    &__burger 
+            width: 24px
+            height: 24px
+    &__burger
         width: 50px
-        height: 35px 
+        height: 35px
         position: relative
         span
             width: 100%
@@ -190,19 +207,19 @@
             &:nth-child(1)
                 top: 0
             &:nth-child(2)
-                top: 15px 
+                top: 15px
                 right: 0
                 left: auto
-                width: 25px 
+                width: 25px
             &:nth-child(3)
                 bottom: 0
-    &__mobileLogo 
+    &__mobileLogo
         img
             +max-screen($breakpoint-lg)
                 height: 56px
             +max-screen($breakpoint-sm)
-                height: 42px 
-    &__burgerClose 
+                height: 42px
+    &__burgerClose
         width: 28px
         height: 28px
         position: absolute
@@ -219,7 +236,7 @@
             &:nth-child(1)
                 transform: rotate(45deg)
             &:nth-child(2)
-                transform: rotate(-45deg) 
+                transform: rotate(-45deg)
 html[lang="en-US"]
     +max-screen($breakpoint-lg)
         margin-top: 0 !important

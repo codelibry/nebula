@@ -1,21 +1,21 @@
-.logo 
+.logo
     margin-bottom: 385px
     position: relative
     z-index: 1
     +max-screen(1200px)
         margin-bottom: 300px
-    +max-screen($breakpoint-lg) 
+    +max-screen($breakpoint-lg)
         margin-bottom: 206px
-    +max-screen($breakpoint-md) 
+    +max-screen($breakpoint-md)
         margin-bottom: 168px
     +max-screen($breakpoint-sm)
         margin-bottom: 88px
-    &::before 
+    &::before
         content: ""
         background-image: url('../assets/images/logo_clouds.png')
         background-size: cover
         background-position: center
-        top: -520px 
+        top: -520px
         bottom: -343px
         width: 100%
         position: absolute
@@ -23,41 +23,42 @@
             top: -26.3vw
             bottom: -17.4vw
         +max-screen($breakpoint-xl)
-            top: -280px 
-            bottom: -185px 
-        +max-screen(1200px) 
+            top: -280px
+            bottom: -185px
+        +max-screen(1200px)
             top: -240px
             bottom: -165px
         +max-screen($breakpoint-lg)
             top: -165px
             bottom: -109px
             background-position: 31%
+
         +max-screen($breakpoint-md)
             top: -120px
             bottom: -79px
         +max-screen($breakpoint-sm)
-            top: -100px 
+            top: -100px
             bottom: -66px
             background-position: 61%
-    &__wrapper 
+    &__wrapper
         padding: 40px 69px 83px
         text-align: center
         position: relative
         z-index: 1
         +max-screen($breakpoint-xl)
-            padding: 32px 69px 56px 
+            padding: 32px 69px 56px
         +max-screen(1200px)
             padding: 20px 54px 42px
         +max-screen($breakpoint-lg)
-            padding: 13px 22px 26px 
+            padding: 13px 22px 26px
         +max-screen($breakpoint-md)
-            padding: 9.5px 16.2px 19.5px 
+            padding: 9.5px 16.2px 19.5px
         +max-screen($breakpoint-sm)
             padding: 8px 14px 16px
-        img 
+        img
             height: 153px
             +max-screen($breakpoint-xl)
-                height: 120px 
+                height: 120px
             +max-screen(1200px)
                 height: 100px
             +max-screen($breakpoint-lg)
@@ -66,3 +67,24 @@
                 height: 35px
             +max-screen($breakpoint-sm)
                 height: 31px
+.page-template-case_studies
+    .logo
+        margin-bottom: 295px
+        +max-screen($breakpoint-lg)
+            margin-bottom: 195px
+        &::before
+            top: -368px
+            bottom: -220px
+            background-position: 65%
+            +max-screen($breakpoint-lg)
+                background-size: 150vw
+                background-repeat: no-repeat
+                top: -328px
+                background-position: 60%
+            +max-screen($breakpoint-md)
+                background-size: 115vw
+                top: -263px
+                background-position: 69%
+            +max-screen($breakpoint-sm)
+                background-size: 200%
+                background-position: 59%

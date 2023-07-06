@@ -1,0 +1,116 @@
+.caseStudies_hero
+    margin-bottom: 311px
+    position: relative
+    padding-top: 55px
+    +max-screen($breakpoint-xl)
+        margin-bottom: 230px
+    +max-screen($breakpoint-lg)
+        padding-top: 70px
+        margin-bottom: 200px
+    +max-screen($breakpoint-ls)
+        margin-bottom: 160px
+    +max-screen($breakpoint-md)
+    +max-screen($breakpoint-sm)
+    &::before
+        content: ""
+        width: 100%
+        top: -125px
+        position: absolute
+        bottom: -220px
+        background-image: url('../assets/images/case_studies_hero_background.png')
+        background-size: cover
+        background-position: center
+        +max-screen(1200px)
+            bottom: -420px
+        +max-screen($breakpoint-lg)
+            background-image: url('../assets/images/landscape_hero_background.png')
+            bottom: -280px
+        +max-screen($breakpoint-md)
+            background-image: url('../assets/images/solutions/Dark_bg_1st_section__tablet_portrait.jpg')
+        +max-screen($breakpoint-sm)
+            background-position: 60%
+            bottom: -250px
+    .container
+        position: relative
+        max-width: 1406px
+        padding-right: 127px
+        +max-screen($breakpoint-xxs)
+            max-width: 90%
+        +max-screen($breakpoint-lg)
+            padding-right: 30px
+        +max-screen($breakpoint-md)
+            max-width: 85%
+            padding-right: 20px
+    &Image
+        padding-right: 25px
+        +max-screen($breakpoint-lg)
+            padding-right: 20px
+        +max-screen($breakpoint-md)
+            order: 2
+        img
+            width: 100%
+            +max-screen($breakpoint-md)
+                width: 46vw
+            +max-screen($breakpoint-sm)
+                display: block
+                width: 50vw
+                margin: 0 auto
+
+    &Content
+        font-size: 32px
+        line-height: 1.4
+        font-weight: 300
+        +max-screen($breakpoint-lg)
+            font-size: 26px
+        +max-screen($breakpoint-md)
+            order: 1
+        &__image
+            margin-bottom: 28px
+            img
+                height: 140px
+                +max-screen($breakpoint-lg)
+                    width: 100%
+                    height: auto
+
+        &__wrapper
+            padding-left: 32px
+            +max-screen($breakpoint-lg)
+                padding-left: 20px
+            +max-screen($breakpoint-md)
+                padding-left: 29%
+            +max-screen($breakpoint-sm)
+                padding-left: 0
+        &__bottomText
+            margin-top: 100px
+            +max-screen($breakpoint-lg)
+                margin-top: 80px
+    &Scroll
+        position: absolute
+        bottom: 140px
+        left: -140px
+        transform: rotate(-90deg)
+        +max-screen($breakpoint-xxs)
+            left: -100px
+        +max-screen($breakpoint-lg)
+            left: -5vw
+        +max-screen($breakpoint-md)
+            bottom: auto
+            top: 40%
+        +max-screen($breakpoint-sm)
+            display: none
+        &::before
+            position: absolute
+            content: ""
+            top: calc(50% - 23px - 14px)
+            left: -70px
+            width: 23px
+            transform: rotate(90deg)
+            height: 73px
+            background-image: url('../assets/images/solutions/scroll_arrow.svg')
+            +max-screen($breakpoint-lg)
+                height: 50px
+                left: -50px
+                width: 18px
+                background-size: contain
+                background-repeat: no-repeat
+                top: calc(50% - 18px - 6px)

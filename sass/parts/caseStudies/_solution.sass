@@ -1,0 +1,366 @@
+.solutionBlock
+    margin-bottom: 222px
+    +max-screen($breakpoint-md)
+        margin-bottom: 422px
+    +max-screen($breakpoint-sm)
+        margin-bottom: 222px
+
+    .container
+        max-width: 100%
+        padding: 0
+    .desk
+        +max-screen($breakpoint-lg)
+            display: none
+    .tablet
+        display: none
+        +max-screen($breakpoint-lg)
+            display: block
+        +max-screen($breakpoint-md)
+            display: none
+
+    &__title
+        position: relative
+        +max-screen($breakpoint-xl)
+            margin-bottom: 30px
+        +max-screen(1100px)
+            margin-bottom: 60px
+    &__image
+        position: relative
+        max-width: 1890px
+        margin: 0 auto
+        +max-screen($breakpoint-xxl)
+            max-width: 90%
+        img:not(.icon)
+            height: 2120px
+            width: 100%
+            +max-screen($breakpoint-xxl)
+                height: auto
+    &__list
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        +max-screen($breakpoint-md)
+            position: relative
+            top: auto
+            left: auto
+    .solutions__column
+        +max-screen($breakpoint-md)
+            position: relative !important
+            top: auto !important
+            left: auto !important
+            right: auto !important
+            bottom: auto !important
+            width: 100%
+            max-width: 477px
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 265px
+            position: relative
+            +max-screen($breakpoint-sm)
+                max-width: 242px
+                margin-bottom: 124px
+        &::before
+            +max-screen($breakpoint-md)
+                position: absolute
+                content: ''
+                width: 211.717px
+                height: 609.15px
+                right: 0
+                top: calc( 50% - 304px )
+                background-size: contain
+                background-repeat: no-repeat
+            +max-screen($breakpoint-sm)
+                width: 107.483px
+                height: 309.248px
+                top: calc( 50% - 154px )
+        &:first-of-type
+            position: absolute
+            top: 81px
+            left: 428px
+            +max-screen($breakpoint-xxl)
+                top: 2%
+                left: 22%
+            +max-screen($breakpoint-xxs)
+            +max-screen(1540px)
+            +max-screen($breakpoint-xl)
+                top: 0%
+                left: 48%
+            +max-screen($breakpoint-xm)
+                top: -1%
+                left: 45%
+            +max-screen(1300px)
+            +max-screen(1200px)
+            +max-screen(1100px)
+                top: -3%
+            +max-screen($breakpoint-lg)
+                top: 8%
+                left: 38%
+            +max-screen($breakpoint-md)
+                margin-top: 251px
+            +max-screen($breakpoint-sm)
+                margin-top: 117px
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_1.svg')
+        &:nth-of-type(2)
+            position: absolute
+            top: 734px
+            left: 516px
+            +max-screen($breakpoint-xxl)
+                top: 35%
+                left: 25%
+            +max-screen($breakpoint-xxs)
+            +max-screen(1540px)
+                left: 23%
+            +max-screen($breakpoint-xl)
+                left: 21%
+            +max-screen($breakpoint-xm)
+            +max-screen(1300px)
+                left: 19%
+            +max-screen(1200px)
+            +max-screen($breakpoint-lg)
+                left: 12%
+                top: 33%
+            +max-screen(990px)
+                left: 10%
+            +max-screen($breakpoint-ls)
+                left: 6%
+
+            .solutions__itemText
+                +max-screen($breakpoint-lg)
+                    max-width: 80%
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_2.svg')
+        &:nth-of-type(3)
+            position: absolute
+            top: 790px
+            right: 350px
+            left: auto
+            +max-screen($breakpoint-xxl)
+                top: 37%
+                right: 17%
+            +max-screen($breakpoint-xxs)
+                top: 35%
+            +max-screen(1540px)
+                right: 12%
+            +max-screen($breakpoint-xl)
+                right: 10%
+            +max-screen($breakpoint-xm)
+                right: 8%
+                top: 32%
+            +max-screen(1300px)
+            +max-screen(1200px)
+                right: 6%
+                top: 34%
+            +max-screen(1100px)
+                top: 32%
+            +max-screen($breakpoint-lg)
+                right: 0
+                top: 35%
+            +max-screen(990px)
+                right: -3%
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_3.svg')
+        &:nth-of-type(4)
+            position: absolute
+            top: 1070px
+            left: 269px
+            +max-screen($breakpoint-xxl)
+                top: 49%
+                left: 8%
+            +max-screen($breakpoint-xxs)
+                top: 46%
+            +max-screen(1540px)
+                left: 6%
+            +max-screen($breakpoint-xl)
+                left: 3%
+            +max-screen($breakpoint-xm)
+                left: 1%
+            +max-screen(1300px)
+                left: -2%
+            +max-screen(1200px)
+            +max-screen($breakpoint-lg)
+                left: 3%
+            +max-screen(990px)
+                top: 44%
+                left: 0
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_4.svg')
+        &:nth-of-type(5)
+            position: absolute
+            bottom: 322px
+            top: auto
+            left: 605px
+            +max-screen($breakpoint-xxl)
+                bottom: 11%
+                left: 28%
+                top: auto
+            +max-screen($breakpoint-xxs)
+                left: 29%
+            +max-screen(1540px)
+            +max-screen($breakpoint-xl)
+                left: 26%
+                bottom: 5%
+            +max-screen($breakpoint-xm)
+            +max-screen(1300px)
+            +max-screen(1200px)
+                left: 24%
+                bottom: 0
+            +max-screen($breakpoint-lg)
+                bottom: 15%
+                left: auto
+                right: 10%
+            +max-screen(990px)
+                right: 7%
+            +max-screen($breakpoint-ls)
+                right: 3%
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_5.svg')
+            .solutions__item
+                +max-screen($breakpoint-md)
+                    background: rgba(12, 134, 157, 0.20) !important
+            .solutions__itemLine
+                +max-screen($breakpoint-md)
+                    background: $turquoise !important
+            .solutions__itemTitle
+                +max-screen($breakpoint-md)
+                    color: $turquoise !important
+            .solutions__itemIcon
+                +max-screen($breakpoint-md)
+                    filter: hue-rotate(256deg)
+        &:nth-of-type(6)
+            position: absolute
+            bottom: 255px
+            right: 235px
+            left: auto
+            top: auto
+            +max-screen($breakpoint-xxl)
+                bottom: 12%
+                right: 12%
+            +max-screen($breakpoint-xxs)
+            +max-screen(1540px)
+            +max-screen($breakpoint-xl)
+                right: 10%
+            +max-screen($breakpoint-xm)
+            +max-screen(1300px)
+                right: 5%
+            +max-screen(1200px)
+            +max-screen(1100px)
+                bottom: 10%
+            +max-screen($breakpoint-lg)
+                bottom: 38%
+            +max-screen(990px)
+                right: 1%
+            +max-screen($breakpoint-ls)
+                right: -3%
+            &::before
+                +max-screen($breakpoint-md)
+                    background-image: url('../assets/images/solutions/sol_6.svg')
+        &:last-of-type
+            +max-screen($breakpoint-md)
+            margin-bottom: 0
+        &:nth-of-type(2n+1)
+            &::before
+                +max-screen($breakpoint-md)
+                    left: 0
+                    right: auto
+            .solutions__item
+                +max-screen($breakpoint-md)
+                    margin-left: auto
+                    margin-right: 20px
+                +max-screen($breakpoint-sm)
+                    margin-right: 10px
+    .solutions__item
+        border-radius: 30px
+        height: auto
+        width: 247px
+        +max-screen($breakpoint-xxs)
+            width: 217px
+        +max-screen(1300px)
+            width: 200px
+        +max-screen(1100px)
+            width: 187px
+        +max-screen($breakpoint-lg)
+            width: 273px
+            display: flex
+            border-radius: 20px
+        +max-screen($breakpoint-ls)
+            width: 253px
+        +max-screen($breakpoint-md)
+            width: 173px
+            border-radius: 15px
+            flex-direction: column
+            margin-left: 20px
+        +max-screen($breakpoint-sm)
+            width: 92px
+            margin-left: 10px
+        &.blue
+            background: rgba(12, 134, 157, 0.20)
+            padding: 37.599px 30.348px 0px 30.348px
+            +max-screen($breakpoint-xxl)
+                padding: 29.792px 16.008px 16.096px 19.992px
+            +max-screen($breakpoint-xxs)
+                padding: 20px 15px
+            +max-screen($breakpoint-lg)
+                padding: 20px
+            +max-screen($breakpoint-sm)
+                padding: 10.153px
+        &.violet
+            background: rgba(112, 47, 138, 0.20)
+            padding: 29.792px 16.008px 16.096px 19.992px
+            +max-screen($breakpoint-xxs)
+                padding: 20px 15px
+            +max-screen($breakpoint-lg)
+                padding: 20px
+            +max-screen($breakpoint-sm)
+                padding: 10.153px
+        &Icon
+            img
+                display: block
+                margin: 0 auto
+                width: 60px
+                +max-screen($breakpoint-xxl)
+                    width: 45px
+                +max-screen(1300px)
+                    width: 40px
+                +max-screen($breakpoint-sm)
+                    width: 20px
+        &Line
+            width: 100%
+            height: 2px
+            margin: 20px 0
+            +max-screen($breakpoint-xxl)
+                margin: 15px 0
+            +max-screen($breakpoint-lg)
+                height: auto
+                max-width: 2px
+                margin: 0 11px
+            +max-screen($breakpoint-md)
+                max-width: none
+                height: 2px
+                margin: 20px 0
+            +max-screen($breakpoint-sm)
+                margin: 10px 0
+                height: 1px
+            &.blue
+                background: $turquoise
+            &.violet
+                background: $s-pink
+        &Content
+            padding: 0 0 20px
+            +max-screen($breakpoint-xxl)
+                padding: 0 0 25px
+            +max-screen($breakpoint-xxs)
+                padding: 0
+            +max-screen($breakpoint-md)
+                padding: 0 0 20px
+            +max-screen($breakpoint-sm)
+                padding: 0 0 10px
+        &Title
+            margin-bottom: 4px

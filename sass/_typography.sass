@@ -1,5 +1,5 @@
 html, body
-  -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch
 
 body
     font-family: $font-family-base
@@ -19,10 +19,9 @@ body
     //     color: $color-light
     //     background: transparent
 
-
 .text
     &--style
-        
+
     &--default,&--default *
         font-family: $font-family-base
         font-size: $default-font-size
@@ -34,18 +33,18 @@ body
         text-transform: uppercase !important
     &--transform--none
         text-transform: none !important
-        
+
     &--left
         text-align: left
     &--right
         text-align: right
     &--center
         text-align: center
-        
+
     &--color
         &--white
             &,& *, &.content-block *
-                color: #fff
+                color: $white
         &--light
             &,& *
                 color: $color-light
@@ -58,6 +57,15 @@ body
         &--default
             &,& *
                 color: $default-text-color
+        &--blue
+            &,& *
+                color: $turquoise
+        &--violet
+            &,& *
+                color: $light-lila
+        &--cian
+            &,& *
+                color: $cian
     &--columns--2
         column-count: 2
 
@@ -83,6 +91,35 @@ body
         &--18
             font-size: 18px !important
             line-height: 1.5 !important
+        &--20
+            font-size: 20px !important
+            line-height: 1.4 !important
+            +max-screen($breakpoint-xxl)
+                font-size: 18px !important
+                line-height: 1.5 !important
+            +max-screen(1300px)
+                font-size: 16px !important
+                line-height: 1.2 !important
+            +max-screen($breakpoint-lg)
+                font-size: 14px!important
+                &.solutions__itemText
+                    font-size: 10px!important
+            +max-screen($breakpoint-sm)
+                &.solutions__itemText
+                    font-size: 7px!important
+                &.solutions__itemTitle
+                    font-size: 8px!important
+        &--24
+            font-size: 24px !important
+            line-height: 140% !important
+            +max-screen($breakpoint-xxl)
+                font-size: 20px !important
+                line-height: 140% !important
+            +max-screen($breakpoint-lg)
+                font-size: 18px !important
+                line-height: 140% !important
+            +max-screen($breakpoint-sm)
+                font-size: 16px !important
         &--25
             font-size: 25px !important
             line-height: 30px !important
@@ -95,6 +132,12 @@ body
             +max-screen($breakpoint-sm)
                 font-size: 35px !important
                 line-height: 35px !important
+        &--70
+            font-size: 70px !important
+            line-height: 105% !important
+            +max-screen($breakpoint-xl)
+                font-size: 52px
+                line-height: 105%
 
     &--outline
         color: transparent
@@ -103,7 +146,6 @@ body
             color: transparent
         .text-color-white &
             -webkit-text-stroke: 1px #fff
-
 
 .font
     &--primary
@@ -132,7 +174,6 @@ body
         &--900 *
             font-weight: 900
 
-
 .p1
     font-size: 15px
     line-height: normal
@@ -147,51 +188,53 @@ body
     +max-screen($breakpoint-lg)
     +max-screen($breakpoint-sm)
 
-
 h1,.h1
     font-size: 70px
     line-height: 70px
-    font-weight: 900
+    font-weight: 300
     +max-screen($breakpoint-xl)
+        font-size: 52px
+        line-height: 105%
     +max-screen($breakpoint-lg)
-        font-size: 60px
-        line-height: 60px
+        // font-size: 60px
+        // line-height: 60px
     +max-screen($breakpoint-md)
-        font-size: 55px
-        line-height: 55px
+        // font-size: 55px
+        // line-height: 55px
     +max-screen($breakpoint-sm)
-        font-size: calcFluidSize(35, 55, 320, $breakpoint-sm)
-        line-height: calcFluidSize(42, 60, 320, $breakpoint-sm)
+        font-size: 32px
+        // font-size: calcFluidSize(35, 55, 320, $breakpoint-sm)
+        // line-height: calcFluidSize(42, 60, 320, $breakpoint-sm)
 
 h2,.h2
-    font-size: 52px
+    font-size: 50px
     line-height: normal
-    font-weight: 900
+    font-weight: 300
     +max-screen($breakpoint-lg)
         font-size: 42px
-    +max-screen($breakpoint-md)	
-        font-size: 42px
-    +max-screen($breakpoint-sm)	
-        font-size: 34px
+    +max-screen($breakpoint-md)
+        font-size: 38px
+    +max-screen($breakpoint-sm)
+        font-size: 23px
 
 h3,.h3
     font-size: 25px
     font-weight: 700
     +max-screen($breakpoint-xl)
-    +max-screen($breakpoint-md)	
-        
+    +max-screen($breakpoint-md)
+    +max-screen($breakpoint-sm)
+        font-size: 32px
+
 h4,.h4
     font-size: 20px
     font-weight: 700
     line-height: normal
     +max-screen($breakpoint-xl)
-    +max-screen($breakpoint-md)	
+    +max-screen($breakpoint-md)
 
 .h5,h5
-    
 
 h6,.h6
-        
 
 .link-underline
     position: relative
@@ -225,10 +268,9 @@ h6,.h6
             margin-right: 20px
             margin-top: 6px
 
-
-body:not(.page-template-template-api-book)
-    h1, .h1, h2, .h2
-        text-transform: uppercase
+// body:not(.page-template-template-api-book)
+//     h1, .h1, h2, .h2
+//         text-transform: uppercase
 
 .content-block
     p,h1,h2,h3,h4,h5,h6
@@ -247,12 +289,14 @@ body:not(.page-template-template-api-book)
         padding-bottom: 10px
         &:nth-last-child(1)
             margin-bottom: 0
-    
+
     h1,h2,h3,h4,h5
         //text-transform: uppercase
     p,ul,ol
     a
-        text-decoration: underline
+        // text-decoration: underline
+        color: #d866fd
+        font-weight: bold
         &:not(.button)
             transition: 0.3s
             &:hover
@@ -289,7 +333,7 @@ body:not(.page-template-template-api-book)
             &:before
                 content: ''
                 background-color: $color-light
-                width: 7px 
+                width: 7px
                 height: 7px
                 min-width: 7px
                 border-radius: 50%
