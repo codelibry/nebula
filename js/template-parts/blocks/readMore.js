@@ -1,9 +1,12 @@
-import $ from 'jquery';
+import $ from "jquery";
 
-function readMore(){
-    $('.guidelines__readMore').click(function(){
-        $(this).parent().find('.guidelines__testimonialText').toggleClass('opened');
-    });
+function readMore() {
+  $(".caseStudies__readMore").click(function () {
+    $(this)
+      .parent()
+      .find(".caseStudies__testimonialText")
+      .toggleClass("opened");
+  });
 }
 
-export{readMore};
+export { readMore };

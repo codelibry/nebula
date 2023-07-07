@@ -206,6 +206,7 @@ $list = get_field('case_studies_list');
                         <div class="caseStudies__sliderItem__text text--size--24 content-block">
                             <?php echo $main_content ?>
                         </div>
+                        <a class="caseStudies__readMore" href="#">Read more...</a>
                         <?php if ($btn) : ?>
                             <div class="caseStudies__sliderItem__button">
                                 <a href="<?php echo $btn['url']; ?>" class="btn btn--turquoise" target="<?php echo $btn['target']; ?>">

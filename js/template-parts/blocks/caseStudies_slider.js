@@ -16,7 +16,7 @@ function slider() {
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             arrows: false,
           },
@@ -26,6 +26,16 @@ function slider() {
 
     slider.on("init", function () {
       $(window).trigger("heightChanges");
+    });
+
+    $(".caseStudies__readMore").click(function () {
+      event.preventDefault();
+      console.log("click");
+      $(this)
+        .parent()
+        .find(".caseStudies__sliderItem__text")
+        .toggleClass("opened");
+      $(this).hide();
     });
   });
 }
