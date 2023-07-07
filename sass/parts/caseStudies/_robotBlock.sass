@@ -5,6 +5,12 @@
         margin-bottom: 232px
     +max-screen($breakpoint-md)
         margin-bottom: 332px
+    +max-screen($breakpoint-sm)
+        background-color: $white
+    +max-screen(505px)
+        margin-bottom: 282px
+    +max-screen(425px)
+        margin-bottom: 232px
     &::before
         content: ""
         background-image: url('../assets/images/transformation_block_background.png')
@@ -22,8 +28,31 @@
             background-size: 400vw
         +max-screen($breakpoint-md)
             background-size: cover
+        +max-screen($breakpoint-sm)
+            background-image: url('../assets/images/solutions/White_Clouds_bg_before_footer.png')
+            background-size: 100%
+            top: -1389px
         .page-template-case_studies &
             z-index: 1
+    &::after
+        +max-screen($breakpoint-sm)
+            content: ""
+            background-image: url('../assets/images/solutions/White_clouds_middle_section.png')
+            left: 0
+            right: 0
+            top: 25%
+            bottom: -530px
+            position: absolute
+            background-position: center
+            background-size: 100%
+            background-repeat: no-repeat
+            z-index: 1
+        +max-screen(505px)
+            top: 70vw
+        +max-screen(425px)
+            top: 100vw
+        +max-screen(390px)
+            top: 130vw
     .container
         // max-width: 90%
         // max-width: 1475px
@@ -60,7 +89,7 @@
                 left: -27.5%
             +max-screen($breakpoint-sm)
                 top: auto
-                bottom: -140px
+                bottom: -165px
                 left: calc(50% - 69px)
                 transform: none
             img
