@@ -59,10 +59,10 @@
             bottom: -150px
         +max-screen($breakpoint-sm)
             background-size: 140vw
-            bottom: -170px
+            bottom: -30px
         +max-screen(475px)
             background-size: 400%
-            bottom: -350px
+            bottom: -250px
             background-position: bottom
     &Title
 
@@ -118,7 +118,7 @@
         background: $space-lila
         &Image
             position: absolute
-            top: 50%
+            top: calc(50% + 100px)
             transform: translateY(-50%)
             right: 0
             +max-screen($breakpoint-md)
@@ -131,6 +131,8 @@
                 width: 520px
                 +max-screen($breakpoint-xl)
                     width: 385px
+                +max-screen($breakpoint-lg)
+                    width: 377px
                 +max-screen($breakpoint-md)
                     width: 254.704px
                 +max-screen($breakpoint-sm)
@@ -152,6 +154,8 @@
             +max-screen($breakpoint-md)
                 padding-right: 0
                 margin-bottom: 225px
+            +max-screen($breakpoint-sm)
+                margin-bottom: 190px
 
 .challenge
     &__block
@@ -160,6 +164,8 @@
             bottom: 0
             position: absolute
             right: 43px
+            +max-screen($breakpoint-lg)
+                bottom: 60px
             +max-screen($breakpoint-md)
                 top: -170px
                 bottom: auto
@@ -171,6 +177,8 @@
                 width: 450px
                 +max-screen($breakpoint-xl)
                     width: 385px
+                +max-screen($breakpoint-lg)
+                    width: 327px
                 +max-screen($breakpoint-md)
                     width: 220.995px
                 +max-screen($breakpoint-sm)
@@ -192,3 +200,6 @@
             +max-screen($breakpoint-md)
                 padding-right: 0
                 margin-bottom: 209px
+            +max-screen($breakpoint-sm)
+                margin-bottom: 0
+                padding-bottom: 235px

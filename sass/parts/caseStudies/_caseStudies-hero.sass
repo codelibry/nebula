@@ -28,7 +28,8 @@
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/solutions/Dark_bg_1st_section__tablet_portrait.jpg')
         +max-screen($breakpoint-sm)
-            background-position: 60%
+            background-position: 50%
+            background-image: url('../assets/images/solutions/Dark_bg_1st_section__mobile.jpg')
             bottom: -250px
     .container
         position: relative
@@ -50,8 +51,14 @@
             order: 2
         img
             width: 100%
+            +max-screen($breakpoint-lg)
+                max-width: 293.616px
+                margin-left: auto
+                display: block
             +max-screen($breakpoint-md)
                 width: 46vw
+                max-width: none
+                margin-left: 0
             +max-screen($breakpoint-sm)
                 display: block
                 width: 50vw
@@ -85,6 +92,9 @@
             margin-top: 100px
             +max-screen($breakpoint-lg)
                 margin-top: 80px
+            br
+                +max-screen($breakpoint-md)
+                    display: none
     &Scroll
         position: absolute
         bottom: 170px
@@ -97,6 +107,7 @@
         +max-screen($breakpoint-md)
             bottom: auto
             top: 40%
+            font-size: 16px !important
         +max-screen($breakpoint-sm)
             display: none
         &::before

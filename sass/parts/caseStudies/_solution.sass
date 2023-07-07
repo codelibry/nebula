@@ -15,17 +15,25 @@
         background-size: cover
         background-position: center
         +max-screen(1200px)
-
         +max-screen($breakpoint-lg)
             background-image: url('../assets/images/solutions/Dark_gradient_bg__tablet.jpg')
             bottom: -3720px
         +max-screen($breakpoint-md)
 
         +max-screen($breakpoint-sm)
-
+            background-image: url('../assets/images/solutions/Dark_gradient_bg__mobile.jpg')
+            bottom: -4120px
+        +max-screen(375px)
+            background-position: bottom
+            bottom: -4420px
     .container
         max-width: 100%
         padding: 0
+        +max-screen($breakpoint-sm)
+            top: -100px
+            position: relative
+        +max-screen(475px)
+            top: auto
     .desk
         +max-screen($breakpoint-lg)
             display: none
