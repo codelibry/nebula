@@ -78,6 +78,12 @@
             top: -368px
             bottom: -220px
             background-position: 65%
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url('../assets/images/Turqiouse_clouds.png')
+            +max-screen(2560px)
+                background-size: cover
+                background-image: url('../assets/images/logo_clouds.png')
             +max-screen($breakpoint-lg)
                 background-size: 150vw
                 background-repeat: no-repeat
