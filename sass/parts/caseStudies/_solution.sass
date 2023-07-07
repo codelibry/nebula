@@ -35,6 +35,7 @@
         +max-screen(475px)
             top: auto
     .desk
+
         +max-screen($breakpoint-lg)
             display: none
     .tablet
@@ -58,8 +59,11 @@
             max-width: 90%
         img:not(.icon)
             height: 2120px
-            width: 100%
+            width: 105%
+            +max-screen(1920px)
+                width: 105%
             +max-screen($breakpoint-xxl)
+                width: 100%
                 height: auto
     &__list
         position: absolute
@@ -104,7 +108,7 @@
         &:first-of-type
             position: absolute
             top: 81px
-            left: 428px
+            left: 448px
             +max-screen($breakpoint-xxl)
                 top: 2%
                 left: 22%
