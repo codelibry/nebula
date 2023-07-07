@@ -161,6 +161,18 @@
             .solutions__itemText
                 +max-screen($breakpoint-lg)
                     max-width: 80%
+            .solutions__item
+                +max-screen($breakpoint-md)
+                    background: rgba(112, 47, 138, 0.20) !important
+            .solutions__itemLine
+                +max-screen($breakpoint-md)
+                    background: $s-pink !important
+            .solutions__itemTitle
+                +max-screen($breakpoint-md)
+                    color: $s-pink !important
+            .solutions__itemIcon
+                +max-screen($breakpoint-md)
+                    filter: hue-rotate(90deg)
             &::before
                 +max-screen($breakpoint-md)
                     background-image: url('../assets/images/solutions/sol_2.svg')

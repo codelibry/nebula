@@ -27,7 +27,7 @@
         +max-screen($breakpoint-ls)
             top: -380px
         +max-screen($breakpoint-md)
-            top: -18%
+            top: -20%
         +max-screen(660px)
             top: -30%
             background-size: 200vw
@@ -112,7 +112,8 @@
     .container
         position: relative
         z-index: 2
-        max-width: 1600px
+        +min-screen($breakpoint-xxl)
+            max-width: 1600px
 .pain
     &__block
         background: $space-lila
