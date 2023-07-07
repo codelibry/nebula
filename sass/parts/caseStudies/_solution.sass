@@ -1,9 +1,26 @@
 .solutionBlock
+    position: relative
     margin-bottom: 222px
     +max-screen($breakpoint-md)
         margin-bottom: 422px
     +max-screen($breakpoint-sm)
         margin-bottom: 222px
+    &::before
+        content: ""
+        width: 100%
+        top: -225px
+        position: absolute
+        bottom: -3520px
+        background-image: url('../assets/images/solutions/Dark_gradient_bg.jpg')
+        background-size: cover
+        background-position: center
+        +max-screen(1200px)
+
+        +max-screen($breakpoint-lg)
+
+        +max-screen($breakpoint-md)
+
+        +max-screen($breakpoint-sm)
 
     .container
         max-width: 100%
