@@ -119,6 +119,8 @@
             padding-right: 11px
         p
             margin-bottom: 20px
+            +max-screen($breakpoint-md)
+                margin-bottom: 10px
             &:last-child
                 margin-bottom: 0
         li
@@ -127,6 +129,8 @@
             margin-bottom: 20px
             +max-screen($breakpoint-lg)
                 padding-left: 15.5px
+            +max-screen($breakpoint-md)
+                margin-bottom: 10px
             +max-screen($breakpoint-sm)
                 padding-left: 15px
                 br
