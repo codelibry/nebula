@@ -1,11 +1,13 @@
 import $ from "jquery";
 
 function readMore() {
-  $(".caseStudies__readMore").click(function () {
-    $(this)
-      .parent()
-      .find(".caseStudies__testimonialText")
-      .toggleClass("opened");
+  $(".guidelines").each(function () {
+    $(".guidelines__readMore").click(function () {
+      $(this)
+        .parent()
+        .find(".guidelines__testimonialText")
+        .toggleClass("opened");
+    });
   });
 }
 
