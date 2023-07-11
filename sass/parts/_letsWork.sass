@@ -1,44 +1,77 @@
-.letsWork 
-    margin-bottom: 305px
+.letsWork
+    padding-bottom: 305px
     position: relative
     +max-screen($breakpoint-lg)
-        margin-bottom: 206px
+        padding-bottom: 206px
     +max-screen($breakpoint-md)
-        margin-bottom: 155px
+        padding-bottom: 155px
     +max-screen($breakpoint-sm)
-        margin-bottom: 137px
-    &::before 
+        padding-bottom: 137px
+    &::before
         content: ""
-        bottom: -175px 
-        top: -404px
-        background-image: url('../assets/images/lets_talk_bg.png')
-        background-size: cover
-        background-position: center
-        background-repeat: no-repeat
         position: absolute
-        width: 100%
         left: 0
-        +max-screen($breakpoint-lg)
-            background-image: url('../assets/images/landscape_lets_work_background.png')
-            top: -302px
-            bottom: -189px
-        +max-screen($breakpoint-md)
-            background-image: url('../assets/images/lets_work_tablet_background.png')
-            top: -131px 
-            bottom: -100px
-        +max-screen($breakpoint-md)
-            background-image: url('../assets/images/lets_work_mobile_background.png')
-            top: -121px 
-            bottom: -115px 
-    .container 
-        max-width: 76.8%
+        right: 0
+        background: #1B233C
+        top: -475px
+        bottom: 10px
+        +max-screen($breakpoint-sm)
+            top: -100px
+            bottom: -120px
+    .front_dark_bg
+        position: absolute
+        content: ""
+        width: 100%
+        height: 400%
+        top: -200%
+        bottom: -500px
+        left: 0
+        background: linear-gradient(30deg,rgba(12,134,157,.65),rgba(12,134,157,0) 42.96%)
+        z-index: 0
+
+        &::after
+            position: absolute
+            content: ""
+            width: 50%
+            height: 200%
+            top: -100%
+            bottom: -500px
+            right: 0
+            z-index: 0
+            background: linear-gradient(283deg, #702F8A 0%, rgba(112, 47, 138, 0.00) 42.96%)
+
+    // &::before
+    //     content: ""
+    //     bottom: -175px
+    //     top: -404px
+    //     background-image: url('../assets/images/lets_talk_bg.png')
+    //     background-size: cover
+    //     background-position: center
+    //     background-repeat: no-repeat
+    //     position: absolute
+    //     width: 100%
+    //     left: 0
+    //     +max-screen($breakpoint-lg)
+    //         background-image: url('../assets/images/landscape_lets_work_background.png')
+    //         top: -302px
+    //         bottom: -189px
+    //     +max-screen($breakpoint-md)
+    //         background-image: url('../assets/images/lets_work_tablet_background.png')
+    //         top: -131px
+    //         bottom: -100px
+    //     +max-screen($breakpoint-md)
+    //         background-image: url('../assets/images/lets_work_mobile_background.png')
+    //         top: -121px
+    //         bottom: -115px
+    .container
+        // max-width: 76.8%
         position: relative
         z-index: 1
-        +max-screen($breakpoint-lg)
-            max-width: 830px
-        +max-screen($breakpoint-md)
-            max-width: 610px
-    &__title 
+        // +max-screen($breakpoint-lg)
+        //     max-width: 830px
+        // +max-screen($breakpoint-md)
+        //     max-width: 610px
+    &__title
         font-size: 70px
         line-height: 1.05
         margin-bottom: 40px
@@ -52,7 +85,7 @@
         +max-screen($breakpoint-sm)
             font-size: 32px
             margin-bottom: 20px
-    &__text 
+    &__text
         font-size: 24px
         line-height: 1.4
         font-weight: 300
@@ -61,11 +94,11 @@
         +max-screen($breakpoint-sm)
             font-size: 16px
             line-height: 1.45
-        p 
+        p
             margin-bottom: 22px
             &:last-child
                 margin-bottom: 0
-    &__button 
+    &__button
         margin-top: 112px
         text-align: center
         +max-screen($breakpoint-lg)
