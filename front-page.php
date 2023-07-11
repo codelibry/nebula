@@ -33,7 +33,7 @@ $title = get_field('guidelines_title');
 $text = get_field('guidelines_text');
 $button = get_field('guidelines_button');
 $testimonial_image = get_field('guidelines_testimonial_image');
-$testimonial_title = get_field('guidelines_testimonial_title');
+$testimonial_title = get_field('guidelines_testimonial_title', false, false);
 $testimonial_text = get_field('guidelines_testimonial_text');
 $testimonial_owner = get_field('guidelines_testimonial_owner');
 ?>
@@ -42,7 +42,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
         <?php if ($title || $text) : ?>
             <div class="guidelines__top">
                 <?php if ($title) : ?>
-                    <div class="guidelines__title"><?php echo $title; ?></div>
+                    <h2 class="guidelines__title"><?php echo $title; ?></h2>
                 <?php endif; ?>
                 <?php if ($text) : ?>
                     <div class="guidelines__text"><?php echo $text; ?></div>
@@ -55,7 +55,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
                 <?php endif; ?>
                 <?php if ($testimonial_title) : ?>
-                    <div class="guidelines__testimonialTitle"><?php echo $testimonial_title; ?></div>
+                    <h2 class="guidelines__testimonialTitle"><?php echo $testimonial_title; ?></h2>
                 <?php endif; ?>
                 <?php if ($testimonial_text) : ?>
                     <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
@@ -76,7 +76,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
     </div>
 </section>
 <?php
-$title = get_field('about_services_title');
+$title = get_field('about_services_title', false, false);
 $text = get_field('about_services_text');
 $under_cards_text = get_field('under_cards_text');
 $button = get_field('about_services_btn');
@@ -87,7 +87,7 @@ $button = get_field('about_services_btn');
         <?php if ($title || $text) : ?>
             <div class="services__top">
                 <?php if ($title) : ?>
-                    <div class="services__topTitle"><?php echo $title; ?></div>
+                    <h2 class="services__topTitle"><?php echo $title; ?></h2>
                 <?php endif; ?>
                 <?php if ($text) : ?>
                     <div class="services__topText">
@@ -110,7 +110,7 @@ $button = get_field('about_services_btn');
                                 <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
                             <?php endif; ?>
                             <?php if ($title) : ?>
-                                <div class="services__cardsItem__title"><?php echo $title; ?></div>
+                                <h3 class="services__cardsItem__title font--weight--400"><?php echo $title; ?></h3>
                             <?php endif; ?>
                             <?php if ($text) : ?>
                                 <div class="services__cardsItem__text"><?php echo $text; ?></div>
@@ -193,7 +193,7 @@ $solution_tablet_image = $solution['tablet_image'];
     </div>
 </section>
 <?php
-$title = get_field('lets_work_title');
+$title = get_field('lets_work_title', false, false);
 $text = get_field('lets_work_text');
 $button = get_field('lets_work_button');
 ?>
@@ -201,7 +201,7 @@ $button = get_field('lets_work_button');
     <div class="front_dark_bg"></div>
     <div class="container">
         <?php if ($title) : ?>
-            <div class="letsWork__title"><?php echo $title; ?></div>
+            <h2 class="letsWork__title"><?php echo $title; ?></h2>
         <?php endif; ?>
         <?php if ($text) : ?>
             <div class="letsWork__text"><?php echo $text; ?></div>
@@ -215,14 +215,14 @@ $button = get_field('lets_work_button');
 </section>
 
 <?php
-$title = get_field('processes_title');
+$title = get_field('processes_title', false, false);
 $button = get_field('processes_button');
 $image = get_field('processes_image');
 ?>
 <section class="processes">
     <div class="container">
         <?php if ($title) : ?>
-            <div class="processes__title"><?php echo $title; ?></div>
+            <h2 class="processes__title"><?php echo $title; ?></h2>
         <?php endif; ?>
         <div class="processes__content">
             <?php if (have_rows('processes')) : ?>
@@ -241,7 +241,7 @@ $image = get_field('processes_image');
                                 <?php if ($title || $text) : ?>
                                     <div class="processes__itemContent">
                                         <?php if ($title) : ?>
-                                            <div class="processes__itemTitle"><?php echo $title; ?></div>
+                                            <h3 class="processes__itemTitle text--uppercase"><?php echo $title; ?></h3>
                                         <?php endif; ?>
                                         <?php if ($text) : ?>
                                             <div class="processes__itemText"><?php echo $text; ?></div>
