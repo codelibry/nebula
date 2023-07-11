@@ -16,10 +16,10 @@
     +max-screen($breakpoint-sm)
         margin-bottom: 0
         padding-bottom: 104px
-    &::before 
+    &::before
         content: ""
         background-image: url('../assets/images/White_Clouds_bg_before_footer.png')
-        background-size: cover 
+        background-size: cover
         background-position: center
         left: 0
         width: 100%
@@ -39,18 +39,18 @@
     .container
         position: relative
         z-index: 1
-        max-width: 1420px 
+        max-width: 1420px
         +max-screen(1660px)
             max-width: 90%
         +max-screen($breakpoint-lg)
             max-width: 872px
         +max-screen($breakpoint-md)
-            max-width: 706px 
+            max-width: 706px
             padding-right: 39px
         +max-screen($breakpoint-sm)
-            max-width: 405px 
+            max-width: 405px
             padding-right: 20px
-    &__title 
+    &__title
         font-size: 70px
         line-height: 1.05
         margin-bottom: 12px
@@ -72,27 +72,27 @@
             text-align: left
             margin-bottom: 20px
             padding-left: 0
-    &__list 
+    &__list
         +max-screen($breakpoint-lg)
             padding-right: 20px
-            width: 275px 
+            width: 275px
             padding-top: 47px
         +max-screen($breakpoint-md)
             padding-top: 100px
             padding-right: 0
             width: 100%
         +max-screen($breakpoint-sm)
-            max-width: 360px 
+            max-width: 360px
             margin: auto
             padding-top: 45px
     &__content
         +max-screen($breakpoint-lg)
-            display: flex 
+            display: flex
             justify-content: flex-end
         +max-screen($breakpoint-md)
             display: block
-    &__item 
-        display: flex 
+    &__item
+        display: flex
         &Content
             margin-left: 33px
             padding-top: 23px
@@ -102,15 +102,15 @@
                 margin-left: 17px
                 padding-top: 10px
                 max-width: calc( 100% - 33px )
-        &Number 
+        &Number
             font-size: 100px
             line-height: 1
             color: #D866FD
             position: relative
-            width: 42px 
-            display: flex 
+            width: 42px
+            display: flex
             justify-content: flex-end
-            min-width: 42px 
+            min-width: 42px
             font-weight: 700
             +max-screen(1200px)
                 font-size: 80px
@@ -120,21 +120,21 @@
                 font-size: 36px
                 width: 16px
                 min-width: 16px
-            &::after 
+            &::after
                 content: ""
                 position: absolute
-                right: -15px 
-                top: 23px 
-                width: 2px 
+                right: -15px
+                top: 23px
+                width: 2px
                 bottom: 0
                 background: #D866FD
-                border-radius: 2px 
+                border-radius: 2px
                 +max-screen($breakpoint-lg)
                     right: -12px
                 +max-screen($breakpoint-sm)
                     right: -8px
                     top: 8px
-        &Title 
+        &Title
             color: #D866FD
             font-weight: 700
             +max-screen(1200px)
@@ -142,7 +142,7 @@
             +max-screen($breakpoint-sm)
                 font-size: 10px
                 line-height: 1.4
-        &Text 
+        &Text
             color: #141F38
             font-size: 20px
             line-height: 1.4
@@ -152,65 +152,65 @@
             +max-screen($breakpoint-lg)
                 font-size: 10px
                 margin-top: 10px
-                br 
+                br
                     display: none
             +max-screen($breakpoint-sm)
                 font-size: 8px
                 line-height: 1.4
                 margin-top: 2.5px
-                br 
+                br
                     display: none
     &__image
         position: absolute
         top: 47%
         transform: translateY(-50%)
-        left: 40px 
+        left: 40px
         width: 80%
         background-image: url('../assets/images/processes_image.png')
         background-size: contain
-        background-position: center 
+        background-position: center
         background-repeat: no-repeat
         height: 100%
         +max-screen($breakpoint-lg)
-            background-image: url('../assets/images/landscape_processes_image.png')
+            background-image: url('../assets/images/landscape_processes_image__tablet.svg')
             width: calc( 100% - 352px)
             left: 0
-            top: 42px 
-            bottom: 132px 
+            top: 42px
+            bottom: 132px
             height: calc( 100% - 174px )
             transform: none
         +max-screen($breakpoint-md)
             background-image: url('../assets/images/processes_tablet_image.png')
-            top: 94px 
-            bottom: 118px 
+            top: 94px
+            bottom: 118px
             height: calc( 100% - 212px )
             transform: none
             left: 50%
             transform: translateX(-50%)
             width: 100%
-        +max-screen($breakpoint-sm) 
+        +max-screen($breakpoint-sm)
             width: 55%
-            top: 54px 
+            top: 54px
             transform: translateX(-50%)
             left: 50%
-            bottom: 128px 
+            bottom: 128px
             height: calc( 100% - 182px )
             background-image: url('../assets/images/mobile_process_image.png')
         +max-screen(450px)
             left: 53%
         img
             width: 100%
-            +max-screen($breakpoint-sm) 
+            +max-screen($breakpoint-sm)
                 max-height: 100%
                 object-fit: contain
-        &.desktop 
+        &.desktop
             +max-screen($breakpoint-sm)
                 display: none
-        &.mobile 
-            display: none 
+        &.mobile
+            display: none
             +max-screen($breakpoint-sm)
-                display: block 
-    &__button 
+                display: block
+    &__button
         margin-top: 35px
         text-align: center
         +max-screen($breakpoint-lg)
@@ -219,13 +219,13 @@
             margin-top: 97px
         +max-screen($breakpoint-sm)
             margin-top: 77px
-    &__column 
+    &__column
         +max-screen($breakpoint-sm)
-            display: flex 
+            display: flex
         &:nth-child(1)
             .processes__item
                 max-width: 355px
-                &Number 
+                &Number
                     +max-screen($breakpoint-md)
                         width: 29px
                         min-width: 29px
@@ -246,7 +246,7 @@
                     +max-screen($breakpoint-sm)
                         margin-bottom: 0
                         width: 40%
-                    &::after 
+                    &::after
                         +max-screen($breakpoint-sm)
                             content: ""
                             padding-bottom: calc( 100% - 16px )
@@ -255,14 +255,14 @@
                 &:nth-child(2)
                     +max-screen($breakpoint-md)
                         margin-left: auto
-                        
+
                     +max-screen($breakpoint-sm)
                         margin-top: auto
                         width: 44.5%
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #CC03DF
-                    .processes__itemNumber::after 
+                    .processes__itemNumber::after
                         background: #CC03DF
         &:nth-child(2)
             margin-top: 50px
@@ -281,10 +281,10 @@
             .processes__itemTitle,
             .processes__itemNumber
                 color: #9A3BA3
-            .processes__itemNumber::after 
+            .processes__itemNumber::after
                 background: #9A3BA3
         &:nth-child(3)
-            display: flex 
+            display: flex
             flex-direction: column-reverse
             +max-screen($breakpoint-lg)
                 flex-direction: column
@@ -311,7 +311,7 @@
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #702F8A
-                    .processes__itemNumber::after 
+                    .processes__itemNumber::after
                         background: #702F8A
                 &:nth-child(2)
                     margin-left: auto
@@ -328,5 +328,5 @@
                     .processes__itemTitle,
                     .processes__itemNumber
                         color: #372C4E
-                    .processes__itemNumber::after 
+                    .processes__itemNumber::after
                         background: #372C4E
