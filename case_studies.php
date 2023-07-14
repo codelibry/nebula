@@ -94,13 +94,12 @@ $solutions_list = get_field('solutions_list'); ?>
         <div class="solutionBlock__image">
             <img class="desk" src="<?php echo get_template_directory_uri() . '/assets/images/solutions/solution_image_desk.svg' ?>" alt="">
             <img class="tablet" src="<?php echo get_template_directory_uri() . '/assets/images/solutions/solution_image_tablet.svg' ?>" alt="">
-            <!-- <img src="<?php echo get_template_directory_uri() . '/assets/images/solution_image.png' ?>" alt=""> -->
             <div class="solutionBlock__list">
                 <?php while (have_rows('solutions_list')) : the_row();
                     $title_inner = get_sub_field('subtitle');
                     $text = get_sub_field('content');
                     $icon = get_sub_field('icon');
-                    $color = get_sub_field('color'); ?>
+                    $color = get_sub_field('choose_color'); ?>
                     <div class="solutions__column">
                         <div class="solutions__item <?php echo $color ?>">
                             <div class="solutions__itemIcon">

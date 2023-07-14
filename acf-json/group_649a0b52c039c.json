@@ -361,25 +361,27 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_64a43ebb14ac5",
-                    "label": "Color",
-                    "name": "color",
+                    "key": "field_64b155e662fe6",
+                    "label": "Choose color",
+                    "name": "choose_color",
                     "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "choices": {
                         "blue": "Blue",
-                        "violet": "Violet"
+                        "violet": "Violet",
+                        "violet_lite": "S-pink",
+                        "violet_middle": "Violet middle"
                     },
                     "allow_null": 0,
                     "other_choice": 0,
-                    "default_value": "violet",
+                    "default_value": "",
                     "layout": "vertical",
                     "return_format": "value",
                     "save_other_choice": 0
@@ -780,5 +782,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1688551913
+    "modified": 1689343636
 }

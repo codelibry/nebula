@@ -268,9 +268,13 @@
                 +max-screen($breakpoint-md)
                     background: rgba(12, 134, 157, 0.20) !important
             .solutions__itemLine
+                &.violet
+                    background: $light-lila
                 +max-screen($breakpoint-md)
                     background: $turquoise !important
             .solutions__itemTitle
+                &.text--color--violet
+                    color: $light-lila
                 +max-screen($breakpoint-md)
                     color: $turquoise !important
             .solutions__itemIcon
@@ -362,6 +366,25 @@
                 padding: 20px
             +max-screen($breakpoint-sm)
                 padding: 10.153px
+        &.violet_lite
+            background: rgba(204, 3, 223, 0.20)
+            padding: 29.792px 16.008px 16.096px 19.992px
+            +max-screen($breakpoint-xxs)
+                padding: 20px 15px
+            +max-screen($breakpoint-lg)
+                padding: 20px
+            +max-screen($breakpoint-sm)
+                padding: 10.153px
+        &.violet_middle
+            background: rgba(154, 59, 163, 0.20)
+            padding: 29.792px 16.008px 16.096px 19.992px
+            +max-screen($breakpoint-xxs)
+                padding: 20px 15px
+            +max-screen($breakpoint-lg)
+                padding: 20px
+            +max-screen($breakpoint-sm)
+                padding: 10.153px
+
         &Icon
             img
                 display: block
@@ -393,6 +416,10 @@
             &.blue
                 background: $turquoise
             &.violet
+                background: $s-pink
+            &.violet_lite
+                background: $light-lila
+            &.violet_middle
                 background: $s-pink
         &Content
             padding: 0 0 20px
