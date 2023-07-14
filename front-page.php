@@ -55,7 +55,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
                 <?php endif; ?>
                 <?php if ($testimonial_title) : ?>
-                    <h2 class="guidelines__testimonialTitle"><?php echo $testimonial_title; ?></h2>
+                    <h3 class="guidelines__testimonialTitle"><?php echo $testimonial_title; ?></h3>
                 <?php endif; ?>
                 <?php if ($testimonial_text) : ?>
                     <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
