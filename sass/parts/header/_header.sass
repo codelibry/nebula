@@ -3,9 +3,17 @@
     padding-bottom: 11px
     z-index: 1
     // position: relative
-    position: absolute
+    position: fixed
+    top: 0
     width: 100%
     overflow: hidden
+    +min-screen($breakpoint-lg)
+        &.top-scroll
+            top: 0
+            position: fixed
+            background: var(--dark-space, #372C4E)
+            z-index: 7
+
     +max-screen($breakpoint-lg)
         position: static
         padding: 0

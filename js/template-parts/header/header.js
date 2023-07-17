@@ -13,6 +13,14 @@ function header() {
     $(".header__burgerClose").click(function () {
       $(".header__mobileMenu").removeClass("opened");
     });
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 50) {
+        $(".header").addClass("top-scroll");
+      } else {
+        $(".header").removeClass("top-scroll");
+      }
+    });
   });
 }
 
