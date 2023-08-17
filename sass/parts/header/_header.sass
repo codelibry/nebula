@@ -11,7 +11,7 @@
         &.top-scroll
             top: 0
             position: fixed
-            background: var(--dark-space, #372C4E)
+            // background: var(--dark-space, #372C4E)
             z-index: 7
 
     +max-screen($breakpoint-lg)
@@ -90,10 +90,11 @@
                     color: $light-lila
                     font-weight: bold
     &__right
-        padding-top: 28px
+
         margin-left: -70px
         margin-right: -70px
         display: flex
+        align-self: center
         +max-screen($breakpoint-xl)
             align-items: center
             padding-top: 0
@@ -103,6 +104,10 @@
             margin-left: -32px
             margin-right: -32px
         &Menu
+            display: flex
+            & > div
+                align-self: center
+            // padding-top: 28px
             .menu
                 padding-top: 0
                 margin-left: 0
@@ -110,6 +115,7 @@
     .header-btn
         margin-left: 70px
         margin-right: 70px
+        align-self: flex-start
         +max-screen($breakpoint-xl)
             margin-left: 56px
             margin-right: 56px
@@ -119,10 +125,6 @@
         a
             font-size: 24px
             padding: 10px 20px
-            background-color: $turquoise
-            border-radius: 10px
-            line-height: normal
-            text-transform: uppercase
             +max-screen($breakpoint-xl)
                 font-size: 20px
     &__mobile

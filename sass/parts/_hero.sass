@@ -7,34 +7,17 @@
     +max-screen($breakpoint-lg)
         padding-top: 70px
         padding-bottom: 155px
-        margin-bottom: 200px
+
     +max-screen($breakpoint-md)
         padding-top: 94px
         padding-bottom: 89px
-        margin-bottom: 70px
+
     +max-screen($breakpoint-sm)
         padding-top: 59.5px
         padding-bottom: 68px
         margin-bottom: 114px
     &::before
-        content: ""
-        background-image: url('../assets/images/hero_background.png')
-        background-size: cover
-        background-position: center
-        position: absolute
-        left: 0
-        top: -125px
-        width: 100%
-        bottom: 60px
-        +max-screen($breakpoint-lg)
-            background-image: url('../assets/images/landscape_hero_background.png')
-            bottom: -130px
-        +max-screen($breakpoint-md)
-            background-image: url('../assets/images/hero_tablet.png')
-            bottom: 0
-        +max-screen($breakpoint-sm)
-            background-position: 60%
-            bottom: -50px
+
     .container
         max-width: 1660px
         +max-screen($breakpoint-xxl)
@@ -61,7 +44,19 @@
             margin-left: 0
             margin-top: 0
         img
-            width: 100%
+            position: absolute
+            width: 120%
+            left: -80px
+            top: -80px
+            +max-screen($breakpoint-xl)
+                position: absolute
+                width: 100%
+                left: -40px
+                top: -40px
+            +max-screen($breakpoint-lg)
+                position: relative
+                top: auto
+                left: auto
             +max-screen($breakpoint-sm)
                 max-width: 160px
                 margin-left: auto
@@ -73,28 +68,16 @@
     &__button
         padding-right: 3px
     &__text
-        color: $white
-        font-size: 54px
-        line-height: 1.25
         margin-bottom: 82px
-        font-weight: 300
-        +max-screen($breakpoint-xl)
-            font-size: 48px
         +max-screen(1200px)
             +min-screen(1025px)
                 font-size: 48px
                 br
                     display: none
         +max-screen($breakpoint-lg)
-            font-size: 32px
             margin-bottom: 30px
-            line-height: 1.2
             max-width: 470px
-        +max-screen($breakpoint-md)
-            font-size: 50px
         +max-screen($breakpoint-sm)
-            font-size: 34px
-            line-height: 1.35
             margin-bottom: 35px
             margin-bottom: 45px
             padding-right: 0

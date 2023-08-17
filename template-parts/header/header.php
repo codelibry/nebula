@@ -14,7 +14,7 @@ $btn = get_field('header_button', 'options');
             <div class="header__right">
                 <div class="header__rightMenu"><?php wp_nav_menu(array('menu' => 'header-right-menu')); ?></div>
                 <?php if ($btn) : ?>
-                    <div class="header-btn"><a href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a></div>
+                    <div class="header-btn"><a class="btn btn--blue btn--small" href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a></div>
                 <?php endif; ?>
             </div>
         </div>

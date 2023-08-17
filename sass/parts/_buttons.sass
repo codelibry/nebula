@@ -1,12 +1,17 @@
 .btn
-    display: inline-block
-    padding: 17.5px 53.5px
-    border-radius: 10px
-    font-size: 30px
-    line-height: 1.2
+    display: inline-flex
+    height: 80px
+    padding: 24px 55px
+    justify-content: center
+    align-items: center
+    gap: 10px
     text-transform: uppercase
     background: $s-pink
     font-weight: 700
+    font-size: 30px
+    color: $white
+    border-radius: 10px
+    box-shadow: 8px 8px 25px 0px rgba(27, 35, 60, 0.20), -10px -10px 25px 0px #FFF
     +max-screen(1200px)
         font-size: 24px
     +max-screen($breakpoint-lg)
@@ -15,5 +20,8 @@
     +max-screen($breakpoint-sm)
         width: 100%
         text-align: center
-    &--turquoise
-        background: $turquoise
+    &--blue
+        background: $lila
+        box-shadow: 5px 5px 20px 0px rgba(13, 39, 80, 0.16), -8px -8px 15px 0px #FFF
+    &--small
+        height: 50px

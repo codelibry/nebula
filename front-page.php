@@ -10,13 +10,13 @@ $image = get_field('hero_image');
         <div class="row hero_content">
             <div class="hero__textWrapper col-lg-8 col-md-8 col-12">
                 <?php if ($text) : ?>
-                    <div class="hero__text">
+                    <div class="hero__text text--size--54 font--weight--300">
                         <?php echo $text; ?>
                     </div>
                 <?php endif; ?>
                 <?php if ($button) : ?>
                     <div class="hero__button">
-                        <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
+                        <a href="<?php echo $button['url']; ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
                     </div>
                 <?php endif; ?>
             </div>
