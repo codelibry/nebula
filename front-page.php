@@ -10,7 +10,7 @@ $image = get_field('hero_image');
         <div class="row hero_content">
             <div class="hero__textWrapper col-lg-8 col-md-8 col-12">
                 <?php if ($text) : ?>
-                    <div class="hero__text text--size--54 font--weight--300">
+                    <div class="hero__text text--size--54 font--weight--100">
                         <?php echo $text; ?>
                     </div>
                 <?php endif; ?>
@@ -42,7 +42,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
         <?php if ($title || $text) : ?>
             <div class="guidelines__top">
                 <?php if ($title) : ?>
-                    <h2 class="guidelines__title"><?php echo $title; ?></h2>
+                    <h2 class="guidelines__title "><?php echo $title; ?></h2>
                 <?php endif; ?>
                 <?php if ($text) : ?>
                     <div class="guidelines__text"><?php echo $text; ?></div>
@@ -55,7 +55,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
                 <?php endif; ?>
                 <?php if ($testimonial_title) : ?>
-                    <h3 class="guidelines__testimonialTitle"><?php echo $testimonial_title; ?></h3>
+                    <h3 class="guidelines__testimonialTitle h2 font--weight--100"><?php echo $testimonial_title; ?></h3>
                 <?php endif; ?>
                 <?php if ($testimonial_text) : ?>
                     <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
@@ -84,45 +84,47 @@ $button = get_field('about_services_btn');
 
 <section class="services">
     <div class="container">
-        <?php if ($title || $text) : ?>
-            <div class="services__top">
-                <?php if ($title) : ?>
-                    <h2 class="services__topTitle"><?php echo $title; ?></h2>
-                <?php endif; ?>
-                <?php if ($text) : ?>
-                    <div class="services__topText">
-                        <?php echo $text; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
-        <?php if (have_rows('about_services_cards')) : ?>
-            <div class="services__cards row">
-                <?php while (have_rows('about_services_cards')) : the_row(); ?>
-                    <?php
-                    $title = get_sub_field('title');
-                    $image = get_sub_field('image');
-                    $text = get_sub_field('text');
-                    ?>
-                    <div class="services__cardsItem__wrapper col-sm-3 col-6">
-                        <div class="services__cardsItem">
-                            <?php if ($image) : ?>
-                                <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
-                            <?php endif; ?>
-                            <?php if ($title) : ?>
-                                <h3 class="services__cardsItem__title font--weight--400"><?php echo $title; ?></h3>
-                            <?php endif; ?>
-                            <?php if ($text) : ?>
-                                <div class="services__cardsItem__text"><?php echo $text; ?></div>
-                            <?php endif; ?>
+        <div class="services__inner">
+            <?php if ($title || $text) : ?>
+                <div class="services__top">
+                    <?php if ($title) : ?>
+                        <h2 class="services__topTitle font--weight--100"><?php echo $title; ?></h2>
+                    <?php endif; ?>
+                    <?php if ($text) : ?>
+                        <div class="services__topText">
+                            <?php echo $text; ?>
                         </div>
-                    </div>
-                <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (have_rows('about_services_cards')) : ?>
+                <div class="services__cards row">
+                    <?php while (have_rows('about_services_cards')) : the_row(); ?>
+                        <?php
+                        $title = get_sub_field('title');
+                        $image = get_sub_field('image');
+                        $text = get_sub_field('text');
+                        ?>
+                        <div class="services__cardsItem__wrapper col-sm-3 col-6">
+                            <div class="services__cardsItem">
+                                <?php if ($image) : ?>
+                                    <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
+                                <?php endif; ?>
+                                <?php if ($title) : ?>
+                                    <h3 class="services__cardsItem__title font--weight--400"><?php echo $title; ?></h3>
+                                <?php endif; ?>
+                                <?php if ($text) : ?>
+                                    <div class="services__cardsItem__text"><?php echo $text; ?></div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+            <div class="services__text"><?php echo $under_cards_text ?></div>
+            <div class="services__btn">
+                <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
             </div>
-        <?php endif; ?>
-        <div class="services__text"><?php echo $under_cards_text ?></div>
-        <div class="services__btn">
-            <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
         </div>
     </div>
 </section>

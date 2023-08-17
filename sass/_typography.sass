@@ -228,12 +228,15 @@ h1,.h1
 
 h2,.h2
     font-size: 50px
-    line-height: normal
-    font-weight: 100
+    line-height: 1.25
+    +max-screen($breakpoint-xl)
+        font-size: 46px
     +max-screen($breakpoint-lg)
         font-size: 42px
+        line-height: 1.05
     +max-screen($breakpoint-md)
         font-size: 38px
+        line-height: 1.25
     +max-screen($breakpoint-sm)
         font-size: 23px
 
