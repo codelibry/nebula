@@ -88,7 +88,7 @@ $button = get_field('about_services_btn');
             <?php if ($title || $text) : ?>
                 <div class="services__top">
                     <?php if ($title) : ?>
-                        <h2 class="services__topTitle font--weight--100"><?php echo $title; ?></h2>
+                        <h2 class="services__topTitle h1 font--weight--100"><?php echo $title; ?></h2>
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <div class="services__topText">
@@ -123,21 +123,11 @@ $button = get_field('about_services_btn');
             <?php endif; ?>
             <div class="services__text"><?php echo $under_cards_text ?></div>
             <div class="services__btn">
-                <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
+                <a href="<?php echo $button['url']; ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
             </div>
         </div>
     </div>
 </section>
-<?php $logo = get_field('logo'); ?>
-<?php if ($logo) : ?>
-    <section class="logo">
-        <div class="container">
-            <div class="logo__wrapper">
-                <img src="<?php echo $logo['url']; ?>" alt="">
-            </div>
-        </div>
-    </section>
-<?php endif; ?>
 <?php
 $pain = get_field('problem');
 $solution = get_field('solution');

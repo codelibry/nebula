@@ -173,6 +173,8 @@ body
         &--100,
         &--100 *
             font-weight: 100
+            strong
+                font-weight: 700
         &--300,
         &--300 *
             font-weight: 300
@@ -211,20 +213,17 @@ body
 h1,.h1
     font-size: 70px
     line-height: 105%
-    font-weight: 100
+    +max-screen($breakpoint-xl)
+        font-size: 64px
+    +max-screen(1200px)
+        font-size: 58px
     +max-screen($breakpoint-lg)
         font-size: 52px
         line-height: 105%
-    +max-screen($breakpoint-lg)
-        // font-size: 60px
-        // line-height: 60px
     +max-screen($breakpoint-md)
-        // font-size: 55px
-        // line-height: 55px
     +max-screen($breakpoint-sm)
-        font-size: 32px
-        // font-size: calcFluidSize(35, 55, 320, $breakpoint-sm)
-        // line-height: calcFluidSize(42, 60, 320, $breakpoint-sm)
+        font-size: 26px
+        line-height: 1.2
 
 h2,.h2
     font-size: 50px
