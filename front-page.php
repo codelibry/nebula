@@ -16,7 +16,7 @@ $image = get_field('hero_image');
                 <?php endif; ?>
                 <?php if ($button) : ?>
                     <div class="hero__button">
-                        <a href="<?php echo $button['url']; ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
+                        <a href="<?php echo $button['url']; ?>" class="btn btn--default"><?php echo $button['title']; ?></a>
                     </div>
                 <?php endif; ?>
             </div>
@@ -123,7 +123,7 @@ $button = get_field('about_services_btn');
             <?php endif; ?>
             <div class="services__text"><?php echo $under_cards_text ?></div>
             <div class="services__btn">
-                <a href="<?php echo $button['url']; ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
+                <a href="<?php echo $button['url']; ?>" class="btn btn--default"><?php echo $button['title']; ?></a>
             </div>
         </div>
     </div>
@@ -200,7 +200,7 @@ $button = get_field('lets_work_button');
             <?php endif; ?>
             <?php if ($button) : ?>
                 <div class="letsWork__button">
-                    <a href="<?php echo $button['url'] ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
+                    <a href="<?php echo $button['url'] ?>" class="btn btn--default"><?php echo $button['title']; ?></a>
                 </div>
             <?php endif; ?>
         </div>
