@@ -39,6 +39,8 @@
         background-repeat: no-repeat
         background-size: contain
         z-index: 1
+        +max-screen($breakpoint-xxs)
+            max-width: 65vw
     &__title
         font-size: 70px
         line-height: 1.05
@@ -64,7 +66,7 @@
         line-height: 1.4
         margin-top: 40px
         +max-screen($breakpoint-xl)
-            font-size: 22px
+            font-size: 20px
         +max-screen(1200px)
             font-size: 20px
         +max-screen($breakpoint-lg)
@@ -156,7 +158,7 @@
             font-size: 20px
             &.opened
                 max-height: 100%
-            +max-screen(1200px)
+            +max-screen($breakpoint-xl)
                 font-size: 18px
             +max-screen($breakpoint-lg)
                 font-size: 16px
