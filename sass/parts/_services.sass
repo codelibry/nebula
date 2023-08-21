@@ -106,7 +106,7 @@
         +max-screen($breakpoint-sm)
             margin-top: 20px
 
-            max-width: none
+            max-width: 400px
             gap: 10px 0
         &Item
             background-size: cover
@@ -375,29 +375,34 @@
                         transform: none
                         height: auto
                     +max-screen($breakpoint-lg)
-                        flex: 0 0 28%
-                        max-width: 28%
-                        padding-left: 25px
-                        margin-left: -12px
+                        // flex: 0 0 28%
+                        // max-width: 28%
+
+                        flex: 0 0 50%
+                        max-width: 50%
+
+                        padding-left: 0
+                        // margin-left: -12px
+                        margin-left: 0
                         margin-top: 0
                         z-index: 3
-                        transform: translate(9px, -16px)
+                        transform: translate(19px, -16px)
                     +max-screen($breakpoint-md)
-                        padding-left: 23px
+                        // padding-left: 23px
                         // flex: 0 0 28%
                         flex: 0 0 50%
                         max-width: 50%
                         margin-left: 0
                         z-index: 2
                         margin-top: 0
-                        transform: translateY(-15px)
+                        transform: translate(19px, -16px)
                     +max-screen($breakpoint-sm)
                         max-width: 50%
                         margin-top: 0
-                        transform: translate(10px, -10px )
+                        transform: translate(20px, -10px )
                         z-index: 2
                         flex: none
-                        padding-left: 0
+                        // padding-left: 23px
                     .services__cardsItem__title
                         text-align: center
                         margin-top: 18px
@@ -468,7 +473,7 @@
                         +max-screen($breakpoint-lg)
                             width: 25px
                             height: 25px
-                            left: 5.49px
+                            left: -17.49px
                             top: 53%
                             // border-radius: 15px
                         +max-screen($breakpoint-md)
@@ -478,7 +483,7 @@
                             width: 22px
                             height: 22px
                             transform: none
-                            left: -17.5px
+                            left: -16.0px
                             transform: rotate(-6.09deg) translate(4%, -17%)
                             z-index: 3
                     .services__cardsItem
