@@ -190,19 +190,20 @@ $text = get_field('lets_work_text');
 $button = get_field('lets_work_button');
 ?>
 <section class="letsWork">
-    <div class="front_dark_bg"></div>
     <div class="container">
-        <?php if ($title) : ?>
-            <h2 class="letsWork__title"><?php echo $title; ?></h2>
-        <?php endif; ?>
-        <?php if ($text) : ?>
-            <div class="letsWork__text"><?php echo $text; ?></div>
-        <?php endif; ?>
-        <?php if ($button) : ?>
-            <div class="letsWork__button">
-                <a href="<?php echo $button['url'] ?>" class="btn"><?php echo $button['title']; ?></a>
-            </div>
-        <?php endif; ?>
+        <div class="letsWork__wrapper">
+            <?php if ($title) : ?>
+                <h2 class="letsWork__title"><?php echo $title; ?></h2>
+            <?php endif; ?>
+            <?php if ($text) : ?>
+                <div class="letsWork__text"><?php echo $text; ?></div>
+            <?php endif; ?>
+            <?php if ($button) : ?>
+                <div class="letsWork__button">
+                    <a href="<?php echo $button['url'] ?>" class="btn btn--blue"><?php echo $button['title']; ?></a>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
 
