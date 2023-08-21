@@ -1,53 +1,27 @@
 .footer
-    padding-top: 147px
-    padding-bottom: 60px
-    color: $white
+    // padding-top: 147px
+    // padding-bottom: 60px
     font-size: 16px
-    background: #1B233C
     position: relative
     z-index: 1
-    +max-screen($breakpoint-xl)
-        padding-top: 80px
-    +max-screen($breakpoint-lg)
-        padding-top: 38px
-        padding-bottom: 50px
-    +max-screen($breakpoint-sm)
-        padding-top: 26.5px
-        padding-bottom: 85.5px
+
+    // +max-screen($breakpoint-xl)
+    //     padding-top: 80px
+    // +max-screen($breakpoint-lg)
+    //     padding-top: 38px
+    //     padding-bottom: 50px
+    // +max-screen($breakpoint-sm)
+    //     padding-top: 26.5px
+    //     padding-bottom: 85.5px
     &::before
-        // content: ""
-        // background-image: url('../assets/images/footer_clouds.png')
-        // background-size: cover
-        // background-position: center
-        // top: -1170px
-        // width: 100%
-        // left: 0
-        // position: absolute
-        // bottom: 0
-        // +max-screen($breakpoint-xxl)
-        //     top: -870px
-        // +max-screen($breakpoint-xl)
-        //     top: -750px
-        // +max-screen(1200px)
-        //     top: -800px
-        // +max-screen($breakpoint-lg)
-        //     top: -320px
-        //     bottom: calc( 100% - 135px)
-        // +max-screen($breakpoint-md)
-        //     top: -250px
-        //     bottom: calc( 100% - 90px )
-        // +max-screen($breakpoint-sm)
-        //     top: -127px
-        //     bottom: calc( 100% - 45px )
-        //     width: 100%
-        //     left: 0
-        //     background-position-x: 30%
     a
-        color: $white
+        letter-spacing: 0.64px
+        // color: $white
     .footer-title
         opacity: 0.5
         font-size: 16px
         margin-bottom: 16px
+        letter-spacing: 0.64px
         +max-screen($breakpoint-lg)
             font-size: 10px
             line-height: 1.6
@@ -65,6 +39,21 @@
             max-width: 1480px
         +max-screen($breakpoint-lg)
             max-width: 829px
+    &__main
+        padding: 147px 60px 60px
+        border-radius: 30px
+        max-width: 1740px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 125px
+        background: var(--new-vizual-background-main, #ECECEC)
+        box-shadow: 20px 20px 25px 0px rgba(20, 31, 56, 0.25), -15px -15px 20px 0px rgba(255, 255, 255, 0.35)
+        +max-screen($breakpoint-xxl)
+            margin-left: 30px
+            margin-right: 30px
+        +max-screen($breakpoint-lg)
+            padding: 87px 60px 60px
+
     &__logo
         +max-screen($breakpoint-sm)
             margin-bottom: 18.5px
@@ -158,6 +147,7 @@
     &__copywriting
         font-size: 14px
         opacity: 0.5
+        letter-spacing: 0.56px
         +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
@@ -165,8 +155,9 @@
             line-height: 1.6
             margin-top: 18px
     &__email
-        color: #7BA4DB
+        color: $lila
         font-size: 14px
+        letter-spacing: 0.56px
         +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
@@ -176,6 +167,7 @@
         font-size: 14px
         position: relative
         padding-left: 15px
+        letter-spacing: 0.56px
         +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
@@ -191,7 +183,7 @@
             top: 50%
             height: 12px
             transform: translate(-50%, -50%)
-            background: #F9F9F9
+            background: $default-text-color
             +max-screen($breakpoint-sm)
                 content: none
     &__text
@@ -214,10 +206,23 @@
                 font-size: 10px
             +max-screen($breakpoint-md)
                 display: none
-        img
+        div
+            display: flex
+            border-radius: 50%
+            background: var(--new-vizual-background-main, #ECECEC)
+            box-shadow: 2px 2px 15px 0px rgba(20, 31, 56, 0.55), -2px -2px 4px 0px #FFF
             width: 54px
+            height: 54px
             margin-left: 10px
             +max-screen($breakpoint-lg)
                 width: 30px
+                height: 30px
             +max-screen($breakpoint-md)
                 width: 52px
+                height: 52px
+        img
+            display: block
+            align-self: center
+            margin: 0 auto
+            width: 100%
+            max-width: 22px
