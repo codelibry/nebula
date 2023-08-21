@@ -8,46 +8,8 @@
     +max-screen($breakpoint-sm)
         margin-bottom: 202px
     &::before
-        // top: 274px
-        // bottom: -441px
-        // content: ""
-        // background-image: url('../assets/images/pain__solution_clouds.png')
-        // background-size: cover
-        // background-position: center
-        // position: absolute
-        // left: 0
-        // width: 100%
-        // z-index: 1
-        // +max-screen($breakpoint-xl)
-        //     top: 244px
-        //     bottom: -480px
-        // +max-screen(1200px)
-        //     top: calc( 100% - 380px )
-        //     bottom: -180px
-        // +max-screen($breakpoint-lg)
-        //     background-image: url('../assets/images/landscape_pain_clouds.png')
-        //     bottom: -208px
-        //     top: calc( 100% - 404px)
-        // +max-screen($breakpoint-md)
-        //     bottom: -221px
-        //     top: calc( 100% - 369px)
-        //     background-position: 90%
-        //     background-image: url('../assets/images/pain__solution_clouds.png')
-        // +max-screen($breakpoint-sm)
-        //     top: calc( 100% - 133px)
-        //     bottom: -250px
-        //     background-position: 55%
     &::after
-        // content: ""
-        // position: absolute
-        // left: 0
-        // right: 0
-        // background: #1B233C
-        // top: -475px
-        // bottom: 10px
-        // +max-screen($breakpoint-sm)
-        //     top: -100px
-        //     bottom: -120px
+
     .container
         max-width: 1350px
         position: relative
@@ -74,6 +36,8 @@
     &Block
         padding: 60px 120px
         border-radius: 25px
+        background: var(--new-vizual-background-main, #ECECEC)
+        box-shadow: 10px 10px 20px 0px rgba(20, 31, 56, 0.25), -8px -8px 25px 0px #FFF
         +max-screen($breakpoint-xl)
             padding: 50px 80px
         +max-screen(1200px)
@@ -141,7 +105,7 @@
                 content: ""
                 width: 10px
                 height: 10px
-                background: $light-lila
+                background: $default-text-color
                 position: absolute
                 left: 0
                 top: 7px
@@ -150,7 +114,7 @@
                     width: 5px
                     height: 5px
 .pain
-    background: $space-lila
+    // background: $space-lila
     padding-right: 250px
     +max-screen(1200px)
         padding-right: 180px
@@ -167,21 +131,21 @@
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
                 margin-right: calc( -9.84375% - 68px )
-                overflow: hidden
+                // overflow: hidden
                 padding-right: calc( 9.84375% + 87px )
         +max-screen(1660px)
             margin-right: calc(-6.5% - 46px )
-            overflow: hidden
+            // overflow: hidden
             padding-right: calc( 46px + 6.5%)
         +max-screen($breakpoint-xl)
             margin-right: calc( -5% - 39px )
             padding-right: 126px
-            overflow: hidden
+            // overflow: hidden
         +max-screen(1200px)
             +min-screen(1025px)
                 margin-right: -30px
                 padding-right: 150px
-                overflow: hidden
+                // overflow: hidden
         +max-screen($breakpoint-lg)
             padding-left: 0
             margin-right: 0
@@ -259,7 +223,7 @@
             +max-screen($breakpoint-sm)
                 display: none
 .solution
-    background: $turquoise
+    // background: $turquoise
     padding-left: 250px
     position: relative
     z-index: 1
@@ -281,44 +245,44 @@
         +max-screen($breakpoint-sm)
             padding-left: 0
         &::before
-            content: ""
-            background-image: url('../assets/images/purple_planet.png')
-            width: 586px
-            height: 586px
-            top: 47%
-            position: absolute
-            transform: translateY(-50%)
-            left: -21%
-            z-index: 1
-            +max-screen($breakpoint-xl)
-                width: 480px
-                height: 480px
-                top: 57%
-                left: -8%
-                background-size: contain
-            +max-screen(1200px)
-                width: 416px
-                height: 416px
-                left: -7%
-                top: 54%
-            +max-screen($breakpoint-lg)
-                width: 265px
-                height: 265px
-                left: -53px
-                top: auto
-                bottom: 36px
-                transform: none
-            +max-screen($breakpoint-md)
-                left: 0
-                bottom: 2px
-                top: auto
-            +max-screen($breakpoint-sm)
-                position: absolute
-                left: -16px
-                top: auto
-                width: 180px
-                bottom: -141px
-                height: 180px
+            // content: ""
+            // background-image: url('../assets/images/purple_planet.png')
+            // width: 586px
+            // height: 586px
+            // top: 47%
+            // position: absolute
+            // transform: translateY(-50%)
+            // left: -21%
+            // z-index: 1
+            // +max-screen($breakpoint-xl)
+            //     width: 480px
+            //     height: 480px
+            //     top: 57%
+            //     left: -8%
+            //     background-size: contain
+            // +max-screen(1200px)
+            //     width: 416px
+            //     height: 416px
+            //     left: -7%
+            //     top: 54%
+            // +max-screen($breakpoint-lg)
+            //     width: 265px
+            //     height: 265px
+            //     left: -53px
+            //     top: auto
+            //     bottom: 36px
+            //     transform: none
+            // +max-screen($breakpoint-md)
+            //     left: 0
+            //     bottom: 2px
+            //     top: auto
+            // +max-screen($breakpoint-sm)
+            //     position: absolute
+            //     left: -16px
+            //     top: auto
+            //     width: 180px
+            //     bottom: -141px
+            //     height: 180px
     &__image
         position: absolute
         left: -20%
