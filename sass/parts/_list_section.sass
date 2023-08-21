@@ -1,0 +1,141 @@
+.list_section
+    margin-bottom: 160px
+    .container
+        max-width: 1745px
+        position: relative
+        z-index: 1
+        +max-screen($breakpoint-xxl)
+            +min-screen(1660px)
+                max-width: 87.76%
+        +max-screen(1660px)
+            max-width: 90%
+        +max-screen($breakpoint-xl)
+            max-width: 88%
+        +max-screen(1200px)
+            max-width: 1685px
+        +max-screen($breakpoint-lg)
+            max-width: 830px
+        +max-screen($breakpoint-md)
+            max-width: 768px
+            // padding-left: 15px
+            // padding-right: 15px
+    &__wrapper
+        border-radius: 25px
+        padding: 120px 57px 86px
+        border-radius: 30px
+        background: var(--new-vizual-background-main, #ECECEC)
+        box-shadow: 20px 20px 25px 0px rgba(20, 31, 56, 0.25), -15px -15px 20px 0px rgba(255, 255, 255, 0.35)
+        // +max-screen($breakpoint-xxs)
+        //     padding: 120px 205px 86px
+        // +max-screen($breakpoint-xl)
+        //     padding: 120px 205px 86px
+
+    &__title
+        margin-bottom: 80px
+        +max-screen($breakpoint-sm)
+            margin-bottom: 40px
+    &__inner
+        display: flex
+        gap: 0 50px
+        margin-bottom: 80px
+        +max-screen($breakpoint-sm)
+            margin-bottom: 40px
+            gap: 40px 0px
+            flex-direction: column
+        &:last-of-type
+            margin-bottom: 0
+        .img_block
+            width: 100%
+            max-width: 100px
+            +max-screen($breakpoint-sm)
+                max-width: 60px
+            img
+                width: 100%
+
+        .content-block
+            strong
+                color: $s-pink
+        .button_block
+            a
+                margin-top: 80px
+                width: 100%
+                max-width: 923px
+                +max-screen($breakpoint-sm)
+                    margin-top: 40px
+    &__top
+        max-width: 1230px
+        margin-left: auto
+        margin-right: auto
+    &__bottom
+        position: relative
+        margin-top: 80px
+        max-width: 1230px
+        margin-left: auto
+        margin-right: auto
+        +max-screen($breakpoint-md)
+            margin-top: 280px
+        .left_img
+            position: absolute
+            top: 83px
+            left: -153px
+            +max-screen($breakpoint-xxs)
+                left: -33px
+            +max-screen($breakpoint-md)
+                left: 50%
+                transform: translateX(-50%)
+                top: -222px
+
+            img
+                +max-screen($breakpoint-xxs)
+                    max-width: 55%
+                +max-screen($breakpoint-md)
+                    margin: 0 auto
+                    display: block
+                +max-screen($breakpoint-sm)
+                    max-width: 75%
+
+        &-rows
+            margin-left: 305px
+            +max-screen($breakpoint-xxs)
+                margin-left: 255px
+            +max-screen($breakpoint-md)
+                margin-left: auto
+            ul
+            li
+                position: relative
+                padding-left: 75px
+                margin-bottom: 30px
+                +max-screen($breakpoint-md)
+                    padding-left: 50px
+                +max-screen($breakpoint-sm)
+                    padding-left: 15px
+                &:before
+                    content: ''
+                    background: var(--new-vizual-background-main, #ECECEC)
+                    box-shadow: 10px 10px 25px rgba(20, 31, 56, 0.3), -8px -8px 25px #FFF
+                    width: 25px
+                    height: 25.058px
+                    min-width: 25px
+                    border-radius: 50%
+                    position: absolute
+                    left: 0
+                    top: 10px
+                    +max-screen($breakpoint-md)
+                        width: 15px
+                        height: 15px
+                        min-width: 15px
+                        box-shadow: 5px 5px 15px rgba(20,31,56,.3), -3px -3px 15px #fff
+                    +max-screen($breakpoint-sm)
+                        left: -30px
+
+                &:last-of-type
+                    margin-bottom: 0
+                strong
+                    color: $s-pink
+    .btn
+        &.btn--default
+            width: max-content
+            margin: 120px auto 0
+            display: block
+            +max-screen($breakpoint-md)
+                margin: 80px auto 0

@@ -208,53 +208,78 @@ $button = get_field('lets_work_button');
 </section>
 
 <?php
-$title = get_field('processes_title', false, false);
-$button = get_field('processes_button');
-$image = get_field('processes_image');
-?>
-<section class="processes">
-    <div class="container">
-        <?php if ($title) : ?>
-            <h2 class="processes__title"><?php echo $title; ?></h2>
-        <?php endif; ?>
-        <div class="processes__content">
-            <?php if (have_rows('processes')) : ?>
-                <div class="processes__list row">
-                    <?php $i = 1;
-                    while (have_rows('processes')) : the_row(); ?>
-                        <?php
-                        $title = get_sub_field('title');
-                        $text = get_sub_field('text');
-                        ?>
-                        <?php if ($i == 1 || $i == 3 || $i == 4) : ?>
-                            <div class="processes__column col-lg-4 col-12">
-                            <?php endif; ?>
-                            <div class="processes__item">
-                                <div class="processes__itemNumber"><?php echo $i; ?></div>
-                                <?php if ($title || $text) : ?>
-                                    <div class="processes__itemContent">
-                                        <?php if ($title) : ?>
-                                            <h3 class="processes__itemTitle text--uppercase"><?php echo $title; ?></h3>
-                                        <?php endif; ?>
-                                        <?php if ($text) : ?>
-                                            <div class="processes__itemText"><?php echo $text; ?></div>
-                                        <?php endif; ?>
+$title = get_field('list_section__title', false, false);
+$left_img = get_field('list_section__left_img');
+$list_section_button = get_field('list_section__button');
+
+if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
+    <section class="list_section">
+        <div class="container">
+            <div class="list_section__wrapper">
+                <div class="list_section__top">
+                    <?php if ($title) : ?>
+                        <h2 class="list_section__title h1 font--weight--100"><?php echo $title; ?></h2>
+                    <?php endif; ?>
+                    <?php if (have_rows('list_section__blocks')) :
+                        while (have_rows('list_section__blocks')) : the_row();
+                            $text = get_sub_field('text');
+                            $img = get_sub_field('img');
+                            $button = get_sub_field('add_button'); ?>
+                            <div class="list_section__inner">
+                                <?php if ($img) : ?>
+                                    <div class="img_block">
+                                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['title']; ?>">
                                     </div>
                                 <?php endif; ?>
+                                <div class="content-block_main">
+                                    <div class="content-block text--size--24">
+                                        <?php echo $text ?>
+                                    </div>
+                                    <?php if ($button) : ?>
+                                        <div class="button_block">
+                                            <a href="<?php echo $button['url']; ?>" class="btn btn--white">
+                                                <span><?php echo $button['title']; ?></span>
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                            <?php if ($i == 2 || $i == 3 || $i == 5) : ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+                <?php if (have_rows('list_section__rows') || $left_img) : ?>
+                    <div class="list_section__bottom">
+                        <div class="left_img">
+                            <img src="<?php echo $left_img['url'] ?>" alt="<?php echo $left_img['title'] ?>">
+                        </div>
+                        <?php if (have_rows('list_section__rows')) : ?>
+                            <div class="list_section__bottom-rows">
+                                <ul>
+                                    <?php while (have_rows('list_section__rows')) : the_row();
+                                        $text = get_sub_field('content');
+                                        $subtitle = get_sub_field('subtitle'); ?>
+                                        <li class="inner_block">
+                                            <div class="subtitle">
+                                                <h3 class="text--size--24"><?php echo $subtitle ?></h3>
+                                            </div>
+                                            <div class="content-block text--size--24">
+                                                <?php echo $text ?>
+                                            </div>
+                                        </li>
+                                    <?php endwhile; ?>
+                                </ul>
+
                             </div>
                         <?php endif; ?>
-                    <?php $i++;
-                    endwhile; ?>
-                </div>
-                <div class="processes__image">
-                </div>
-            <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ($list_section_button) : ?>
+                    <a href="<?php echo $list_section_button['url'] ?>" class="btn btn--default">
+                        <?php echo $list_section_button['title']; ?>
+                    </a>
+                <?php endif; ?>
+            </div>
         </div>
-        <?php if ($button) : ?>
-            <div class="processes__button"><a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a></div>
-        <?php endif; ?>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 <?php get_footer(); ?>
