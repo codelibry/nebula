@@ -11,6 +11,8 @@
         &.top-scroll
             top: 0
             position: fixed
+            background: var(--new-vizual-background-main,#ececec)
+            box-shadow: 20px 20px 25px 0 rgba(20,31,56,.25), -15px -15px 20px 0 hsla(0,0%,100%,.35)
             // background: var(--dark-space, #372C4E)
             z-index: 7
 
@@ -134,7 +136,9 @@
         top: 0
         right: 0
         z-index: 99
-        background: linear-gradient(93.2deg, #702F8A 6.72%, #1B233C 93.41%)
+        background: var(--new-vizual-background-main,#ececec)
+        //     box-shadow: 20px 20px 25px 0 rgba(20,31,56,.25), -15px -15px 20px 0 hsla(0,0%,100%,.35)
+        // background: linear-gradient(93.2deg, #702F8A 6.72%, #1B233C 93.41%)
         box-shadow: 0px -4px 4px rgba(20, 31, 56, 0.2)
         +max-screen($breakpoint-xl)
         +max-screen($breakpoint-lg)
@@ -177,10 +181,13 @@
             z-index: 100
             background-size: cover
             background-position: center
-            +max-screen($breakpoint-lg)
-                background-image: url('../assets/images/landscape_hero_background.png')
-            +max-screen($breakpoint-md)
-                background-image: url(../assets/images/hero_tablet.png)
+            background: var(--new-vizual-background-main, #ECECEC)
+            box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.20), -8px -8px 25px 0px #FFF
+
+            // +max-screen($breakpoint-lg)
+            //     background-image: url('../assets/images/landscape_hero_background.png')
+            // +max-screen($breakpoint-md)
+            //     background-image: url(../assets/images/hero_tablet.png)
             &.opened
                 right: 0
             & > div:first-child
@@ -197,8 +204,8 @@
         a
             display: block
             padding: 10px 20px
-            background: $turquoise
-            box-shadow: 0px 0px 5px rgba(44, 59, 78, 0.4)
+            background: $lila
+            box-shadow: 5px 5px 20px 0 rgba(13,39,80,.16), -8px -8px 15px 0 #fff
             border-radius: 10px
         img
             width: 24px
@@ -216,7 +223,7 @@
             transition: all 0.3s ease
             left: 0
             position: absolute
-            background: #fff
+            background: $lila
             &:nth-child(1)
                 top: 0
             &:nth-child(2)
@@ -245,7 +252,7 @@
             border-radius: 50px
             width: 28px
             height: 3px
-            background: #fff
+            background: #000
             &:nth-child(1)
                 transform: rotate(45deg)
             &:nth-child(2)
