@@ -8,10 +8,25 @@
     +max-screen($breakpoint-sm)
         margin-bottom: 177px
     &::before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 235%
+        top: -5%
+        bottom: -10px
+        left: 0
+        background: url(../assets/images/Decor_bg.svg)
+        background-position: left
+        background-repeat: no-repeat
+        background-size: contain
+        z-index: 1
+        opacity: 0.3
+        +max-screen($breakpoint-xxs)
+            max-width: 65vw
     &::after
 
     .container
-        max-width: 1350px
+        max-width: calc(1384px + 60px)
         position: relative
         z-index: 1
         +max-screen($breakpoint-xxl)
@@ -34,7 +49,7 @@
             padding-left: 22.5px
             padding-right: 22.5px
     &Block
-        padding: 60px 120px
+        padding: 60px 88px
         border-radius: 25px
         background: var(--new-vizual-background-main, #ECECEC)
         box-shadow: 10px 10px 20px 0px rgba(20, 31, 56, 0.25), -8px -8px 25px 0px #FFF
@@ -71,8 +86,10 @@
             line-height: 1.2
             margin-bottom: 20px
     &Text
-        font-size: 20px
+        font-size: 24px
         line-height: 1.4
+        +max-screen($breakpoint-xxs)
+            font-size: 20px
         +max-screen(1200px)
             font-size: 18px
         +max-screen($breakpoint-lg)
@@ -90,7 +107,7 @@
         li
             padding-left: 31px
             position: relative
-            margin-bottom: 20px
+            margin-bottom: 14px
             +max-screen($breakpoint-lg)
                 padding-left: 15.5px
             +max-screen($breakpoint-md)
@@ -125,9 +142,9 @@
     +max-screen($breakpoint-sm)
         padding-right: 30px
     &__wrapper
-        padding-right: 87px
-        padding-left: 17px
-        margin-bottom: 161px
+        // padding-right: 87px
+        // padding-left: 17px
+        margin-bottom: 120px
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
                 margin-right: calc( -9.84375% - 68px )
@@ -223,12 +240,13 @@
             +max-screen($breakpoint-sm)
                 display: none
 .solution
-    // background: $turquoise
-    padding-left: 250px
+    padding: 60px 85px
+    padding-left: 112px
     position: relative
     z-index: 1
+    transform: translateX(30px)
     +max-screen(1200px)
-        padding-left: 180px
+        padding-left: 100px
     +max-screen($breakpoint-lg)
         padding-left: 135px
     +max-screen($breakpoint-md)
@@ -238,54 +256,17 @@
         padding-left: 30px
         padding-right: 30px
     &__wrapper
-        padding-left: 117px
+        padding-left: 244px
         +max-screen($breakpoint-lg)
             padding-right: 0
             padding-left: 99px
         +max-screen($breakpoint-sm)
             padding-left: 0
         &::before
-            // content: ""
-            // background-image: url('../assets/images/purple_planet.png')
-            // width: 586px
-            // height: 586px
-            // top: 47%
-            // position: absolute
-            // transform: translateY(-50%)
-            // left: -21%
-            // z-index: 1
-            // +max-screen($breakpoint-xl)
-            //     width: 480px
-            //     height: 480px
-            //     top: 57%
-            //     left: -8%
-            //     background-size: contain
-            // +max-screen(1200px)
-            //     width: 416px
-            //     height: 416px
-            //     left: -7%
-            //     top: 54%
-            // +max-screen($breakpoint-lg)
-            //     width: 265px
-            //     height: 265px
-            //     left: -53px
-            //     top: auto
-            //     bottom: 36px
-            //     transform: none
-            // +max-screen($breakpoint-md)
-            //     left: 0
-            //     bottom: 2px
-            //     top: auto
-            // +max-screen($breakpoint-sm)
-            //     position: absolute
-            //     left: -16px
-            //     top: auto
-            //     width: 180px
-            //     bottom: -141px
-            //     height: 180px
+
     &__image
         position: absolute
-        left: -20%
+        left: -30%
         top: 52%
         transform: translateY(-50%)
         +max-screen($breakpoint-xl)

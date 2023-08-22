@@ -15,7 +15,7 @@
     .container
         position: relative
         z-index: 2
-        max-width: 1414px
+        max-width: calc(1414px + 60px)
         +max-screen($breakpoint-xxl)
             max-width: 77.4%
         +max-screen($breakpoint-lg)
@@ -31,7 +31,7 @@
         content: ""
         width: 100%
         height: 150%
-        top: 55%
+        top: 59%
         bottom: -10px
         right: 0
         background: url(../assets/images/right_background.svg)
@@ -39,6 +39,7 @@
         background-repeat: no-repeat
         background-size: contain
         z-index: 1
+        opacity: 0.3
         +max-screen($breakpoint-xxs)
             max-width: 65vw
     &__title
@@ -90,8 +91,8 @@
         strong
             color: $s-pink
     &__top
-        margin: 0 auto
-        max-width: 1235px
+        margin: 0
+        max-width: 1194px
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
                 max-width: 90%
@@ -137,21 +138,7 @@
             margin-top: 40px
             margin-left: 0
         &Title
-            // font-size: 50px
-            // line-height: 1.25
-            // +max-screen($breakpoint-xl)
-            //     font-size: 46px
-            // +max-screen(1200px)
-            //     font-size: 42px
-            // +max-screen($breakpoint-lg)
-            //     font-size: 38px
-            //     line-height: 1.05
-            // +max-screen($breakpoint-md)
-            //     font-size: 32px
-            //     line-height: 1.2
-            // +max-screen($breakpoint-sm)
-            //     font-size: 23px
-            //     line-height: 1.2
+
         &Text
             margin-top: 40px
             line-height: 1.4
@@ -181,7 +168,7 @@
             font-size: 20px
             line-height: 1.25
             font-style: italic
-            padding-bottom: 13px
+            padding-bottom: 0
             +max-screen(1200px)
                 font-size: 18px
             +max-screen($breakpoint-lg)

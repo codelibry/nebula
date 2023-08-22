@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php
 $text = get_field('hero_text');
+$color_text = get_field('hero_color_text');
 $button = get_field('hero_btn');
 $image = get_field('hero_image');
 
@@ -12,6 +13,11 @@ $image = get_field('hero_image');
                 <?php if ($text) : ?>
                     <div class="hero__text text--size--54 font--weight--100">
                         <?php echo $text; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ($color_text) : ?>
+                    <div class="hero__color__text text--size--32 text--color--pink">
+                        <?php echo $color_text; ?>
                     </div>
                 <?php endif; ?>
                 <?php if ($button) : ?>

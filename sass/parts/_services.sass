@@ -1,5 +1,5 @@
 .services
-    margin-bottom: 278px
+    margin-bottom: 211px
     position: relative
     +max-screen($breakpoint-lg)
         margin-bottom: 109px
@@ -8,18 +8,9 @@
     +max-screen($breakpoint-sm)
         margin-bottom: 99px
     // &::before
-    //     content: ""
-    //     background: #1b233c
-    //     left: 0
-    //     width: 100%
-    //     top: -300px
-    //     bottom: -500px
-    //     position: absolute
-    //     +max-screen($breakpoint-sm)
-    //         top: -100px
-    //         bottom: -150px
+
     .container
-        max-width: 1745px
+        max-width: calc(1739px + 60px)
         position: relative
         z-index: 1
         +max-screen($breakpoint-xxl)
@@ -132,8 +123,8 @@
             &__wrapper
                 padding: 0
                 position: relative
-                max-width: 23.5%
-                flex: 0 0 23.5%
+                max-width: 23.8%
+                flex: 0 0 23.8%
 
                 +max-screen($breakpoint-sm)
                     max-width: 50%
@@ -362,8 +353,8 @@
                 &:nth-child(4n + 4)
                     padding-left: 60px
                     margin-top: -30px
-                    max-width: 29.5%
-                    flex: 0 0 29.5%
+                    max-width: 28.6%
+                    flex: 0 0 28.6%
                     transform: translateX(10px)
                     height: 100%
                     +max-screen(1660px)
@@ -426,23 +417,11 @@
                             padding-left: 9px
                     &::before
                         +max-screen($breakpoint-sm)
-                            // content: ""
-                            // background-image: url('../assets/images/mobile_4_card_puzzle.png')
-                            // width: 27px
-                            // height: 30px
-                            // background-size: contain
-                            // background-position: 50%
-                            // position: absolute
-                            // left: 50%
-                            // -webkit-transform: rotate(-6.09deg) translate(-100%,2%)
-                            // transform: rotate(-6.09deg) translate(-100%,-6%)
-                            // top: -2px
-                            // z-index: 3
-                            // background-repeat: no-repeat
+
                     &::after
                         content: ""
                         position: absolute
-                        left: -8.3px
+                        left: -8.5px
                         top: 50%
                         // width: 82px
                         // height: 90px
@@ -602,8 +581,8 @@
                 margin-bottom: 0
     &__btn
         text-align: center
-        margin-top: 53.5px
+        margin-top: 80.0px
         +max-screen($breakpoint-lg)
-            margin-top: 75px
+            margin-top: 40px
         +max-screen($breakpoint-md)
             margin-top: 40px

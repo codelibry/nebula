@@ -1,6 +1,6 @@
 .hero
-    padding-top: 20px
-    padding-bottom: 309px
+    padding-top: 70px
+    padding-bottom: 209px
     position: relative
     +max-screen($breakpoint-xl)
         padding-bottom: 160px
@@ -19,12 +19,24 @@
     &::before
 
     .container
-        max-width: 1660px
+        max-width: 1480px
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
-                max-width: 86.45%
+                max-width: 1480px
+        +max-screen($breakpoint-xxs)
+            max-width: 1420px
+        +max-screen($breakpoint-xl)
+            padding-left: 100px
+            padding-right: 100px
+        +max-screen(1200px)
+            padding-left: 80px
+            padding-right: 80px
         +max-screen($breakpoint-lg)
             max-width: 911px
+        +max-screen($breakpoint-sm)
+            padding-left: 22.5px
+            padding-right: 22.5px
+
     &__image
         +max-screen($breakpoint-lg)
             flex: 0 0 37.83333%
@@ -46,8 +58,9 @@
         img
             position: absolute
             width: 120%
+            max-width: 533px
             left: -80px
-            top: -80px
+            top: -40px
             +max-screen($breakpoint-xl)
                 position: absolute
                 width: 100%
@@ -68,7 +81,7 @@
     &__button
         padding-right: 3px
     &__text
-        margin-bottom: 82px
+        margin-bottom: 55px
         +max-screen(1200px)
             +min-screen(1025px)
                 font-size: 48px
@@ -82,13 +95,14 @@
             margin-bottom: 45px
             padding-right: 0
         &Wrapper
-            padding-left: 90px
+            // padding-left: 125px
+            padding-left: 0
             padding-top: 32px
             display: flex
             flex-direction: column
             justify-content: center
             +max-screen($breakpoint-xl)
-                padding-left: 64px
+                // padding-left: 64px
             +max-screen(1200px)
                 +min-screen(1025px)
                     max-width: 60%
@@ -105,3 +119,7 @@
                 padding-top: 0
                 padding-left: 15px
                 padding-right: 0
+    &__color__text
+        margin-bottom: 55px
+        strong
+            color: $space-lila !important
