@@ -14,6 +14,21 @@
     //     padding-top: 26.5px
     //     padding-bottom: 85.5px
     &::before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 450%
+        top: -309%
+        bottom: -10px
+        right: 0
+        background: url(../assets/images/footer_bg.svg)
+        background-position: right
+        background-repeat: no-repeat
+        background-size: contain
+        z-index: 0
+        opacity: 0.3
+        +max-screen($breakpoint-xxs)
+            max-width: 65vw
     a
         letter-spacing: 0.64px
         // color: $white
@@ -40,6 +55,8 @@
         +max-screen($breakpoint-lg)
             max-width: 829px
     &__main
+        position: relative
+        z-index: 1
         padding: 147px 60px 60px
         border-radius: 30px
         max-width: 1740px
@@ -51,6 +68,8 @@
         +max-screen($breakpoint-xxl)
             margin-left: 30px
             margin-right: 30px
+        +max-screen($breakpoint-xl)
+            margin-bottom: 80px
         +max-screen($breakpoint-lg)
             padding: 87px 60px 60px
 
