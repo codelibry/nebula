@@ -26,17 +26,20 @@
         +max-screen($breakpoint-lg)
             display: block
     .container
-        max-width: 1420px
+        max-width: 1480px
+        +max-screen($breakpoint-xxs)
+            max-width: 1420px
         +max-screen($breakpoint-xl)
             padding-left: 100px
             padding-right: 100px
         +max-screen(1200px)
             padding-left: 80px
             padding-right: 80px
+
     &__content
         display: flex
         position: relative
-        justify-content: space-between
+        // justify-content: space-between
         height: 94px
         +max-screen($breakpoint-xl)
             height: 80px
@@ -45,10 +48,13 @@
         +max-screen($breakpoint-lg)
             display: none
     &__logo
-        position: absolute
-        left: 50%
-        top: 50%
-        transform: translate(-50%, -50%)
+        // position: absolute
+        // left: 50%
+        // top: 50%
+        // transform: translate(-50%, -50%)
+        margin-right: 35px
+        +max-screen($breakpoint-xl)
+            margin-right: 25px
         img
             height: 94px
             +max-screen($breakpoint-xl)
@@ -62,24 +68,24 @@
     .menu
         display: flex
         padding-top: 28px
-        margin-left: -70px
-        margin-right: -70px
+
         +max-screen($breakpoint-xl)
             padding-top: 0
-            margin-left: -56px
-            margin-right: -56px
+
         +max-screen(1200px)
-            margin-left: -42px
-            margin-right: -42px
+
         li
-            margin-left: 70px
-            margin-right: 70px
+            // margin-left: 70px
+            // margin-right: 70px
+
+            margin-left: 35px
+            margin-right: 35px
             +max-screen($breakpoint-xl)
-                margin-left: 56px
-                margin-right: 56px
+                margin-left: 25px
+                margin-right: 25px
             +max-screen(1200px)
-                margin-left: 42px
-                margin-right: 42px
+                // margin-left: 42px
+                // margin-right: 42px
             a
                 font-size: 24px
                 text-transform: uppercase
@@ -92,19 +98,13 @@
                     color: $light-lila
                     font-weight: bold
     &__right
-
-        margin-left: -70px
-        margin-right: -70px
         display: flex
         align-self: center
         +max-screen($breakpoint-xl)
             align-items: center
             padding-top: 0
-            margin-left: -56px
-            margin-right: -56px
         +max-screen(1200px)
-            margin-left: -32px
-            margin-right: -32px
+
         &Menu
             display: flex
             & > div
@@ -115,15 +115,15 @@
                 margin-left: 0
                 margin-right: 0
     .header-btn
-        margin-left: 70px
-        margin-right: 70px
+        margin-left: 35px
+        margin-right: 35px
         align-self: flex-start
         +max-screen($breakpoint-xl)
-            margin-left: 56px
-            margin-right: 56px
+            margin-left: 25px
+            margin-right: 25px
         +max-screen(1200px)
-            margin-left: 42px
-            margin-right: 42px
+            // margin-left: 42px
+            // margin-right: 42px
         a
             font-size: 24px
             padding: 10px 20px
