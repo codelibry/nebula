@@ -249,14 +249,18 @@
         padding-left: 100px
     +max-screen($breakpoint-lg)
         padding-left: 135px
+        transform: none
     +max-screen($breakpoint-md)
         padding-left: 130px
         padding-right: 85px
     +max-screen($breakpoint-sm)
         padding-left: 30px
         padding-right: 30px
+
     &__wrapper
         padding-left: 244px
+        +max-screen($breakpoint-xl)
+            padding-left: 122px
         +max-screen($breakpoint-lg)
             padding-right: 0
             padding-left: 99px
@@ -269,10 +273,13 @@
         left: -30%
         top: 52%
         transform: translateY(-50%)
-        +max-screen($breakpoint-xl)
-            left: -15%
+        +max-screen($breakpoint-xxs)
             img
                 width: 420px
+        +max-screen($breakpoint-xl)
+            left: -25%
+            img
+                width: 390px
         +max-screen(1200px)
             width: 350px
             left: -16%
@@ -296,10 +303,12 @@
             display: block
             position: absolute
             top: auto
-            bottom: -145px
-            left: 64.5px
+            bottom: -155px
+            // left: 64.5px
+            left: 50%
+            transform: translateX(-50%)
             img
-                width: 187px
+                width: 167px
         &.no-tablet,
         &.no-desktop
             display: block
