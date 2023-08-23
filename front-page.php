@@ -45,40 +45,42 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
 ?>
 <section class="guidelines">
     <div class="container">
-        <?php if ($title || $text) : ?>
-            <div class="guidelines__top">
-                <?php if ($title) : ?>
-                    <h2 class="guidelines__title "><?php echo $title; ?></h2>
-                <?php endif; ?>
-                <?php if ($text) : ?>
-                    <div class="guidelines__text"><?php echo $text; ?></div>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
-        <?php if ($testimonial_image || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
-            <div class="guidelines__testimonial">
-                <?php if ($testimonial_image) : ?>
-                    <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
-                <?php endif; ?>
-                <?php if ($testimonial_title) : ?>
-                    <h3 class="guidelines__testimonialTitle h2 font--weight--100"><?php echo $testimonial_title; ?></h3>
-                <?php endif; ?>
-                <?php if ($testimonial_text) : ?>
-                    <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
-                <?php endif; ?>
-                <div class="guidelines__readMore">Read more...</div>
-                <?php if ($testimonial_owner) : ?>
-                    <div class="guidelines__testimonialOwner">
-                        <?php echo $testimonial_owner; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
-        <?php if ($button) : ?>
-            <div class="guidelines__btn">
-                <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
-            </div>
-        <?php endif; ?>
+        <div class="guidelines__main">
+            <?php if ($title || $text) : ?>
+                <div class="guidelines__top">
+                    <?php if ($title) : ?>
+                        <h2 class="guidelines__title "><?php echo $title; ?></h2>
+                    <?php endif; ?>
+                    <?php if ($text) : ?>
+                        <div class="guidelines__text"><?php echo $text; ?></div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($testimonial_image || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
+                <div class="guidelines__testimonial">
+                    <?php if ($testimonial_image) : ?>
+                        <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
+                    <?php endif; ?>
+                    <?php if ($testimonial_title) : ?>
+                        <h3 class="guidelines__testimonialTitle h2 font--weight--100"><?php echo $testimonial_title; ?></h3>
+                    <?php endif; ?>
+                    <?php if ($testimonial_text) : ?>
+                        <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
+                    <?php endif; ?>
+                    <div class="guidelines__readMore">Read more...</div>
+                    <?php if ($testimonial_owner) : ?>
+                        <div class="guidelines__testimonialOwner">
+                            <?php echo $testimonial_owner; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($button) : ?>
+                <div class="guidelines__btn">
+                    <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
 <?php

@@ -42,6 +42,12 @@
         opacity: 0.3
         +max-screen($breakpoint-xxs)
             max-width: 65vw
+    &__main
+        transform: translateX(102px)
+        +max-screen($breakpoint-xxs)
+            transform: translateX(5%)
+        +max-screen($breakpoint-lg)
+            transform: none
     &__title
         font-size: 70px
         line-height: 1.05
