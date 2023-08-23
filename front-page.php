@@ -290,4 +290,5 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
         </div>
     </section>
 <?php endif; ?>
+
 <?php get_footer(); ?>
