@@ -21,6 +21,12 @@ function header() {
         $(".header").removeClass("top-scroll");
       }
     });
+
+    $(".header_switcher").click(function () {
+      $("body").toggleClass("dark_mode");
+      $(".light").toggleClass("on");
+      $(".dark").toggleClass("on");
+    });
   });
 }
 

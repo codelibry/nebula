@@ -61,7 +61,7 @@
             +max-screen($breakpoint-xl)
                 height: 80px
             +max-screen(1200px)
-                height: 72px
+                height: 66px
     &__left
         +max-screen($breakpoint-xl)
             display: flex
@@ -85,11 +85,13 @@
                 margin-left: 25px
                 margin-right: 25px
             +max-screen(1200px)
-                // margin-left: 42px
-                // margin-right: 42px
+                margin-left: 15px
+                margin-right: 15px
             a
                 font-size: 24px
                 text-transform: uppercase
+                +max-screen(1200px)
+                    font-size: 20px
                 +max-screen($breakpoint-xl)
                     font-size: 20px
                 +max-screen($breakpoint-lg)
@@ -101,6 +103,8 @@
     &__right
         display: flex
         align-self: center
+        justify-content: space-between
+        width: 100%
         +max-screen($breakpoint-xl)
             align-items: center
             padding-top: 0
@@ -123,13 +127,18 @@
             margin-left: 25px
             margin-right: 25px
         +max-screen(1200px)
-            // margin-left: 42px
-            // margin-right: 42px
+            align-self: center
+            margin-left: 15px
+            margin-right: 15px
         a
             font-size: 24px
             padding: 10px 20px
+            +max-screen(1200px)
+                font-size: 20px
+                height: auto
             +max-screen($breakpoint-xl)
                 font-size: 20px
+
     &__mobile
         padding: 13px 22.5px
         position: absolute
