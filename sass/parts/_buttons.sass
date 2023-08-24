@@ -12,6 +12,7 @@
     border-radius: 20px
     background: var(--new-vizual-background-main, #ECECEC)
     box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
+
     .dark_mode &
         color: $gold
         background: var(--dark-mode-background, #232A34)
@@ -34,17 +35,22 @@
         color: $lila
         font-weight: normal
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
+
         .dark_mode &
             color: $gold
             background: var(--dark-mode-background, #232A34)
-            box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
+            box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153 inset
 
     &--white
         background: var(--new-vizual-background-main, #ECECEC)
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 25px 0px #FFF inset
+        +max-screen($breakpoint-xl)
+            box-shadow: 10px 10px 15px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 15px 0px #FFF inset
         .dark_mode &
             background: #232A34
             box-shadow: 10px 10px 25px 0px #141414 inset, -8px -8px 25px 0px #354153 inset
+            +max-screen($breakpoint-xl)
+                box-shadow: 10px 10px 15px 0px #141414 inset, -8px -8px 15px 0px #354153 inset
         span
             background: var(--blue-space-gradient, linear-gradient(116deg, #0D63A8 0%, #000076 59.38%, #0D63A8 95.31%))
             background-clip: text

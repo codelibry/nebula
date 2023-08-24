@@ -80,9 +80,10 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-            <?php if ($button) : ?>
+            <?php if ($button) :
+                $link_target = $button['target'] ? $button['target'] : '_self'; ?>
                 <div class="guidelines__btn">
-                    <a href="<?php echo $button['url']; ?>" class="btn"><?php echo $button['title']; ?></a>
+                    <a href="<?php echo $button['url']; ?>" class="btn" target="<?php echo esc_attr($link_target); ?>"><?php echo $button['title']; ?></a>
                 </div>
             <?php endif; ?>
         </div>
@@ -139,9 +140,12 @@ $button = get_field('about_services_btn');
                 </div>
             <?php endif; ?>
             <div class="services__text"><?php echo $under_cards_text ?></div>
-            <div class="services__btn">
-                <a href="<?php echo $button['url']; ?>" class="btn btn--default"><?php echo $button['title']; ?></a>
-            </div>
+            <?php if ($button) :
+                $link_target = $button['target'] ? $button['target'] : '_self'; ?>
+                <div class="services__btn">
+                    <a href="<?php echo $button['url']; ?>" class="btn btn--default" target="<?php echo esc_attr($link_target); ?>"><?php echo $button['title']; ?></a>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

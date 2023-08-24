@@ -57,21 +57,6 @@
             "delay": 0
         },
         {
-            "key": "field_6479f581cc9ad",
-            "label": "Button",
-            "name": "hero_btn",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_6479f5907465a",
             "label": "Image",
             "name": "hero_image",
@@ -118,6 +103,21 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_6479f581cc9ad",
+            "label": "Button",
+            "name": "hero_btn",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_647a114a8b39b",
@@ -1153,5 +1153,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1692885891
+    "modified": 1692888307
 }
