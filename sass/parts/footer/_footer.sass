@@ -13,11 +13,15 @@
         width: 100%
         height: max-content
         top: auto
-        bottom: 0
+        bottom: -125px
         right: 0
         z-index: 0
         // opacity: 0.3
         overflow: hidden
+        +max-screen($breakpoint-xl)
+            bottom: -80px
+        +max-screen($breakpoint-sm)
+            bottom: -40px
         img
             display: block
             object-fit: contain
@@ -32,6 +36,9 @@
         font-size: 16px
         margin-bottom: 16px
         letter-spacing: 0.64px
+        .dark_mode &
+            color: $gold
+            opacity: 1
         +max-screen($breakpoint-lg)
             font-size: 10px
             line-height: 1.6
@@ -59,6 +66,9 @@
         margin-right: auto
         background: var(--new-vizual-background-main, #ECECEC)
         box-shadow: 20px 20px 25px 0px rgba(20, 31, 56, 0.25), -15px -15px 20px 0px rgba(255, 255, 255, 0.35)
+        .dark_mode &
+            background: var(--dark-mode-background, #232A34)
+            box-shadow: 20px 20px 25px 0px #141414, -15px -15px 20px 0px #354153
         +max-screen($breakpoint-xxl)
             margin-left: 30px
             margin-right: 30px
@@ -71,6 +81,12 @@
             text-align: center
         img
             max-width: 119px
+            .dark_mode &
+                display: none
+            &.dark
+                display: none
+                .dark_mode &
+                    display: block
             +max-screen($breakpoint-lg)
                 max-width: 65px
             +max-screen($breakpoint-sm)
@@ -146,6 +162,12 @@
             margin-top: 14px
         img
             width: 48px
+            .dark_mode &
+                display: none
+            &.dark
+                display: none
+                .dark_mode &
+                    display: block
             +max-screen($breakpoint-lg)
                 width: 26px
                 height: 26px
@@ -169,6 +191,8 @@
         color: $lila
         font-size: 14px
         letter-spacing: 0.56px
+        .dark_mode &
+            color: $gold
         +max-screen($breakpoint-lg)
             font-size: 10px
         +max-screen($breakpoint-sm)
@@ -213,6 +237,9 @@
             align-items: center
         span
             opacity: 0.5
+            .dark_mode &
+                color: $gold
+                opacity: 1
             +max-screen($breakpoint-lg)
                 font-size: 10px
             +max-screen($breakpoint-md)
@@ -225,15 +252,21 @@
             width: 54px
             height: 54px
             margin-left: 10px
+            .dark_mode &
+                background: #232A34
+                box-shadow: 2px 2px 15px #141414,-2px -2px 10px #354153
             +max-screen($breakpoint-lg)
                 width: 30px
                 height: 30px
             +max-screen($breakpoint-md)
                 width: 52px
                 height: 52px
-        img
+        img, svg
             display: block
             align-self: center
             margin: 0 auto
             width: 100%
             max-width: 22px
+            path
+                .dark_mode &
+                    stroke: $gold

@@ -12,6 +12,8 @@ body
     -moz-osx-font-smoothing: grayscale
     -webkit-backface-visibility: hidden
     -webkit-tap-highlight-color: transparent
+    &.dark_mode
+        color: $light-text
     // ::-moz-selection
     //     color: $color-light
     //     background: transparent
@@ -44,28 +46,25 @@ body
     &--color
         &--white
             &,& *, &.content-block *
-                color: $white
+                color: $light-text
         &--light
             &,& *
                 color: $color-light
         &--dark
             &, & *
                 color: $color-dark
-        &--light-orange
+        &--gold
             &, & *
-                color: $color-light-orange
+                color: $gold
         &--default
             &,& *
                 color: $default-text-color
         &--blue
             &,& *
-                color: $turquoise
+                // color: $turquoise
         &--violet,&--violet_lite
             &,& *
                 color: $light-lila
-        &--cian
-            &,& *
-                color: $cian
         &--pink,&--violet_middle
             &,& *
                 color: $s-pink
@@ -296,10 +295,6 @@ h6,.h6
             margin-right: 20px
             margin-top: 6px
 
-// body:not(.page-template-template-api-book)
-//     h1, .h1, h2, .h2
-//         text-transform: uppercase
-
 .content-block
     p,h1,h2,h3,h4,h5,h6
         margin-bottom: 20px
@@ -479,28 +474,3 @@ h6,.h6
         li
             &::before
                 content: unset !important
-
-.link
-    &--style
-        &--1
-            font-size: 12px
-            line-height: normal
-            font-weight: 700
-            color: $color-light-orange
-            transition: $default-transition
-            text-transform: uppercase
-            position: relative
-            white-space: nowrap
-            &:before
-                content: ''
-                position: absolute
-                bottom: 0
-                right: 0
-                width: 100%
-                height: 2px
-                background-color: $color-light-orange
-                transition: $default-transition
-            &:hover
-                color: $color-dark
-                &:before
-                    width: 0

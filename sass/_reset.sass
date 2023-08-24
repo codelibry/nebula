@@ -7,7 +7,7 @@
 
 html, body
 	width: 100%
-	
+
 	cursor: default
 	&.header-active
 		//overflow: hidden
@@ -16,7 +16,8 @@ body,html
 	font: normal #{$default-font-size}/1.4 $font-family-base
 	font-weight: 600
 	color: $default-text-color
-	background: #FFF
+	// background: #FFF
+
 	+mobile
 		-webkit-text-size-adjust: 100%
 
@@ -35,6 +36,8 @@ img
 a
 	color: $default-text-color
 	text-decoration: none
+	.dark_mode &
+		color: $light-text
 	&:hover
 		text-decoration: none
 

@@ -61,6 +61,12 @@
             max-width: 533px
             left: -80px
             top: -40px
+            .dark_mode &
+                display: none
+            &.dark
+                display: none
+                .dark_mode &
+                    display: block
             +max-screen($breakpoint-xl)
                 position: absolute
                 width: 100%
@@ -119,7 +125,24 @@
                 padding-top: 0
                 padding-left: 15px
                 padding-right: 0
+        strong
+            color: $light-lila
+            .dark_mode &
+                color: $light-gold
+            &:nth-of-type(2n)
+                color: $s-pink
+                .dark_mode &
+                    color: $gold
+            &:nth-of-type(3n)
+                color: $space-lila
+                .dark_mode &
+                    color: $dark-gold
     &__color__text
         margin-bottom: 55px
+        color: $s-pink
+        .dark_mode &
+            color: $light-gold
         strong
             color: $space-lila !important
+            .dark_mode &
+                color: $gold !important

@@ -14,6 +14,8 @@
             background: var(--new-vizual-background-main,#ececec)
             box-shadow: 20px 20px 25px 0 rgba(20,31,56,.25), -15px -15px 20px 0 hsla(0,0%,100%,.35)
             z-index: 7
+            .dark_mode &
+                background: $dark-mode-background
             +max-screen(1200px)
                 box-shadow: 10px 10px 13px 0 rgba(20,31,56,.25), -8px -8px 10px 0 hsla(0,0%,100%,.35)
 
@@ -58,6 +60,12 @@
             margin-right: 25px
         img
             height: 94px
+            .dark_mode &
+                display: none
+            &.dark
+                display: none
+                .dark_mode &
+                    display: block
             +max-screen($breakpoint-xl)
                 height: 80px
             +max-screen(1200px)
@@ -100,6 +108,8 @@
                 a
                     color: $light-lila
                     font-weight: bold
+                    .dark_mode &
+                        color: $light-text
     &__right
         display: flex
         align-self: center
@@ -147,9 +157,9 @@
         right: 0
         z-index: 99
         background: var(--new-vizual-background-main,#ececec)
-        //     box-shadow: 20px 20px 25px 0 rgba(20,31,56,.25), -15px -15px 20px 0 hsla(0,0%,100%,.35)
-        // background: linear-gradient(93.2deg, #702F8A 6.72%, #1B233C 93.41%)
-        box-shadow: 0px -4px 4px rgba(20, 31, 56, 0.2)
+        // box-shadow: 0px -4px 4px rgba(20, 31, 56, 0.2)
+        .dark_mode &
+            background: $dark-mode-background
         +max-screen($breakpoint-xl)
         +max-screen($breakpoint-lg)
             position: fixed
@@ -192,7 +202,9 @@
             background-size: cover
             background-position: center
             background: var(--new-vizual-background-main, #ECECEC)
-            box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.20), -8px -8px 25px 0px #FFF
+
+            .dark_mode &
+                background: var(--dark-mode-background, #232A34)
 
             // +max-screen($breakpoint-lg)
             //     background-image: url('../assets/images/landscape_hero_background.png')
@@ -217,6 +229,9 @@
             background: $lila
             box-shadow: 5px 5px 20px 0 rgba(13,39,80,.16), -8px -8px 15px 0 #fff
             border-radius: 10px
+            .dark_mode &
+                background: $gold
+                box-shadow: none
         img
             width: 24px
             height: 24px
@@ -234,6 +249,8 @@
             left: 0
             position: absolute
             background: $lila
+            .dark_mode &
+                background: $gold
             &:nth-child(1)
                 top: 0
             &:nth-child(2)
@@ -245,6 +262,12 @@
                 bottom: 0
     &__mobileLogo
         img
+            .dark_mode &
+                display: none
+            &.dark
+                display: none
+                .dark_mode &
+                    display: block
             +max-screen($breakpoint-lg)
                 height: 56px
             +max-screen($breakpoint-sm)
@@ -263,6 +286,8 @@
             width: 28px
             height: 3px
             background: #000
+            .dark_mode &
+                background: #fff
             &:nth-child(1)
                 transform: rotate(45deg)
             &:nth-child(2)

@@ -4,7 +4,7 @@ $text = get_field('hero_text');
 $color_text = get_field('hero_color_text');
 $button = get_field('hero_btn');
 $image = get_field('hero_image');
-
+$image_dark = get_field('hero_image_dark');
 ?>
 <section class="hero">
     <div class="container">
@@ -16,7 +16,7 @@ $image = get_field('hero_image');
                     </div>
                 <?php endif; ?>
                 <?php if ($color_text) : ?>
-                    <div class="hero__color__text text--size--32 text--color--pink">
+                    <div class="hero__color__text text--size--32">
                         <?php echo $color_text; ?>
                     </div>
                 <?php endif; ?>
@@ -26,9 +26,10 @@ $image = get_field('hero_image');
                     </div>
                 <?php endif; ?>
             </div>
-            <?php if ($image) : ?>
+            <?php if ($image || $image_dark) : ?>
                 <div class="hero__image col-lg-4 col-md-4 col-12">
-                    <img src="<?php echo $image['url']; ?>" alt="">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                    <img class="dark" src="<?php echo $image_dark['url']; ?>" alt="<?php echo $image_dark['title']; ?>">
                 </div>
             <?php endif; ?>
         </div>
@@ -39,6 +40,7 @@ $title = get_field('guidelines_title');
 $text = get_field('guidelines_text');
 $button = get_field('guidelines_button');
 $testimonial_image = get_field('guidelines_testimonial_image');
+$testimonial_image_dark = get_field('guidelines_testimonial_image_dark');
 $testimonial_title = get_field('guidelines_testimonial_title', false, false);
 $testimonial_text = get_field('guidelines_testimonial_text');
 $testimonial_owner = get_field('guidelines_testimonial_owner');
@@ -56,10 +58,13 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-            <?php if ($testimonial_image || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
+            <?php if ($testimonial_image || $testimonial_image_dark || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
                 <div class="guidelines__testimonial">
-                    <?php if ($testimonial_image) : ?>
-                        <div class="guidelines__testimonialRobbot"><img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>"></div>
+                    <?php if ($testimonial_image || $testimonial_image_dark) : ?>
+                        <div class="guidelines__testimonialRobbot">
+                            <img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>">
+                            <img class="dark" src="<?php echo $testimonial_image_dark['url'] ?>" alt="<?php echo $testimonial_image_dark['title']; ?>">
+                        </div>
                     <?php endif; ?>
                     <?php if ($testimonial_title) : ?>
                         <h3 class="guidelines__testimonialTitle h2 font--weight--100"><?php echo $testimonial_title; ?></h3>
@@ -111,12 +116,16 @@ $button = get_field('about_services_btn');
                         <?php
                         $title = get_sub_field('title');
                         $image = get_sub_field('image');
+                        $image_dark = get_sub_field('image_dark');
                         $text = get_sub_field('text');
                         ?>
                         <div class="services__cardsItem__wrapper col-sm-3 col-6">
                             <div class="services__cardsItem">
-                                <?php if ($image) : ?>
-                                    <div class="services__cardsItem__image"><img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>"></div>
+                                <?php if ($image || $image_dark) : ?>
+                                    <div class="services__cardsItem__image">
+                                        <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title']; ?>">
+                                        <img class="dark" src="<?php echo $image_dark['url'] ?>" alt="<?php echo $image_dark['title']; ?>">
+                                    </div>
                                 <?php endif; ?>
                                 <?php if ($title) : ?>
                                     <h3 class="services__cardsItem__title font--weight--400"><?php echo $title; ?></h3>
@@ -142,11 +151,15 @@ $solution = get_field('solution');
 $pain_title = $pain['title'];
 $pain_text = $pain['text'];
 $pain_image = $pain['image'];
+$pain_image_dark = $pain['image_dark'];
 $pain_tablet_image = $pain['tablet_image'];
+$pain_tablet_image_dark = $pain['tablet_image_dark'];
 $solution_title = $solution['title'];
 $solution_text = $solution['text'];
 $solution_image = $solution['image'];
+$solution_image_dark = $solution['image_dark'];
 $solution_tablet_image = $solution['tablet_image'];
+$solution_tablet_image_dark = $solution['tablet_image_dark'];
 ?>
 <section class="pain__solution">
     <div class="container">
@@ -154,12 +167,24 @@ $solution_tablet_image = $solution['tablet_image'];
             <div class="pain__wrapper pain__solutionBlock__wrapper">
                 <div class="pain pain__solutionBlock">
                     <?php if ($pain_image && $pain_tablet_image) : ?>
-                        <div class="pain__image"><img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>"></div>
-                        <div class="pain__image tablet"><img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>"></div>
+                        <div class="pain__image">
+                            <img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>">
+                            <img class="dark" src="<?php echo $pain_image_dark['url']; ?>" alt="<?php echo $pain_image_dark['title']; ?>">
+                        </div>
+                        <div class="pain__image tablet">
+                            <img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>">
+                            <img class="dark" src="<?php echo $pain_tablet_image_dark['url']; ?>" alt="<?php echo $pain_tablet_image_dark['title']; ?>">
+                        </div>
                     <?php elseif ($pain_tablet_image) : ?>
-                        <div class="pain__image no-desktop"><img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>"></div>
+                        <div class="pain__image no-desktop">
+                            <img src="<?php echo $pain_tablet_image['url']; ?>" alt="<?php echo $pain_tablet_image['title']; ?>">
+                            <img class="dark" src="<?php echo $pain_tablet_image_dark['url']; ?>" alt="<?php echo $pain_tablet_image_dark['title']; ?>">
+                        </div>
                     <?php elseif ($pain_image) : ?>
-                        <div class="pain__image no-tablet"><img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>"></div>
+                        <div class="pain__image no-tablet">
+                            <img src="<?php echo $pain_image['url']; ?>" alt="<?php echo $pain_image['title']; ?>">
+                            <img class="dark" src="<?php echo $pain_image_dark['url']; ?>" alt="<?php echo $pain_image_dark['title']; ?>">
+                        </div>
                     <?php endif; ?>
                     <?php if ($pain_title) : ?>
                         <div class="pain__solutionTitle"><?php echo $pain_title; ?></div>
@@ -174,12 +199,24 @@ $solution_tablet_image = $solution['tablet_image'];
             <div class="solution__wrapper pain__solutionBlock__wrapper">
                 <div class="solution pain__solutionBlock">
                     <?php if ($solution_image && $solution_tablet_image) : ?>
-                        <div class="solution__image"><img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>"></div>
-                        <div class="solution__image tablet"><img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>"></div>
+                        <div class="solution__image">
+                            <img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>">
+                            <img class="dark" src="<?php echo $solution_image_dark['url']; ?>" alt="<?php echo $solution_image_dark['title']; ?>">
+                        </div>
+                        <div class="solution__image tablet">
+                            <img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>">
+                            <img class="dark" src="<?php echo $solution_tablet_image_dark['url']; ?>" alt="<?php echo $solution_tablet_image_dark['title']; ?>">
+                        </div>
                     <?php elseif ($solution_tablet_image) : ?>
-                        <div class="solution__image no-desktop"><img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>"></div>
+                        <div class="solution__image no-desktop">
+                            <img src="<?php echo $solution_tablet_image['url']; ?>" alt="<?php echo $solution_tablet_image['title']; ?>">
+                            <img class="dark" src="<?php echo $solution_tablet_image_dark['url']; ?>" alt="<?php echo $solution_tablet_image_dark['title']; ?>">
+                        </div>
                     <?php elseif ($solution_image) : ?>
-                        <div class="solution__image no-tablet"><img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>"></div>
+                        <div class="solution__image no-tablet">
+                            <img src="<?php echo $solution_image['url']; ?>" alt="<?php echo $solution_image['title']; ?>">
+                            <img class="dark" src="<?php echo $solution_image_dark['url']; ?>" alt="<?php echo $solution_image_dark['title']; ?>">
+                        </div>
                     <?php endif; ?>
                     <?php if ($solution_title) : ?>
                         <div class="pain__solutionTitle"><?php echo $solution_title; ?></div>
@@ -218,6 +255,7 @@ $button = get_field('lets_work_button');
 <?php
 $title = get_field('list_section__title', false, false);
 $left_img = get_field('list_section__left_img');
+$left_img_dark = get_field('list_section__left_img_dark');
 $list_section_button = get_field('list_section__button');
 
 if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
@@ -232,11 +270,13 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                         while (have_rows('list_section__blocks')) : the_row();
                             $text = get_sub_field('text');
                             $img = get_sub_field('img');
+                            $img_dark = get_sub_field('img_dark');
                             $button = get_sub_field('add_button'); ?>
                             <div class="list_section__inner">
                                 <?php if ($img) : ?>
                                     <div class="img_block">
                                         <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['title']; ?>">
+                                        <img class="dark" src="<?php echo $img_dark['url'] ?>" alt="<?php echo $img_dark['title'] ?>">
                                     </div>
                                 <?php endif; ?>
                                 <div class="content-block_main">
@@ -259,6 +299,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                     <div class="list_section__bottom">
                         <div class="left_img">
                             <img src="<?php echo $left_img['url'] ?>" alt="<?php echo $left_img['title'] ?>">
+                            <img class="dark" src="<?php echo $left_img_dark['url'] ?>" alt="<?php echo $left_img_dark['title'] ?>">
                         </div>
                         <?php if (have_rows('list_section__rows')) : ?>
                             <div class="list_section__bottom-rows">

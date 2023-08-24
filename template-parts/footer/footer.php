@@ -1,5 +1,6 @@
 <?php
 $logo = get_field('footer_logo', 'options');
+$logo_dark = get_field('footer_logo_dark', 'options');
 $contact = get_field('contact_text', 'options');
 $email = get_field('footer_email', 'options');
 $phone_number = get_field('footer_phone_number', 'options');
@@ -13,6 +14,7 @@ $copywriting = get_field('footer_copywriting', 'options');
                 <?php if ($logo) : ?>
                     <div class="footer__logo col-sm-2 col-12">
                         <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['title']; ?>">
+                        <img class="dark" src="<?php echo $logo_dark['url'] ?>" alt="<?php echo $logo_dark['title']; ?>">
                     </div>
                 <?php endif; ?>
                 <div class="footer__menuWrapper col-sm-6 col-12">
@@ -21,14 +23,16 @@ $copywriting = get_field('footer_copywriting', 'options');
                 </div>
                 <?php if ($contact) : ?>
                     <div class="footer__contact col-sm-2 col-12">
-                        <div class="footer__contactTitle footer-title">Contact</div>
+                        <div class="footer__contactTitle footer-title text--uppercase">Contact</div>
                         <div class="footer__contactText"><?php echo $contact ?></div>
                     </div>
                 <?php endif; ?>
                 <div class="footer__goUpBtn col-sm-2 col-12">
                     <a href="#"><span>go up</span>
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/to_top.svg' ?>" alt="">
+                            <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 13L13 2L24 13" stroke="#98A9D8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </a>
                 </div>
@@ -42,11 +46,15 @@ $copywriting = get_field('footer_copywriting', 'options');
                         <?php while (have_rows('footer_icons', 'options')) : the_row(); ?>
                             <?php
                             $icon = get_sub_field('icon', 'options');
+                            $icon_dark = get_sub_field('icon_dark', 'options');
                             $link = get_sub_field('link', 'options');
                             if ($icon && $link) :
                             ?>
                                 <div class="footer__icon">
-                                    <a href="<?php echo $link['url']; ?>" target="_blank"><img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['title']; ?>"></a>
+                                    <a href="<?php echo $link['url']; ?>" target="_blank">
+                                        <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['title']; ?>">
+                                        <img class="dark" src="<?php echo $icon_dark['url'] ?>" alt="<?php echo $icon_dark['title'] ?>">
+                                    </a>
                                 </div>
                             <?php endif; ?>
                         <?php endwhile; ?>
