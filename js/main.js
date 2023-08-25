@@ -1,7 +1,11 @@
 import $ from "jquery";
 
 // import { lottie } from './lottie';
-
+import {
+  scrollToAnchor,
+  scrollToHash,
+  requestQuoteLink,
+} from "./animations/scroll-to-anchor";
 import { header } from "./template-parts/header/header";
 
 // Animations
@@ -17,6 +21,8 @@ import { slider } from "./template-parts/blocks/caseStudies_slider";
 import { initPopups } from "./parts/popups";
 import { basicSliders } from "./parts/slider";
 
+scrollToAnchor();
+scrollToHash();
 header();
 
 //animations
