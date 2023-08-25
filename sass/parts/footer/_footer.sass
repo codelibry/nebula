@@ -5,29 +5,42 @@
     margin-bottom: 125px
     +max-screen($breakpoint-xl)
         margin-bottom: 80px
-    +max-screen($breakpoint-sm)
-        margin-bottom: 40px
+    +max-screen($breakpoint-lg)
+        margin-bottom: 100px
     &__bg
         position: absolute
         content: ""
         width: 100%
-        height: max-content
+        height: 2356px
         top: auto
         bottom: -125px
         right: 0
         z-index: 0
-        // opacity: 0.3
         overflow: hidden
+
         +max-screen($breakpoint-xl)
             bottom: -80px
         +max-screen($breakpoint-sm)
             bottom: -40px
-        img
-            display: block
-            object-fit: contain
-            margin-left: auto
-        +max-screen($breakpoint-xxs)
-            max-width: 65vw
+        &::before
+            position: absolute
+            content: ""
+            width: 100%
+            height: 100%
+            top: 0
+            bottom: -10px
+            right: 0
+            background: url(../assets/images/footer_bg.svg)
+            background-color: $color-bg-light
+            background-blend-mode: exclusion
+            background-position: right bottom
+            background-repeat: no-repeat
+            background-size: 100%
+            .dark_mode &
+                background-color: $dark-mode-background
+                background-blend-mode: soft-light
+            +max-screen($breakpoint-xxs)
+                max-width: 85vw
     a
         letter-spacing: 0.64px
         // color: $light-text

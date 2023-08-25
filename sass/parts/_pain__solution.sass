@@ -19,10 +19,9 @@
         background-position: left
         background-repeat: no-repeat
         background-size: contain
-        z-index: 1
-        background-blend-mode: screen
-
-        // opacity: 0.3
+        mix-blend-mode: screen
+        .dark_mode &
+            content: none
         +max-screen($breakpoint-xxs)
             max-width: 65vw
     &::after
