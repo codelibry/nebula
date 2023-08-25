@@ -200,7 +200,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
             </div>
         <?php endif; ?>
         <?php if ($solution_image || $solution_text || $solution_title) : ?>
-            <div class="solution__wrapper pain__solutionBlock__wrapper">
+            <div class="solution__wrapper pain__solutionBlock__wrapper" id="solutions">
                 <div class="solution pain__solutionBlock">
                     <?php if ($solution_image && $solution_tablet_image) : ?>
                         <div class="solution__image">
@@ -263,7 +263,7 @@ $left_img_dark = get_field('list_section__left_img_dark');
 $list_section_button = get_field('list_section__button');
 
 if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
-    <section class="list_section">
+    <section class="list_section" id="about">
         <div class="container">
             <div class="list_section__wrapper">
                 <div class="list_section__top">

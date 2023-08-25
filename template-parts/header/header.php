@@ -6,9 +6,6 @@ $btn = get_field('header_button', 'options');
 <header class="header">
     <div class="container">
         <div class="header__content">
-            <!-- <div class="header__left">
-                <div class="header__leftMenu"><?php wp_nav_menu(array('menu' => 'header-left-menu')); ?></div>
-            </div> -->
             <?php if ($logo) : ?>
                 <div class="header__logo">
                     <a href="<?php echo get_home_url() ?>">
@@ -18,7 +15,8 @@ $btn = get_field('header_button', 'options');
                 </div>
             <?php endif; ?>
             <div class="header__right">
-                <div class="header__rightMenu"><?php wp_nav_menu(array('menu' => 'header-right-menu')); ?></div>
+                <div class="header__rightMenu"><?php wp_nav_menu(array('menu' => 'header-menu'));
+                                                ?></div>
                 <?php if ($btn) : ?>
                     <div class="header-btn"><a class="btn btn--blue btn--small" href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a></div>
                 <?php endif; ?>
@@ -119,8 +117,7 @@ $btn = get_field('header_button', 'options');
             </div>
         </div>
         <div class="header__mobileMenu">
-            <?php wp_nav_menu(array('menu' => 'header-left-menu')); ?>
-            <?php wp_nav_menu(array('menu' => 'header-right-menu')); ?>
+            <?php wp_nav_menu(array('menu' => 'header-menu')); ?>
             <div class="header__burgerClose">
                 <span></span>
                 <span></span>
