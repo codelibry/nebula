@@ -413,14 +413,14 @@ h6,.h6
     pre
         white-space: pre-wrap
     blockquote
-        margin: rem(24px 0)
+        // margin: rem(24px 0)
         position: relative
-        padding-left: rem(75px)
-        padding-top: rem(20px)
+        padding-left: rem(50px)
+        // padding-top: rem(20px)
         +max-screen($breakpoint-sm)
             padding-left: rem(30px)
             padding-right: rem(30px)
-            padding-top: rem(5px)
+            // padding-top: rem(5px)
         p
             font-size: rem(30px)
             line-height: rem(42px)
@@ -445,15 +445,19 @@ h6,.h6
             font-size: 100px
             line-height: 85px
             font-weight: 600
-            color: $color-light
+            color: $s-pink
             //background-image: url(../assets/images/icon-quote.svg)
             //background-repeat: no-repeat
             //background-size: contain
             //background-position: center
+            .dark_mode &
+                color: $gold
             +max-screen($breakpoint-sm)
-                width: rem(30px)
-                height: rem(30px)
-                left: -10px
+                width: rem(15px)
+                height: rem(15px)
+                font-size: 50px
+                line-height: 45px
+                left: -8px
     .wpcf7
         padding: rem(12px 0)
         &:nth-last-child(1)

@@ -40,7 +40,7 @@ function cptui_register_my_cpts_testimonial()
         ),
         'query_var' => true,
         'menu_icon' => 'dashicons-format-chat',
-        'supports' => array('title'),
+        'supports' => array('title', 'editor'),
         'show_in_graphql' => false,
     );
 

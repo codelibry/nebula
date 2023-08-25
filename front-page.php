@@ -340,4 +340,34 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
     </section>
 <?php endif; ?>
 
+<?php
+$testimonials_title = get_field('testimonials_text');
+$testimonials_row = get_field('testimonials')
+?>
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonials__main">
+            <?php if ($testimonials_title || $testimonials_row) : ?>
+                <div class="testimonials__top">
+                    <?php if ($testimonials_title) : ?>
+                        <h2 class="testimonials__title h1 font--weight--100 text--center"><?php echo $testimonials_title; ?></h2>
+                    <?php endif; ?>
+                    <?php if ($testimonials_row) : ?>
+                        <div class="testimonials__rows">
+                            <?php foreach ($testimonials_row as $item) :
+                                $output = apply_filters('the_content', $item->post_content); ?>
+                                <div class="testimonials__item content-block">
+                                    <blockquote><?php echo $item->post_content; ?></blockquote>
+                                    <h3 class="author font--weight--100 text--center"><?php echo get_the_title($item->ID); ?></h3>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>

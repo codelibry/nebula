@@ -1,0 +1,165 @@
+.testimonials
+    position: relative
+    margin-bottom: 160px
+    +max-screen($breakpoint-xl)
+    +max-screen(1200px)
+        z-index: 1
+    +max-screen($breakpoint-lg)
+        margin-bottom: 80px
+        z-index: 1
+    .container
+        position: relative
+        z-index: 2
+        max-width: calc(1414px + 60px)
+        +max-screen($breakpoint-xxl)
+            max-width: 77.4%
+        +max-screen($breakpoint-lg)
+            max-width: 920px
+            padding-left: 75px
+            padding-right: 75px
+        +max-screen($breakpoint-md)
+            max-width: 77.4%
+            padding-left: 22.5px
+            padding-right: 22.5px
+        +max-screen($breakpoint-sm)
+            max-width: 100%
+    &__rows
+        margin-top: 40px
+        max-width: 60%
+        margin-left: auto
+        margin-right: auto
+        +max-screen($breakpoint-md)
+            max-width: none
+        +max-screen($breakpoint-sm)
+            margin-top: 20px
+    &__item
+        background: $color-bg-light
+        box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.20), -8px -8px 25px 0px #FFF
+        padding: 40px
+        border-radius: 30px
+        position: relative
+        +max-screen($breakpoint-sm)
+            padding: 40px 20px
+            box-shadow: 10px 10px 15px 0px rgba(20, 31, 56, 0.20), -8px -8px 15px 0px #FFF
+        .dark_mode &
+            background: var(--dark-mode-background, #232A34)
+            box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
+            +max-screen($breakpoint-sm)
+                box-shadow: 10px 10px 15px 0px #141414, -8px -8px 15px 0px #354153
+        h3
+            margin-top: 20px
+            font-style: italic
+    /* the slides */
+    .slick-slide
+        margin: 30px 40px
+        +max-screen($breakpoint-sm)
+            margin: 20px 20px
+    /* the parent */
+    .slick-list
+        margin: 0 -40px
+        +max-screen($breakpoint-sm)
+            margin: 0 -20px
+    .slick-arrow
+        position: absolute
+        display: block
+        font-size: 0
+        border: none
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background-color: $new-vizual-background-main
+        top: calc( 50% - 25px )
+        box-shadow: 2px 2px 15px 0 rgba(20,31,56,.55), -2px -2px 4px 0 #fff
+        .dark_mode &
+            background-color: $dark-mode-background
+            box-shadow: 2px 2px 15px #141414,-2px -2px 10px #354153
+        +max-screen($breakpoint-md)
+            width: 40px
+            height: 40px
+            top: calc( 50% - 20px )
+        &::before
+            content: ""
+            position: absolute
+            top: calc(50% - 10px)
+            z-index: 2
+            display: block
+            width: 20px
+            height: 20px
+            border-top: 3px solid $lila
+            border-left: 3px solid $lila
+            +max-screen($breakpoint-md)
+                width: 16px
+                height: 16px
+                top: calc(50% - 8px)
+            .dark_mode &
+                border-top: 3px solid $gold
+                border-left: 3px solid $gold
+        &.slick-prev
+            left: -100px
+            +max-screen($breakpoint-md)
+                left: -60px
+            &::before
+                left: 18px
+                transform: rotate(-45deg)
+                +max-screen($breakpoint-md)
+                    left: 13px
+        &.slick-next
+            right: -100px
+            +max-screen($breakpoint-md)
+                right: -60px
+            &::before
+                right: 18px
+                transform: rotate(135deg)
+                +max-screen($breakpoint-md)
+                    right: 13px
+    /* Dots */
+    .slick-dotted.slick-slider
+        margin-bottom: 30px
+
+    .slick-dots
+        position: absolute
+        bottom: -25px
+        display: block
+        width: 100%
+        padding: 0
+        margin: 0
+        list-style: none
+        text-align: center
+
+    .slick-dots li
+        position: relative
+        display: inline-block
+        width: 20px
+        height: 20px
+        margin: 0 5px
+        padding: 0
+        cursor: pointer
+
+    .slick-dots li button
+        font-size: 0
+        line-height: 0
+        display: block
+        width: 20px
+        height: 20px
+        padding: 5px
+        cursor: pointer
+        color: transparent
+        border: 0
+        outline: none
+        background: $lila
+        border-radius: 50%
+        .dark_mode &
+            background: gold
+
+    .slick-dots li button:hover,
+    .slick-dots li button:focus
+        outline: none
+
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before
+        opacity: 1
+
+    .slick-dots li.slick-active button
+        background: darken($lila,20% )
+        .dark_mode &
+            background: darken($gold,20% )
