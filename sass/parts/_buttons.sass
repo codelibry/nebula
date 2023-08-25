@@ -10,13 +10,19 @@
     font-size: 30px
     color: $s-pink
     border-radius: 20px
-    background: var(--new-vizual-background-main, #ECECEC)
+    background: $new-vizual-background-main
     box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
-
+    transition: $default-transition
+    &:hover
+        background: lighten($new-vizual-background-main, 5%)
     .dark_mode &
         color: $gold
-        background: var(--dark-mode-background, #232A34)
+        background: $dark-mode-background
         box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
+        &:hover
+            background: lighten($dark-mode-background, 5%)
+    +max-screen($breakpoint-xxs)
+        height: auto
     +max-screen(1200px)
         font-size: 24px
     +max-screen($breakpoint-lg)
@@ -34,19 +40,22 @@
     &--small
         height: 50px
         border-radius: 10px
-        background: var(--new-vizual-background-main, #ECECEC)
+        background: $new-vizual-background-main
         color: $lila
         font-weight: normal
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
-
+        &:hover
+            background: $new-vizual-background-main
         .dark_mode &
             color: $gold
-            background: var(--dark-mode-background, #232A34)
+            background: $dark-mode-background
             box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153 inset
-
+            &:hover
+                background: $dark-mode-background
     &--white
-        background: var(--new-vizual-background-main, #ECECEC)
+        background: $new-vizual-background-main
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 25px 0px #FFF inset
+
         +max-screen($breakpoint-xl)
             box-shadow: 10px 10px 15px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 15px 0px #FFF inset
         .dark_mode &
@@ -66,10 +75,10 @@
 
     &--default
         border-radius: 20px
-        background: var(--new-vizual-background-main, #ECECEC)
+        background: $new-vizual-background-main
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
         color: var(--new-vizual-accent-baby-lila, #98A9D8)
         .dark_mode &
-            background: var(--dark-mode-background, #232A34)
+            background: $dark-mode-background
             box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
             color: $gold

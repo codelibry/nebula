@@ -77,10 +77,10 @@
         max-width: 1740px
         margin-left: auto
         margin-right: auto
-        background: var(--new-vizual-background-main, #ECECEC)
+        background: $new-vizual-background-main
         box-shadow: 20px 20px 25px 0px rgba(20, 31, 56, 0.25), -15px -15px 20px 0px rgba(255, 255, 255, 0.35)
         .dark_mode &
-            background: var(--dark-mode-background, #232A34)
+            background: $dark-mode-background
             box-shadow: 20px 20px 25px 0px #141414, -15px -15px 20px 0px #354153
         +max-screen($breakpoint-xxl)
             margin-left: 30px
@@ -260,7 +260,7 @@
         div
             display: flex
             border-radius: 50%
-            background: var(--new-vizual-background-main, #ECECEC)
+            background: $new-vizual-background-main
             box-shadow: 2px 2px 15px 0px rgba(20, 31, 56, 0.55), -2px -2px 4px 0px #FFF
             width: 54px
             height: 54px

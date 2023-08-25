@@ -34,7 +34,7 @@
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.20), -8px -8px 25px 0px #FFF
         border-radius: 30px
         .dark_mode &
-            background: var(--dark-mode-background, #232A34)
+            background: $dark-mode-background
             box-shadow: 10px 10px 25px #141414, -8px -8px 25px #354153
         +max-screen($breakpoint-md)
             padding: 86px 57px 86px 37px
@@ -177,10 +177,10 @@
                             content: none
 
                     .services__cardsItem
-                        background: var(--new-vizual-background-main, #ECECEC)
+                        background: $new-vizual-background-main
                         box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
                         .dark_mode &
-                            background: var(--dark-mode-background, #232A34)
+                            background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                         +max-screen($breakpoint-sm)
                             padding-left: 24px
@@ -196,7 +196,7 @@
                             right: -7px
                             border-radius: 50%
                             position: absolute
-                            background: var(--new-vizual-background-main, #ECECEC)
+                            background: $new-vizual-background-main
                             box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
                             .dark_mode &
                                 content: none
@@ -219,10 +219,10 @@
                 &:nth-child(4n + 2)
                     .services__cardsItem__title
                     .services__cardsItem
-                        background: var(--new-vizual-background-main, #ECECEC)
+                        background: $new-vizual-background-main
                         box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
                         .dark_mode &
-                            background: var(--dark-mode-background, #232A34)
+                            background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                         &::before
 
@@ -306,7 +306,7 @@
                         +max-screen($breakpoint-sm)
 
                     .services__cardsItem
-                        background: var(--new-vizual-background-main, #ECECEC)
+                        background: $new-vizual-background-main
                         box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.20) inset, -5px -5px 20px 0px #FFF inset
                         position: relative
                         border-radius: 25px
@@ -314,7 +314,7 @@
                         .dark_mode &
                             position: relative
                             z-index: 2
-                            background: var(--dark-mode-background, #232A34)
+                            background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                         &::before
 
@@ -328,10 +328,10 @@
                             left: -7px
                             border-radius: 50%
                             position: absolute
-                            background: var(--new-vizual-background-main, #ECECEC)
+                            background: $new-vizual-background-main
                             box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
                             .dark_mode &
-                                background: var(--dark-mode-background, #232A34)
+                                background: $dark-mode-background
                                 box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                                 z-index: 3
                             +max-screen($breakpoint-xxs)
@@ -482,11 +482,11 @@
                             z-index: 3
 
                     .services__cardsItem
-                        background: var(--new-vizual-background-main, #ECECEC)
+                        background: $new-vizual-background-main
                         box-shadow: -5px -5px 20px 0px #FFF inset, 4px 4px 20px 0px rgba(20, 31, 56, 0.20) inset
                         transform: rotate(-8.87deg)
                         .dark_mode &
-                            background: var(--dark-mode-background, #232A34)
+                            background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                         +max-screen(1200px)
                             height: 97%
