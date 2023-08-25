@@ -532,6 +532,7 @@
                     font-size: 9px
                     line-height: 1.4
                     margin-top: 10px
+
             &__image
                 z-index: 1
                 position: relative
@@ -576,6 +577,8 @@
         font-size: 24px
         margin-top: 112px
         line-height: 1.4
+        &.opened
+            max-height: 100%
         +max-screen($breakpoint-xl)
             font-size: 20px
             margin-top: 82px
@@ -597,12 +600,25 @@
             font-size: 16px
             line-height: 1.45
             margin-top: 20px
+            max-height: 8.6em
+            overflow: hidden
         p
             margin-bottom: 24px
             +max-screen($breakpoint-sm)
                 margin-bottom: 22px
             &:last-child
                 margin-bottom: 0
+        &__readMore
+            display: none
+            +max-screen($breakpoint-lg)
+                margin-top: 40px
+                display: block
+                font-size: 16px
+                line-height: 1.4
+                text-transform: uppercase
+                text-align: right
+            +max-screen($breakpoint-md)
+                margin-top: 20px
     &__btn
         text-align: center
         margin-top: 80.0px

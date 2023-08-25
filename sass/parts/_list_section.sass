@@ -30,10 +30,8 @@
             background: var(--dark-mode-background, #232A34)
             box-shadow: 10px 10px 25px #141414,-8px -8px 25px #354153
 
-        // +max-screen($breakpoint-xxs)
-        //     padding: 120px 205px 86px
-        // +max-screen($breakpoint-xl)
-        //     padding: 120px 205px 86px
+        +max-screen($breakpoint-sm)
+            padding: 60px 27px 86px
 
     &__title
         margin-bottom: 80px
@@ -113,7 +111,7 @@
                     margin: 0 auto
                     display: block
                 +max-screen($breakpoint-sm)
-                    max-width: 75%
+                    max-width: 140px
 
         &-rows
             margin-left: 305px
@@ -152,7 +150,7 @@
                         .dark_mode &
                             box-shadow: 5px 5px 125px #161616,-3px -3px 15px #5B5B5B
                     +max-screen($breakpoint-sm)
-                        left: -30px
+                        left: -15px
 
                 &:last-of-type
                     margin-bottom: 0
