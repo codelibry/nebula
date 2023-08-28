@@ -23,10 +23,64 @@ function header() {
     });
 
     $(".header_switcher").click(function () {
-      $("body").toggleClass("dark_mode");
-      $(".light").toggleClass("on");
-      $(".dark").toggleClass("on");
+      // $("body").toggleClass("dark_mode");
+      // $(".light").toggleClass("on");
+      // $(".dark").toggleClass("on");
     });
+
+    // theme mode btn function
+    function changeThemeMode() {
+      const modeBtn = $(".header_switcher");
+      const rootElem = document.documentElement;
+      let storedColorScheme = localStorage.getItem("colorScheme");
+
+      if (
+        storedColorScheme === "dark" &&
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        rootElem.setAttribute("data-theme", "dark");
+        modeBtn.addClass("dark-theme");
+        $("body").addClass("dark_mode");
+        $(".dark").addClass("on");
+        $(".light").removeClass("on");
+      } else if (storedColorScheme === "dark") {
+        rootElem.setAttribute("data-theme", "dark");
+        modeBtn.addClass("dark-theme");
+        $("body").addClass("dark_mode");
+        $(".dark").addClass("on");
+        $(".light").removeClass("on");
+      } else {
+        rootElem.setAttribute("data-theme", "light");
+        modeBtn.addClass("light-theme");
+        $(".light").addClass("on");
+        $(".dark").removeClass("on");
+        $("body").removeClass("dark_mode");
+      }
+
+      modeBtn.on("click", function () {
+        storedColorScheme = localStorage.getItem("colorScheme");
+        if (storedColorScheme === "dark") {
+          rootElem.setAttribute("data-theme", "light");
+          modeBtn.addClass("light-theme");
+          modeBtn.removeClass("dark-theme");
+          localStorage.setItem("colorScheme", "light");
+          $("body").removeClass("dark_mode");
+          $(".light").addClass("on");
+          $(".dark").removeClass("on");
+        } else {
+          rootElem.setAttribute("data-theme", "dark");
+          modeBtn.addClass("dark-theme");
+          modeBtn.removeClass("light-theme");
+          localStorage.setItem("colorScheme", "dark");
+          $("body").addClass("dark_mode");
+          $(".dark").addClass("on");
+          $(".light").removeClass("on");
+        }
+      });
+    }
+
+    changeThemeMode();
   });
 }
 
