@@ -72,7 +72,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                     <?php if ($testimonial_text) : ?>
                         <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
                     <?php endif; ?>
-                    <div class="guidelines__readMore">Read more...</div>
+                    <!-- <div class="guidelines__readMore">Read more...</div> -->
                     <?php if ($testimonial_owner) : ?>
                         <div class="guidelines__testimonialOwner">
                             <?php echo $testimonial_owner; ?>
@@ -142,7 +142,7 @@ $button = get_field('about_services_btn');
             <div class="services__text">
                 <?php echo $under_cards_text ?>
             </div>
-            <div class="services__text__readMore">Read more...</div>
+            <!-- <div class="services__text__readMore">Read more...</div> -->
             <?php if ($button) :
                 $link_target = $button['target'] ? $button['target'] : '_self'; ?>
                 <div class="services__btn">
@@ -249,7 +249,7 @@ $button = get_field('lets_work_button');
             <?php endif; ?>
             <?php if ($text) : ?>
                 <div class="letsWork__text"><?php echo $text; ?></div>
-                <div class="letsWork__text__readMore">Read more...</div>
+                <!-- <div class="letsWork__text__readMore">Read more...</div> -->
             <?php endif; ?>
             <?php if ($button) : ?>
                 <div class="letsWork__button">

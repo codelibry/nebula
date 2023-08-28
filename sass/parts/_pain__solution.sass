@@ -86,7 +86,7 @@
             line-height: 1.2
             margin-bottom: 20px
         +max-screen($breakpoint-sm)
-            font-size: 23px
+            // font-size: 23px
             line-height: 1.2
             margin-bottom: 20px
     &Text
@@ -244,6 +244,10 @@
             display: block
             img
                 max-width: 220px
+        +max-screen(425px)
+            bottom: -185px
+            img
+                max-width: 200px
         &.no-tablet,
         &.no-desktop
             display: block

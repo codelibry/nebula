@@ -31,7 +31,7 @@ appearence();
 //blocks
 videoBlock();
 scrollToTop();
-readMore();
+// readMore();
 slider();
 
 // Parts
