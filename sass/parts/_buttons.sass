@@ -1,7 +1,7 @@
 .btn
     display: inline-flex
-    height: 80px
-    padding: 24px 55px
+    // height: 80px
+    padding: 28px 55px
     justify-content: center
     align-items: center
     gap: 10px
@@ -14,20 +14,23 @@
     box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
     transition: $default-transition
     &:hover
-        background: lighten($new-vizual-background-main, 5%)
+        background: $s-pink
+        color: $new-vizual-background-main
     .dark_mode &
         color: $gold
         background: $dark-mode-background
         box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
         &:hover
-            background: lighten($dark-mode-background, 5%)
+            background: $gold
+            color: $dark-mode-background
     +max-screen($breakpoint-xxs)
-        height: auto
+        padding: 22px 50px
     +max-screen(1200px)
         font-size: 24px
     +max-screen($breakpoint-lg)
         font-size: 20px
         line-height: 1.25
+        padding: 20px 40px
     +max-screen($breakpoint-sm)
         width: 100%
         text-align: center
@@ -38,24 +41,30 @@
         background: $lila
         box-shadow: 5px 5px 20px 0px rgba(13, 39, 80, 0.16), -8px -8px 15px 0px #FFF
     &--small
-        height: 50px
-        border-radius: 10px
+        padding: 13px 20px
+        border-radius: 20px
         background: $new-vizual-background-main
         color: $lila
         font-weight: normal
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
+        +max-screen($breakpoint-lg)
+            padding: 10px 20px
         &:hover
-            background: $new-vizual-background-main
+            background: $lila
+            color: $new-vizual-background-main
         .dark_mode &
             color: $gold
             background: $dark-mode-background
             box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153 inset
             &:hover
-                background: $dark-mode-background
+                background: $gold
+                color: $dark-mode-background
     &--white
         background: $new-vizual-background-main
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 25px 0px #FFF inset
-
+        &:hover
+            background: $new-vizual-background-main
+            color: transparent
         +max-screen($breakpoint-xl)
             box-shadow: 10px 10px 15px 0px rgba(20, 31, 56, 0.30) inset, -8px -8px 15px 0px #FFF inset
         .dark_mode &
@@ -78,7 +87,13 @@
         background: $new-vizual-background-main
         box-shadow: 10px 10px 25px 0px rgba(20, 31, 56, 0.30), -8px -8px 25px 0px #FFF
         color: var(--new-vizual-accent-baby-lila, #98A9D8)
+        &:hover
+            background: $lila
+            color: $new-vizual-background-main
         .dark_mode &
             background: $dark-mode-background
             box-shadow: 10px 10px 25px 0px #141414, -8px -8px 25px 0px #354153
             color: $gold
+            &:hover
+                background: $gold
+                color: $dark-mode-background

@@ -59,7 +59,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                 </div>
             <?php endif; ?>
             <?php if ($testimonial_image || $testimonial_image_dark || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
-                <div class="guidelines__testimonial">
+                <div class="guidelines__testimonial" id="case_study">
                     <?php if ($testimonial_image || $testimonial_image_dark) : ?>
                         <div class="guidelines__testimonialRobbot">
                             <img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>">
@@ -96,7 +96,7 @@ $under_cards_text = get_field('under_cards_text');
 $button = get_field('about_services_btn');
 ?>
 
-<section class="services">
+<section class="services" id="solutions">
     <div class="container">
         <div class="services__inner">
             <?php if ($title || $text) : ?>
@@ -203,7 +203,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
             </div>
         <?php endif; ?>
         <?php if ($solution_image || $solution_text || $solution_title) : ?>
-            <div class="solution__wrapper pain__solutionBlock__wrapper" id="solutions">
+            <div class="solution__wrapper pain__solutionBlock__wrapper">
                 <div class="solution pain__solutionBlock">
                     <?php if ($solution_image && $solution_tablet_image) : ?>
                         <div class="solution__image">
@@ -279,7 +279,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                             $text = get_sub_field('text');
                             $img = get_sub_field('img');
                             $img_dark = get_sub_field('img_dark');
-                            $button = get_sub_field('add_button'); ?>
+                            $subtitle = get_sub_field('add_subtitle'); ?>
                             <div class="list_section__inner">
                                 <?php if ($img) : ?>
                                     <div class="img_block">
@@ -291,11 +291,11 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                                     <div class="content-block text--size--24">
                                         <?php echo $text ?>
                                     </div>
-                                    <?php if ($button) : ?>
+                                    <?php if ($subtitle) : ?>
                                         <div class="button_block">
-                                            <a href="<?php echo $button['url']; ?>" class="btn btn--white">
-                                                <span><?php echo $button['title']; ?></span>
-                                            </a>
+                                            <div class="btn btn--white">
+                                                <span><?php echo $subtitle ?></span>
+                                            </div>
                                         </div>
                                     <?php endif; ?>
                                 </div>

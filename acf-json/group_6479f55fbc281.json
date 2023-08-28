@@ -979,9 +979,9 @@
                 },
                 {
                     "key": "field_64e362637dbdd",
-                    "label": "Add button",
-                    "name": "add_button",
-                    "type": "link",
+                    "label": "Subtitle",
+                    "name": "add_subtitle",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -990,7 +990,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_647bb4490f274",
@@ -1210,5 +1214,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1692966972
+    "modified": 1693228599
 }
