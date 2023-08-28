@@ -9,16 +9,25 @@
     border: 1px solid rgba(249, 249, 249, 0.50)
     background: $new-vizual-background-main
     box-shadow: 10px 10px 20px 0px rgba(13, 39, 80, 0.16), -10px -10px 25px 0px #FFF, -10px -10px 10px 0px rgba(20, 20, 20, 0.06) inset, 10px 10px 20px 0px rgba(20, 20, 20, 0.02) inset
+    +max-screen($breakpoint-lg)
+        width: 67px
+        padding: 2.41px 3.2px
+        box-shadow: 5px 5px 10px 0px rgba(13, 39, 80, 0.16), -5px -5px 15px 0px #FFF, -5px -5px 5px 0px rgba(20, 20, 20, 0.06) inset, 5px 5px 10px 0px rgba(20, 20, 20, 0.02) inset
+        height: auto
+        align-self: center
     .dark_mode &
         border-radius: 10px
         border: 1px solid rgba(73, 88, 98, 0.75)
         background: $dark-mode-background
         box-shadow: 10px 10px 20px 0px #232A34, -10px -10px 25px 0px #444C5B, -10px -10px 10px 0px #354153 inset, 10px 10px 20px 0px #141414 inset
-
+        +max-screen($breakpoint-lg)
+            box-shadow: 5px 5px 10px 0px #232A34, -5px -5px 15px 0px #444C5B, -5px -5px 5px 0px #354153 inset, 5px 5px 10px 0px #141414 inset
     svg
         width: 100%
         display: none
         align-self: center
+        +max-screen($breakpoint-lg)
+            max-width: 60px
         &.on.light
             display: block
         &.on.dark
