@@ -2,7 +2,9 @@ import $ from "jquery";
 import { gsap } from "gsap";
 
 function scrollToAnchor() {
-  $('a[href^="#"]:not(.slider-arrow, .quote--button)').click(function (e) {
+  $(
+    'a[href^="#"]:not(.slider-arrow, .quote--button, .footer__goUpBtn a)'
+  ).click(function (e) {
     e.preventDefault();
     let href = $(this).attr("href");
     console.log("click");
