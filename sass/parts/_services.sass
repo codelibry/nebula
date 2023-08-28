@@ -165,10 +165,15 @@
                             transform: none
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_1.svg)
+                            .dark_mode &
+                                background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
+                                bottom: -38.5px
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
                             bottom: -26.5px
+                            .dark_mode &
+                                bottom: -31.5px
 
                     &::before
                         +max-screen($breakpoint-sm)
@@ -218,11 +223,9 @@
                     .services__cardsItem
                         background: $new-vizual-background-main
                         box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
-
                         .dark_mode &
                             background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                        &::before
 
                 &:nth-child(4n + 3)
                     +max-screen($breakpoint-sm)
@@ -267,10 +270,14 @@
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_2_top.svg)
                             .dark_mode &
+                                background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
+                                top: -76.5px
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
                             top: -67px
+                            .dark_mode &
+                                top: -61.5px
 
                     &::before
                         content: ""
@@ -317,10 +324,17 @@
                             transform: none
                             opacity: 0.9
                             background-image: url(../assets/images/mobile_puzzle_2_bottom.svg)
+                            .dark_mode &
+                                background-image: url(../assets/images/mobile_puzzle_2_bottom_dark.svg)
+                                right: calc( 50% - (var(--size)/2) )
+                                border-bottom-right-radius: 100px
+                                bottom: -83px
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
                             bottom: -67px
+                            .dark_mode &
+                                bottom: -69px
 
                     .services__cardsItem
                         background: $new-vizual-background-main
@@ -335,6 +349,8 @@
                             z-index: 2
                             background: $dark-mode-background
                             box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
+                            +max-screen($breakpoint-lg)
+                                box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
                         &::before
 
                         &::after
@@ -370,15 +386,8 @@
                                     display: none
                             +max-screen($breakpoint-lg)
                                 display: none
-                                // width: 28px
-                                // height: 28px
-                                .dark_mode &
-                                    // width: 22px
-                                    // height: 22px
-
                             +max-screen($breakpoint-md)
                             +max-screen($breakpoint-sm)
-                                content: none
                 &:nth-child(4n + 4)
                     padding-left: 60px
                     margin-top: -30px
@@ -481,6 +490,9 @@
                             transform: rotate(-14deg)
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_3_top.svg)
+                            .dark_mode &
+                                left: auto
+                                background-image: url(../assets/images/mobile_puzzle_3_top_dark.svg)
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
@@ -504,7 +516,7 @@
                             box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
                         +max-screen($breakpoint-sm)
                             transform: rotate(-8.87deg)
-                            padding: 57px 21px 60px
+                            padding: 67px 21px 60px
 
                 &:nth-child(4n + 1),
                 &:nth-child(4n + 2),
