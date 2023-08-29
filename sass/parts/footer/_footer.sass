@@ -63,6 +63,9 @@
             margin-bottom: 4px
     .container
         max-width: 1480px
+        +max-screen($breakpoint-xxs)
+            max-width: 88%
+
         +max-screen($breakpoint-xl)
             max-width: 90%
         +max-screen(1200px)
@@ -85,8 +88,16 @@
         +max-screen($breakpoint-xxl)
             margin-left: 30px
             margin-right: 30px
+        +max-screen($breakpoint-xxs)
+            margin-left: 100px
+            margin-right: 100px
+        +max-screen(1200px)
+            margin-left: 80px
+            margin-right: 80px
         +max-screen($breakpoint-lg)
             padding: 87px 60px 60px
+            margin-left: 30px
+            margin-right: 30px
 
     &__logo
         +max-screen($breakpoint-sm)
