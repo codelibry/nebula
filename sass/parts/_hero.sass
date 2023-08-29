@@ -67,6 +67,8 @@
                 display: none
                 .dark_mode &
                     display: block
+                    +max-screen($breakpoint-sm)
+                        display: none
             +max-screen($breakpoint-xl)
                 position: absolute
                 width: 100%

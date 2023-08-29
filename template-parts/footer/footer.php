@@ -12,7 +12,7 @@ $copywriting = get_field('footer_copywriting', 'options');
         <div class="container">
             <div class="footer__content row">
                 <?php if ($logo) : ?>
-                    <div class="footer__logo col-sm-2 col-12">
+                    <div class="footer__logo col-md-2 col-12">
                         <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['title']; ?>">
                         <img class="dark" src="<?php echo $logo_dark['url'] ?>" alt="<?php echo $logo_dark['title']; ?>">
                     </div>
@@ -22,7 +22,7 @@ $copywriting = get_field('footer_copywriting', 'options');
                     <div class="footer__menu"><?php wp_nav_menu(array('menu' => 'footer-menu')); ?></div>
                 </div>
                 <?php if ($contact) : ?>
-                    <div class="footer__contact col-sm-2 col-12">
+                    <div class="footer__contact col-sm-6 col-12">
                         <div class="footer__contactTitle footer-title text--uppercase">Contact</div>
                         <div class="footer__contactText"><?php echo $contact ?></div>
                     </div>

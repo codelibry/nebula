@@ -7,6 +7,8 @@
         margin-bottom: 80px
     +max-screen($breakpoint-lg)
         margin-bottom: 100px
+    +max-screen($breakpoint-sm)
+        margin-bottom: 40px
     &__bg
         position: absolute
         content: ""
@@ -56,16 +58,17 @@
             font-size: 20px
             line-height: 1.6
             margin-bottom: 8px
-        +max-screen($breakpoint-sm)
+        +max-screen($breakpoint-md)
             text-align: center
+        +max-screen($breakpoint-sm)
             font-size: 16px
             line-height: 1.6
-            margin-bottom: 4px
+            margin-bottom: 17px
+            margin-top: 10px
     .container
         max-width: 1480px
         +max-screen($breakpoint-xxs)
             max-width: 88%
-
         +max-screen($breakpoint-xl)
             max-width: 90%
         +max-screen(1200px)
@@ -92,6 +95,7 @@
             margin-left: 100px
             margin-right: 100px
         +max-screen(1200px)
+            padding: 87px 60px 60px
             margin-left: 80px
             margin-right: 80px
         +max-screen($breakpoint-lg)
@@ -100,8 +104,8 @@
             margin-right: 30px
 
     &__logo
-        +max-screen($breakpoint-sm)
-            margin-bottom: 18.5px
+        +max-screen($breakpoint-md)
+            margin-bottom: 30px
             text-align: center
         img
             max-width: 119px
@@ -111,16 +115,20 @@
                 display: none
                 .dark_mode &
                     display: block
-            +max-screen($breakpoint-lg)
+            +max-screen(1200px)
                 max-width: 65px
-            +max-screen($breakpoint-sm)
-                max-width: 32px
+            +max-screen($breakpoint-md)
+                max-width: 90px
+                display: block
+                margin-left: auto
+                margin-right: auto
+
     &__menu
         margin-bottom: -16px
         .menu
             display: flex
             flex-wrap: wrap
-            +max-screen($breakpoint-sm)
+            +max-screen($breakpoint-md)
                 flex-direction: column
             & > li
                 width: 33%
@@ -130,9 +138,11 @@
                     font-size: 18px
                     line-height: 1.6
                     margin-bottom: 8px
-                +max-screen($breakpoint-sm)
-                    width: 100%
+                +max-screen($breakpoint-md)
                     text-align: center
+                    width: 100%
+                +max-screen($breakpoint-sm)
+
                     font-size: 16px
                     line-height: 1.6
                     margin-bottom: 2px
@@ -140,14 +150,18 @@
             +max-screen($breakpoint-sm)
                 margin-bottom: 15px
     &__contact
+        +max-screen($breakpoint-sm)
+            margin-top: 10px
+            margin-bottom: 40px
         &Text
             +max-screen($breakpoint-lg)
                 font-size: 18px
                 line-height: 1.4
+            +max-screen($breakpoint-md)
+                text-align: center
             +max-screen($breakpoint-sm)
                 font-size: 16px
                 line-height: 1.6
-                margin-bottom: 5px
                 text-align: center
     &__bottom
         display: flex
@@ -159,13 +173,14 @@
         +max-screen($breakpoint-lg)
             margin-top: 52px
             height: 26px
+
         +max-screen($breakpoint-md)
-            margin-top: 62px
-        +max-screen($breakpoint-sm)
             flex-direction: column-reverse
-            margin-top: 0
+            margin-top: 62px
             height: auto
             align-items: center
+        +max-screen($breakpoint-sm)
+            margin-top: 0
     &__icons
         margin: 0 -12.5px
         display: flex
@@ -173,9 +188,10 @@
         left: 50%
         transform: translateX(-50%)
         top: 0
+
         +max-screen($breakpoint-lg)
             margin: 0 -6.8px
-        +max-screen($breakpoint-sm)
+        +max-screen($breakpoint-md)
             position: static
             transform: none
     &__icon
@@ -193,13 +209,12 @@
                 .dark_mode &
                     display: block
             +max-screen($breakpoint-lg)
-                width: 26px
-                height: 26px
+                width: 48px
+                height: 48px
             +max-screen($breakpoint-sm)
-                width: 40px
-                height: 40px
+
         a
-            +max-screen($breakpoint-sm)
+            +max-screen($breakpoint-md)
                 display: block
     &__copywriting
         font-size: 14px
@@ -207,7 +222,7 @@
         letter-spacing: 0.56px
         +max-screen($breakpoint-lg)
             font-size: 18px
-        +max-screen($breakpoint-sm)
+        +max-screen($breakpoint-md)
             font-size: 16px
             line-height: 1.6
             margin-top: 18px
@@ -219,7 +234,7 @@
             color: $gold
         +max-screen($breakpoint-lg)
             font-size: 18px
-        +max-screen($breakpoint-sm)
+        +max-screen($breakpoint-md)
             font-size: 16px
             line-height: 1.6
     &__phone
@@ -247,23 +262,32 @@
                 content: none
     &__text
         display: flex
-        +max-screen($breakpoint-sm)
+        +max-screen(1200px)
             flex-direction: column
             align-items: center
+        +max-screen($breakpoint-md)
+            margin-bottom: 20px
     &__goUpBtn
         display: flex
         align-items: center
         justify-content: flex-end
-        +max-screen($breakpoint-sm)
+        +max-screen(1200px)
+            align-items: flex-start
+        +max-screen($breakpoint-md)
             display: none
         a
             display: flex
             align-items: center
+            +max-screen(1200px)
+                flex-direction: column
+                justify-content: space-between
         span
             opacity: 0.5
             .dark_mode &
                 color: $gold
                 opacity: 1
+            +max-screen(1200px)
+                margin-bottom: 10px
             +max-screen($breakpoint-lg)
                 font-size: 10px
             +max-screen($breakpoint-md)

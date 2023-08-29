@@ -165,9 +165,11 @@
                             transform: none
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_1.svg)
+                            background-size: 101%
                             .dark_mode &
+                                background-size: 101%
                                 background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
-                                bottom: -39.5px
+                                bottom: -38.5px
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
@@ -269,15 +271,17 @@
                             transform: none
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_2_top.svg)
+                            background-size: 101%
                             .dark_mode &
+                                background-size: 101%
                                 background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
                                 top: -76px
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
-                            top: -65px
+                            top: -66px
                             .dark_mode &
-                                top: -61.5px
+                                top: -62px
 
                     &::before
                         content: ""
@@ -324,11 +328,13 @@
                             transform: none
                             opacity: 0.9
                             background-image: url(../assets/images/mobile_puzzle_2_bottom.svg)
+                            background-size: 101%
                             .dark_mode &
+                                background-size: 101%
                                 background-image: url(../assets/images/mobile_puzzle_2_bottom_dark.svg)
                                 right: calc( 50% - (var(--size)/2) )
-                                border-bottom-right-radius: 100px
                                 bottom: -84px
+                                border: none
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
                             --size: 95px
@@ -409,7 +415,7 @@
                         padding-left: 0
                         margin-left: auto
                         margin-right: auto
-                        margin-top: 90px
+                        margin-top: 110px
                         z-index: 3
                         transform: translateX(62px)
                     +max-screen($breakpoint-md)
@@ -484,15 +490,17 @@
                             height: var(--size)
                             left: auto
                             right: calc( 65% - (var(--size)/2) )
-                            top: -26px
+                            top: -25px
                             bottom: auto
                             border-radius: 0
                             transform: rotate(-14deg)
                             opacity: 1
                             background-image: url(../assets/images/mobile_puzzle_3_top.svg)
+                            background-size: 101%
                             .dark_mode &
                                 left: auto
                                 top: -27.5px
+                                background-size: 101%
                                 background-image: url(../assets/images/mobile_puzzle_3_top_dark.svg)
                         +max-screen($breakpoint-md)
                         +max-screen($breakpoint-sm)
@@ -501,7 +509,7 @@
                             right: calc( 58% - (var(--size)/2) )
                             top: -24px
                             .dark_mode &
-                                top: -26px
+                                top: -27px
 
                     .services__cardsItem
                         background: $new-vizual-background-main
