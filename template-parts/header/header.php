@@ -1,19 +1,9 @@
 <?php
 $logo = get_field('header_logo', 'options');
 $logo_dark = get_field('header_logo_dark', 'options');
-$mob_logo = get_field('header_logo_mob', 'options');
-$mob_logo_dark = get_field('header_logo_dark_mob', 'options');
 $btn = get_field('header_button', 'options');
 
-// Thumbnail size attributes.
-$size = 'thumbnail';
-$thumb = $mob_logo['sizes'][$size];
-$width = $mob_logo['sizes'][$size . '-width'];
-$height = $mob_logo['sizes'][$size . '-height'];
 
-$thumb_d = $mob_logo_dark['sizes'][$size];
-$width_d = $mob_logo_dark['sizes'][$size . '-width'];
-$height_d = $mob_logo_dark['sizes'][$size . '-height'];
 ?>
 <header class="header">
     <div class="container">
@@ -112,20 +102,12 @@ $height_d = $mob_logo_dark['sizes'][$size . '-height'];
         </div>
         <div class="header__mobile">
             <div class="container">
-                <!-- <?php if ($btn) : ?>
-                    <div class="header__phone"><a href="<?php echo $btn['url']; ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/phone_icon.svg' ?>" alt=""></a></div>
-                <?php endif; ?> -->
-                <?php if ($mob_logo) : ?>
+                <?php if ($logo) : ?>
                     <div class="header__mobileLogo">
-                        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo $mob_logo['title'] ?>">
-                        <img class="dark" src="<?php echo esc_url($thumb_d); ?>" alt="<?php echo $mob_logo_dark['title']; ?>">
+                        <img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['title']; ?>">
+                        <img class="dark" src="<?php echo $logo_dark['url'] ?>" alt="<?php echo $logo_dark['title']; ?>">
                     </div>
                 <?php endif; ?>
-                <!-- <div class="header__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div> -->
                 <div class="header_switcher">
                     <svg class="light on" viewBox="0 0 85 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M79.2065 3.00487L81.0875 4.21554C83.3752 5.68795 84.7578 8.22205 84.7578 10.9426V30.3483C84.7578 32.9304 83.5116 35.3536 81.4114 36.8556L79.0918 38.5144C78.3919 39.0149 77.6158 39.3993 76.7935 39.6526L73.3303 40.7195C72.3152 41.0322 71.2481 41.1396 70.191 41.0355L42.5004 38.3086H8.72315C4.30488 38.3086 0.723152 34.7269 0.723152 30.3086V12.174C0.723152 7.7557 4.30488 4.17398 8.72315 4.17398H42.5004L70.4223 0.966018C71.329 0.861837 72.247 0.913603 73.1363 1.11907L76.6777 1.93729C77.5758 2.1448 78.4314 2.50598 79.2065 3.00487Z" fill="url(#paint0_linear_1643_3625)" />
