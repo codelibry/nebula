@@ -27,10 +27,11 @@ $height_d = $mob_logo_dark['sizes'][$size . '-height'];
                 </div>
             <?php endif; ?>
             <div class="header__right">
-                <div class="header__rightMenu"><?php wp_nav_menu(array('menu' => 'header-menu'));
-                                                ?></div>
+                <div class="header__rightMenu">
+                    <?php wp_nav_menu(array('menu' => 'header-menu'));
+                    ?></div>
                 <?php if ($btn) : ?>
-                    <div class="header-btn"><a class="btn btn--blue btn--small" href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a></div>
+                    <div class="header-btn"><a class="btn btn--blue btn--small font--weight--700" href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a></div>
                 <?php endif; ?>
                 <div class="header_switcher">
                     <svg class="light on" viewBox="0 0 85 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +107,6 @@ $height_d = $mob_logo_dark['sizes'][$size . '-height'];
                             </radialGradient>
                         </defs>
                     </svg>
-
                 </div>
             </div>
         </div>
