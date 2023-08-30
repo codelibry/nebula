@@ -7,14 +7,14 @@
     top: 0
     width: 100%
     overflow: hidden
+    background: var(--new-vizual-background-main,#ececec)
+    .dark_mode &
+        background: $dark-mode-background
     +min-screen($breakpoint-lg)
         &.top-scroll
             top: 0
             position: fixed
-            background: var(--new-vizual-background-main,#ececec)
             z-index: 7
-            .dark_mode &
-                background: $dark-mode-background
 
     +max-screen($breakpoint-lg)
         position: static

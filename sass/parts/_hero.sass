@@ -4,10 +4,10 @@
     position: relative
     +max-screen($breakpoint-xl)
         padding-bottom: 160px
+        padding-top: 50px
     +max-screen($breakpoint-lg)
         padding-top: 70px
         padding-bottom: 155px
-
     +max-screen($breakpoint-md)
         padding-top: 94px
         padding-bottom: 89px
@@ -72,7 +72,8 @@
             +max-screen($breakpoint-xl)
                 position: absolute
                 width: 100%
-                left: -40px
+                max-width: 503px
+                left: -20px
                 top: -40px
             +max-screen($breakpoint-lg)
                 position: relative
@@ -97,8 +98,9 @@
                 font-size: 48px
                 br
                     display: none
-        +max-screen($breakpoint-lg)
+        +max-screen($breakpoint-xl)
             margin-bottom: 30px
+        +max-screen($breakpoint-lg)
             max-width: 470px
         +max-screen($breakpoint-sm)
             margin-bottom: 35px
@@ -112,7 +114,7 @@
             flex-direction: column
             justify-content: center
             +max-screen($breakpoint-xl)
-                // padding-left: 64px
+                padding-top: 0
             +max-screen(1200px)
                 +min-screen(1025px)
                     max-width: 60%
