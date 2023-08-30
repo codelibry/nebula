@@ -22,7 +22,7 @@ $copywriting = get_field('footer_copywriting', 'options');
                     <div class="footer__menu"><?php wp_nav_menu(array('menu' => 'footer-menu')); ?></div>
                 </div>
                 <?php if ($contact) : ?>
-                    <div class="footer__contact col-sm-6 col-12">
+                    <div class="footer__contact col-md-2 col-sm-6 col-12">
                         <div class="footer__contactTitle footer-title text--uppercase">Contact</div>
                         <div class="footer__contactText"><?php echo $contact ?></div>
                     </div>
@@ -63,7 +63,7 @@ $copywriting = get_field('footer_copywriting', 'options');
                 <?php if ($email && $phone_number) : ?>
                     <div class="footer__text">
                         <?php if ($email) : ?>
-                            <div class="footer__email"><a href="mailto:<?php echo $email; ?>"></a><?php echo $email; ?></div>
+                            <div class="footer__email"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></div>
                         <?php endif; ?>
                         <?php if ($phone_number) : ?>
                             <div class="footer__phone"><a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></div>
