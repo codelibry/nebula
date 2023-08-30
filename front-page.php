@@ -11,12 +11,12 @@ $image_dark = get_field('hero_image_dark');
         <div class="row hero_content">
             <div class="hero__textWrapper col-lg-8 col-md-8 col-12">
                 <?php if ($text) : ?>
-                    <div class="hero__text text--size--54 font--weight--100">
+                    <div class="hero__text text--size--50 font--weight--100">
                         <?php echo $text; ?>
                     </div>
                 <?php endif; ?>
                 <?php if ($color_text) : ?>
-                    <div class="hero__color__text text--size--32">
+                    <div class="hero__color__text text--size--28">
                         <?php echo $color_text; ?>
                     </div>
                 <?php endif; ?>
@@ -51,7 +51,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
             <?php if ($title || $text) : ?>
                 <div class="guidelines__top">
                     <?php if ($title) : ?>
-                        <h2 class="guidelines__title "><?php echo $title; ?></h2>
+                        <h2 class="guidelines__title h1 font--weight--100"><?php echo $title; ?></h2>
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <div class="guidelines__text"><?php echo $text; ?></div>
@@ -245,7 +245,7 @@ $button = get_field('lets_work_button');
     <div class="container">
         <div class="letsWork__wrapper">
             <?php if ($title) : ?>
-                <h2 class="letsWork__title"><?php echo $title; ?></h2>
+                <h2 class="letsWork__title h1"><?php echo $title; ?></h2>
             <?php endif; ?>
             <?php if ($text) : ?>
                 <div class="letsWork__text"><?php echo $text; ?></div>
@@ -288,7 +288,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                                     </div>
                                 <?php endif; ?>
                                 <div class="content-block_main">
-                                    <div class="content-block text--size--24">
+                                    <div class="content-block text--size--20">
                                         <?php echo $text ?>
                                     </div>
                                     <?php if ($subtitle) : ?>
@@ -317,9 +317,9 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                                         $subtitle = get_sub_field('subtitle'); ?>
                                         <li class="inner_block">
                                             <div class="subtitle">
-                                                <h3 class="text--size--24"><?php echo $subtitle ?></h3>
+                                                <h3 class="text--size--20"><?php echo $subtitle ?></h3>
                                             </div>
-                                            <div class="content-block text--size--24">
+                                            <div class="content-block text--size--20">
                                                 <?php echo $text ?>
                                             </div>
                                         </li>

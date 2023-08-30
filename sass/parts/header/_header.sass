@@ -2,7 +2,6 @@
     padding-top: 20px
     padding-bottom: 11px
     z-index: 1
-    // position: relative
     position: fixed
     top: 0
     width: 100%
@@ -26,13 +25,12 @@
         +max-screen($breakpoint-lg)
             display: block
     .container
-        max-width: 1480px
+        max-width: 1400px
         +max-screen($breakpoint-xxs)
-            max-width: 1420px
+            max-width: 1360px
             padding-left: 100px
             padding-right: 100px
         +max-screen($breakpoint-xl)
-
         +max-screen(1200px)
             padding-left: 80px
             padding-right: 80px
@@ -41,9 +39,9 @@
         display: flex
         position: relative
         // justify-content: space-between
-        height: 94px
+        height: 84px
         +max-screen($breakpoint-xl)
-            height: 80px
+            height: 72px
         +max-screen(1200px)
             height: 72px
         +max-screen($breakpoint-lg)
@@ -53,11 +51,11 @@
         // left: 50%
         // top: 50%
         // transform: translate(-50%, -50%)
-        margin-right: 35px
+        margin-right: 25px
         +max-screen($breakpoint-xl)
-            margin-right: 25px
+            margin-right: 15px
         img
-            height: 94px
+            height: 74px
             .dark_mode &
                 display: none
             &.dark
@@ -65,16 +63,16 @@
                 .dark_mode &
                     display: block
             +max-screen($breakpoint-xl)
-                height: 80px
+                height: 60px
             +max-screen(1200px)
-                height: 66px
+                height: 56px
     &__left
         +max-screen($breakpoint-xl)
             display: flex
             align-items: center
     .menu
         display: flex
-        padding-top: 28px
+        padding-top: 18px
 
         +max-screen($breakpoint-xl)
             padding-top: 0
@@ -85,23 +83,23 @@
             // margin-left: 70px
             // margin-right: 70px
 
-            margin-left: 35px
-            margin-right: 35px
+            margin-left: 25px
+            margin-right: 25px
             +max-screen($breakpoint-xl)
-                margin-left: 25px
-                margin-right: 25px
+                margin-left: 15px
+                margin-right: 15px
             +max-screen(1200px)
                 margin-left: 15px
                 margin-right: 15px
             a
-                font-size: 24px
+                font-size: 20px
                 text-transform: uppercase
-                +max-screen(1200px)
-                    font-size: 20px
                 +max-screen($breakpoint-xl)
-                    font-size: 20px
+                    font-size: 16px
+                +max-screen(1200px)
+                    font-size: 16px
                 +max-screen($breakpoint-lg)
-                    font-size: 24px
+                    font-size: 16px
             &.current-menu-item
                 // a
                 //     color: $light-lila
@@ -128,23 +126,23 @@
                 margin-left: 0
                 margin-right: 0
     .header-btn
-        margin-left: 35px
-        margin-right: 35px
+        margin-left: 25px
+        margin-right: 25px
         align-self: flex-start
         +max-screen($breakpoint-xl)
-            margin-left: 25px
-            margin-right: 25px
+            margin-left: 15px
+            margin-right: 15px
         +max-screen(1200px)
             align-self: center
             margin-left: 15px
             margin-right: 15px
         a
-            font-size: 24px
-            +max-screen(1200px)
-                font-size: 20px
-                height: auto
+            font-size: 20px
             +max-screen($breakpoint-xl)
-                font-size: 20px
+                font-size: 16px
+            +max-screen(1200px)
+                font-size: 16px
+                height: auto
 
     &__mobile
         padding: 13px 22.5px

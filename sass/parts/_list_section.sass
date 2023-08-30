@@ -3,16 +3,16 @@
     +max-screen($breakpoint-lg)
         margin-bottom: 80px
     .container
-        max-width: 1800px
+        max-width: calc(1639px + 0px)
         position: relative
-        z-index: 2
+        z-index: 1
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
-                max-width: 87.76%
+                max-width: 85%
         +max-screen(1660px)
-            max-width: 88%
+            max-width: 85%
         +max-screen($breakpoint-xl)
-            max-width: 88%
+            max-width: 85%
         +max-screen(1200px)
             max-width: 1685px
         +max-screen($breakpoint-lg)
@@ -22,25 +22,24 @@
             // padding-left: 15px
             // padding-right: 15px
     &__wrapper
-        padding: 120px 57px 86px
+        padding: 100px 50px 66px
         border-radius: 30px
         background: $new-vizual-background-main
         box-shadow: 20px 20px 25px 0px rgba(20, 31, 56, 0.25), -15px -15px 20px 0px rgba(255, 255, 255, 0.35)
         .dark_mode &
             background: $dark-mode-background
             box-shadow: 10px 10px 25px #141414,-8px -8px 25px #354153
-
         +max-screen($breakpoint-sm)
             padding: 60px 27px 86px
 
     &__title
-        margin-bottom: 80px
+        margin-bottom: 60px
         +max-screen($breakpoint-sm)
             margin-bottom: 40px
     &__inner
         display: flex
         gap: 0 50px
-        margin-bottom: 80px
+        margin-bottom: 60px
         +max-screen($breakpoint-sm)
             margin-bottom: 40px
             gap: 40px 0px
@@ -77,13 +76,13 @@
                 +max-screen($breakpoint-sm)
                     margin-top: 40px
     &__top
-        max-width: 1230px
+        max-width: 1130px
         margin-left: auto
         margin-right: auto
     &__bottom
         position: relative
         margin-top: 80px
-        max-width: 1230px
+        max-width: 1130px
         margin-left: auto
         margin-right: auto
         +max-screen($breakpoint-md)
@@ -100,6 +99,7 @@
                 top: -222px
 
             img
+                max-width: 340px
                 .dark_mode &
                     display: none
                 &.dark
@@ -115,9 +115,9 @@
                     max-width: 140px
 
         &-rows
-            margin-left: 305px
+            margin-left: 255px
             +max-screen($breakpoint-xxs)
-                margin-left: 255px
+                margin-left: 225px
             +max-screen($breakpoint-md)
                 margin-left: auto
             ul
@@ -162,7 +162,7 @@
     .btn
         &.btn--default
             width: max-content
-            margin: 120px auto 0
+            margin: 80px auto 0
             display: block
             +max-screen($breakpoint-md)
                 margin: 80px auto 0

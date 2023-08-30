@@ -34,9 +34,9 @@
             +min-screen(1660px)
                 max-width: 80.3125%
         +max-screen(1660px)
-            max-width: 87%
+            max-width: 80%
         +max-screen($breakpoint-xl)
-            max-width: 90%
+            max-width: 85%
         +max-screen(1200px)
             max-width: 1350px
         +max-screen($breakpoint-lg)
@@ -90,10 +90,10 @@
             line-height: 1.2
             margin-bottom: 20px
     &Text
-        font-size: 24px
+        font-size: 20px
         line-height: 1.4
         +max-screen($breakpoint-xxs)
-            font-size: 20px
+            font-size: 18px
         +max-screen(1200px)
             font-size: 18px
         +max-screen($breakpoint-lg)
@@ -191,6 +191,7 @@
         bottom: 35px
         right: -16%
         img
+            max-width: 480px
             .dark_mode &
                 display: none
             &.dark
@@ -289,10 +290,11 @@
 
     &__image
         position: absolute
-        left: -31%
+        left: -25%
         top: 53%
         transform: translateY(-50%)
         img
+            max-width: 420px
             .dark_mode &
                 display: none
             &.dark
