@@ -141,17 +141,22 @@
                         background-position: center
                         z-index: 1
                         .dark_mode &
+                            right: -16.4px
                             background-image: url(../assets/images/card_puzzle_new_dark.svg)
                         +max-screen($breakpoint-xxs)
                             width: 80px
                             height: 80px
                             right: -14px
+                            .dark_mode &
+                                right: -14px
                         +max-screen($breakpoint-xl)
                             width: 54px
                             height: 54px
                             right: -9.4px
                             opacity: 1
                             // border-radius: 10px
+                            .dark_mode &
+                                right: -9.4px
                         +max-screen(1200px)
 
                         +max-screen($breakpoint-lg)
@@ -167,6 +172,7 @@
                             background-image: url(../assets/images/mobile_puzzle_1.svg)
                             background-size: 101%
                             .dark_mode &
+                                right: calc( 50% - (var(--size)/2) )
                                 background-size: 101%
                                 background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
                                 bottom: -38.5px
@@ -236,7 +242,7 @@
                     &::after
                         content: ""
                         position: absolute
-                        left: -20.5px
+                        left: -21.5px
                         top: 50%
                         width: 95px
                         height: 108px
@@ -405,6 +411,7 @@
                         transform: none
                     +max-screen($breakpoint-xl)
                         padding-left: 34px
+                        transform: translateX(10px)
                     +max-screen(1200px)
                         padding-left: 32px
                         transform: none
@@ -453,8 +460,8 @@
                         position: absolute
                         left: -8.5px
                         top: 50%
-                        width: 98px
-                        height: 98px
+                        width: 115px
+                        height: 115px
                         background-image: url(../assets/images/card_puzzle_4_new_2.svg)
                         background-size: cover
                         background-repeat: no-repeat
@@ -463,15 +470,17 @@
                         transform: rotate(-8.87deg) translateY(-25%)
                         .dark_mode &
                             background-image: url(../assets/images/card_puzzle_4_new_2_dark.svg)
-                            // border-top-left-radius: 40px
-                            // border-bottom-left-radius: 40px
-                            left: -9.5px
+                            opacity: 1
+                            left: -12.6px
+
                         +max-screen($breakpoint-xxs)
                             width: 72px
                             height: 72px
                             left: 10.4px
                             .dark_mode &
-                                left: 8.4px
+                                width: 95px
+                                height: 95px
+                                left: -0.6px
                         +max-screen($breakpoint-xl)
                             width: 54px
                             height: 54px
@@ -479,11 +488,13 @@
                             opacity: 0.8
                             border-radius: 15px
                             .dark_mode &
-                                left: -4.4px
+                                width: 72px
+                                height: 72px
+                                left: -11.8px
                         +max-screen(1200px)
                             left: -5px
                             .dark_mode &
-                                left: -6px
+                                left: -13.2px
                         +max-screen($breakpoint-lg)
                             --size: 115px
                             width: var(--size)
@@ -498,6 +509,8 @@
                             background-image: url(../assets/images/mobile_puzzle_3_top.svg)
                             background-size: 101%
                             .dark_mode &
+                                width: var(--size)
+                                height: var(--size)
                                 left: auto
                                 top: -27.5px
                                 background-size: cover
@@ -525,7 +538,8 @@
                         transform: rotate(-8.87deg)
                         .dark_mode &
                             background: $dark-mode-background
-                            box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
+                            // box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
+                            box-shadow: inset -5px -5px 20px 0 #354153, inset 4px 4px 15px 0 #0d0c0c
                         +max-screen(1200px)
                             height: 97%
                         +max-screen($breakpoint-lg)
