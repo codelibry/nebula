@@ -68,6 +68,9 @@
                     display: block
                     +max-screen($breakpoint-sm)
                         display: none
+            +max-screen($breakpoint-xxl)
+                +min-screen($breakpoint-xl)
+                    max-width: 503px
             +max-screen($breakpoint-xl)
                 position: absolute
                 width: 100%

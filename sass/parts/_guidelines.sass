@@ -94,6 +94,9 @@
         margin: 0
         max-width: 1104px
         transform: translateX(102px)
+        +max-screen($breakpoint-xxl)
+            +min-screen($breakpoint-xl)
+                max-width: 1004px
         +max-screen($breakpoint-xxs)
             transform: translateX(5%)
         +max-screen($breakpoint-lg)

@@ -1,7 +1,11 @@
 .testimonials
     position: relative
     margin-bottom: 160px
+    +max-screen($breakpoint-xxl)
+        +min-screen($breakpoint-xxs)
+            margin-bottom: 120px
     +max-screen($breakpoint-xl)
+        margin-bottom: 120px
     +max-screen(1200px)
         z-index: 1
     +max-screen($breakpoint-lg)
