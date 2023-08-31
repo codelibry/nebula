@@ -15,7 +15,9 @@
         z-index: 1
         +max-screen($breakpoint-xxl)
             +min-screen(1660px)
-                max-width: 85%
+                max-width: 1400px
+                margin-left: auto
+                margin-right: auto
         +max-screen(1660px)
             max-width: 85%
         +max-screen($breakpoint-xl)
@@ -36,6 +38,8 @@
         .dark_mode &
             background: $dark-mode-background
             box-shadow: 10px 10px 25px #141414, -8px -8px 25px #354153
+        +max-screen($breakpoint-xxl)
+            padding: 96px 77px 86px 47px
         +max-screen($breakpoint-lg)
             padding: 86px 37px 86px 37px
         +max-screen($breakpoint-sm)
@@ -111,6 +115,8 @@
             overflow: hidden
             height: 100%
             padding-bottom: 61px
+            +max-screen($breakpoint-xxl)
+                padding: 42px 23px 42px
             +max-screen($breakpoint-xxs)
                 padding: 32px 18px 32px
             +max-screen($breakpoint-lg)
@@ -130,11 +136,16 @@
                     &::after
                         content: ""
                         position: absolute
-                        right: -17px
                         top: 50%
-                        width: 98px
-                        height: 98px
-                        background-image: url(../assets/images/card_puzzle_new.svg)
+
+                        // right: -17px
+                        // width: 98px
+                        // height: 98px
+                        // background-image: url(../assets/images/card_puzzle_new.svg)
+                        width: 75px
+                        height: 85px
+                        right: 0
+                        background-image: url(../assets/images/puzzles/puzzle_light_1.svg)
                         transform: translateY(-50%)
                         background-size: cover
                         background-repeat: no-repeat
@@ -144,15 +155,15 @@
                             right: -16.4px
                             background-image: url(../assets/images/card_puzzle_new_dark.svg)
                         +max-screen($breakpoint-xxs)
-                            width: 80px
-                            height: 80px
-                            right: -14px
+                            width: 66px
+                            height: 75px
+                            // right: -14px
                             .dark_mode &
                                 right: -14px
                         +max-screen($breakpoint-xl)
-                            width: 54px
-                            height: 54px
-                            right: -9.4px
+                            width: 49px
+                            height: 55px
+                            // right: -9.4px
                             opacity: 1
                             // border-radius: 10px
                             .dark_mode &
@@ -242,11 +253,15 @@
                     &::after
                         content: ""
                         position: absolute
-                        left: -21.5px
                         top: 50%
-                        width: 95px
-                        height: 108px
-                        background-image: url(../assets/images/card_puzzle_new_right.svg)
+                        // left: -21.5px
+                        // width: 95px
+                        // height: 108px
+                        // background-image: url(../assets/images/card_puzzle_new_right.svg)
+                        width: 75px
+                        height: 85px
+                        left: 0
+                        background-image: url(../assets/images/puzzles/puzzle_light_2.svg)
                         transform: translateY(-50%)
                         background-size: cover
                         background-repeat: no-repeat
@@ -257,13 +272,13 @@
                             background-image: url(../assets/images/card_puzzle_new_right_dark.svg)
                             z-index: 4
                         +max-screen($breakpoint-xxs)
-                            width: 74px
-                            height: 80px
-                            left: -16px
+                            width: 66px
+                            height: 75px
+                            // left: -16px
                         +max-screen($breakpoint-xl)
                             width: 49px
-                            height: 54px
-                            left: -10.5px
+                            height: 55px
+                            left: -1.2px
                         +max-screen(1200px)
                             opacity: 0.7
                         +max-screen($breakpoint-lg)
@@ -290,16 +305,20 @@
                                 top: -63px
 
                     &::before
-                        content: ""
-                        width: 82px
-                        height: 90px
-                        -webkit-transform: translateY(-50%)
-                        transform: translateY(-50%)
-                        top: 50%
-                        right: -2.5px
-                        border-radius: 15px
                         position: absolute
-                        background-image: url(../assets/images/card_puzzle_new_left_2.svg)
+                        content: ""
+                        top: 50%
+                        transform: translateY(-50%)
+                        // width: 82px
+                        // height: 90px
+                        // right: -2.5px
+                        // border-radius: 15px
+                        // background-image: url(../assets/images/card_puzzle_new_left_2.svg)
+
+                        width: 75px
+                        height: 100px
+                        right: 1px
+                        background-image: url(../assets/images/puzzles/puzzle_light_3.svg)
                         background-size: cover
                         background-repeat: no-repeat
                         background-position: center
@@ -310,18 +329,18 @@
                             z-index: 4
                         +max-screen($breakpoint-xxs)
                             right: 4px
-                            width: 65px
-                            height: 72px
+                            width: 60px
+                            height: 85px
                             .dark_mode &
                                 right: -4px
                         +max-screen($breakpoint-xl)
-                            width: 45px
-                            height: 50px
+                            width: 49px
+                            height: 65px
+                            right: 2px
                             .dark_mode &
                                 right: -3px
                         +max-screen(1200px)
-                            border-radius: 15px
-                            opacity: 0.9
+
                         +max-screen($breakpoint-lg)
                             --size: 115px
                             width: var(--size)
@@ -458,11 +477,14 @@
                     &::after
                         content: ""
                         position: absolute
-                        left: -8.5px
+                        left: -7.0px
                         top: 50%
-                        width: 115px
-                        height: 115px
-                        background-image: url(../assets/images/card_puzzle_4_new_2.svg)
+                        // width: 115px
+                        // height: 115px
+                        // background-image: url(../assets/images/card_puzzle_4_new_2.svg)
+                        width: 75px
+                        height: 100px
+                        background-image: url(../assets/images/puzzles/puzzle_light_4.svg)
                         background-size: cover
                         background-repeat: no-repeat
                         background-position: center
@@ -474,25 +496,23 @@
                             left: -12.6px
 
                         +max-screen($breakpoint-xxs)
-                            width: 72px
-                            height: 72px
-                            left: 10.4px
+                            width: 60px
+                            height: 85px
+                            left: 0
                             .dark_mode &
                                 width: 95px
                                 height: 95px
                                 left: -0.6px
                         +max-screen($breakpoint-xl)
-                            width: 54px
-                            height: 54px
-                            left: -3.8px
-                            opacity: 0.8
-                            border-radius: 15px
+                            width: 49px
+                            height: 55px
+                            left: -11px
                             .dark_mode &
                                 width: 72px
                                 height: 72px
                                 left: -11.8px
                         +max-screen(1200px)
-                            left: -5px
+                            // left: -5px
                             .dark_mode &
                                 left: -13.2px
                         +max-screen($breakpoint-lg)
@@ -570,6 +590,9 @@
                 margin-top: 26px
                 z-index: 2
                 position: relative
+                +max-screen($breakpoint-xxl)
+                    margin-top: 36px
+                    font-size: 16px
                 +max-screen($breakpoint-xxs)
                     margin-top: 38px
                     font-size: 14px
@@ -597,6 +620,8 @@
                         display: none
                         .dark_mode &
                             display: block
+                    +max-screen($breakpoint-xxl)
+                        max-width: 100px
                     +max-screen($breakpoint-xxs)
                         max-width: 80px
                     +max-screen($breakpoint-xl)
@@ -611,7 +636,7 @@
                 margin-top: 40px
                 z-index: 1
                 position: relative
-                +max-screen($breakpoint-xxs)
+                +max-screen($breakpoint-xxl)
                     font-size: 28px
                     margin-top: 30px
                 +max-screen($breakpoint-xl)
@@ -634,6 +659,8 @@
         line-height: 1.4
         &.opened
             max-height: 100%
+        +max-screen($breakpoint-xxl)
+            margin-top: 92px
         +max-screen($breakpoint-xl)
             font-size: 18px
             margin-top: 82px
