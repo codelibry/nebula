@@ -11,7 +11,7 @@ $image_dark = get_field('hero_image_dark');
         <div class="row hero_content">
             <div class="hero__textWrapper col-lg-8 col-md-8 col-12">
                 <?php if ($text) : ?>
-                    <div class="hero__text text--size--50 font--weight--100">
+                    <div class="hero__text text--size--50 font--weight--100 ">
                         <?php echo $text; ?>
                     </div>
                 <?php endif; ?>
@@ -49,9 +49,9 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
     <div class="container">
         <div class="guidelines__main">
             <?php if ($title || $text) : ?>
-                <div class="guidelines__top">
+                <div class="guidelines__top gs_reveal gs_reveal_fromLeft">
                     <?php if ($title) : ?>
-                        <h2 class="guidelines__title h1 font--weight--100"><?php echo $title; ?></h2>
+                        <h2 class="guidelines__title h1 font--weight--100 "><?php echo $title; ?></h2>
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <div class="guidelines__text"><?php echo $text; ?></div>
@@ -59,7 +59,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                 </div>
             <?php endif; ?>
             <?php if ($testimonial_image || $testimonial_image_dark || $testimonial_title || $testimonial_text || $testimonial_owner) : ?>
-                <div class="guidelines__testimonial" id="case_study">
+                <div class="guidelines__testimonial gs_reveal gs_reveal_fromRight" id="case_study">
                     <?php if ($testimonial_image || $testimonial_image_dark) : ?>
                         <div class="guidelines__testimonialRobbot">
                             <img src="<?php echo $testimonial_image['url'] ?>" alt="<?php echo $testimonial_image['title']; ?>">
@@ -82,7 +82,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
             <?php endif; ?>
             <?php if ($button) :
                 $link_target = $button['target'] ? $button['target'] : '_self'; ?>
-                <div class="guidelines__btn">
+                <div class="guidelines__btn gs_reveal">
                     <a href="<?php echo $button['url']; ?>" class="btn" target="<?php echo esc_attr($link_target); ?>"><?php echo $button['title']; ?></a>
                 </div>
             <?php endif; ?>
@@ -96,11 +96,11 @@ $under_cards_text = get_field('under_cards_text');
 $button = get_field('about_services_btn');
 ?>
 
-<section class="services" id="solutions">
+<section class="services gs_reveal gs_reveal_fromLeft" id="solutions">
     <div class="container">
         <div class="services__inner">
             <?php if ($title || $text) : ?>
-                <div class="services__top">
+                <div class="services__top ">
                     <?php if ($title) : ?>
                         <h2 class="services__topTitle h1 font--weight--100"><?php echo $title; ?></h2>
                     <?php endif; ?>
@@ -171,7 +171,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
 <section class="pain__solution">
     <div class="container">
         <?php if ($pain_title || $pain_text || $pain_image) : ?>
-            <div class="pain__wrapper pain__solutionBlock__wrapper">
+            <div class="pain__wrapper pain__solutionBlock__wrapper gs_reveal gs_reveal_fromLeft">
                 <div class="pain pain__solutionBlock">
                     <?php if ($pain_image && $pain_tablet_image) : ?>
                         <div class="pain__image">
@@ -203,7 +203,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
             </div>
         <?php endif; ?>
         <?php if ($solution_image || $solution_text || $solution_title) : ?>
-            <div class="solution__wrapper pain__solutionBlock__wrapper">
+            <div class="solution__wrapper pain__solutionBlock__wrapper gs_reveal gs_reveal_fromRight">
                 <div class="solution pain__solutionBlock">
                     <?php if ($solution_image && $solution_tablet_image) : ?>
                         <div class="solution__image">
@@ -241,7 +241,7 @@ $title = get_field('lets_work_title', false, false);
 $text = get_field('lets_work_text');
 $button = get_field('lets_work_button');
 ?>
-<section class="letsWork">
+<section class="letsWork gs_reveal">
     <div class="container">
         <div class="letsWork__wrapper">
             <?php if ($title) : ?>
@@ -269,8 +269,8 @@ $list_section_button = get_field('list_section__button');
 if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
     <section class="list_section" id="about">
         <div class="container">
-            <div class="list_section__wrapper">
-                <div class="list_section__top">
+            <div class="list_section__wrapper gs_reveal">
+                <div class="list_section__top ">
                     <?php if ($title) : ?>
                         <h2 class="list_section__title h1 font--weight--100"><?php echo $title; ?></h2>
                     <?php endif; ?>
@@ -305,7 +305,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                 </div>
                 <?php if (have_rows('list_section__rows') || $left_img) : ?>
                     <div class="list_section__bottom">
-                        <div class="left_img">
+                        <div class="left_img ">
                             <img src="<?php echo $left_img['url'] ?>" alt="<?php echo $left_img['title'] ?>">
                             <img class="dark" src="<?php echo $left_img_dark['url'] ?>" alt="<?php echo $left_img_dark['title'] ?>">
                         </div>
