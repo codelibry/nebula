@@ -1,6 +1,7 @@
 .services
     margin-bottom: 181px
     position: relative
+    z-index: 1
     +max-screen($breakpoint-lg)
         margin-bottom: 120px
     +max-screen($breakpoint-md)
@@ -10,7 +11,7 @@
     // &::before
 
     .container
-        max-width: calc(1639px + 0)
+        max-width: calc(1739px + 60px)
         position: relative
         z-index: 1
         +max-screen($breakpoint-xxl)
@@ -83,8 +84,12 @@
         margin-top: 109px
         margin-left: 0
         margin-right: 0
+        
         +max-screen($breakpoint-xl)
             margin-top: 84px
+            max-width: calc(380px * 2)
+            margin-left: auto
+            margin-right: auto
         +max-screen(1660px)
             // margin-left: -5%
             // margin-right: -5%
@@ -107,487 +112,234 @@
             display: flex
             align-items: center
             flex-direction: column
-            padding-top: 60px
+            padding-top: 70px
             padding-left: 30px
             padding-right: 30px
             position: relative
             border-radius: 25px
             overflow: hidden
             height: 100%
-            padding-bottom: 61px
+            padding-bottom: 41px
+            border: 2px solid #D75EFF
+            // filter: drop-shadow(0 0 10px rgba(20,31,56,.1))
+            background-color: #ececec
             +max-screen($breakpoint-xxl)
                 padding: 42px 23px 42px
             +max-screen($breakpoint-xxs)
                 padding: 32px 18px 32px
-            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-xl)
+                padding: 42px 30px
+            +max-screen($breakpoint-md)
                 padding: 43px 31px 70px 31px
             +max-screen($breakpoint-sm)
-                padding: 43px 21px 65px 21px
+                padding: 65px 21px 65px 21px
             &__wrapper
                 padding: 0
                 position: relative
                 max-width: 23.8%
                 flex: 0 0 23.8%
-
-                +max-screen($breakpoint-sm)
+                margin-left: -3px
+                +max-screen($breakpoint-xl)
                     max-width: 50%
-                &:nth-child(4n + 1)
-                    .services__cardsItem__title
-                    &::after
-                        content: ""
-                        position: absolute
-                        top: 50%
-
-                        // right: -17px
-                        // width: 98px
-                        // height: 98px
-                        // background-image: url(../assets/images/card_puzzle_new.svg)
-                        width: 75px
-                        height: 85px
-                        right: 0
-                        background-image: url(../assets/images/puzzles/puzzle_light_1.svg)
-                        transform: translateY(-50%)
-                        background-size: cover
-                        background-repeat: no-repeat
-                        background-position: center
-                        z-index: 1
+                    flex: 1 1 auto
+                +max-screen($breakpoint-md)
+                    max-width: 350px
+                    margin-left: auto
+                    margin-right: auto
+                    flex: 1 1 auto
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    right: -57px
+                    width: 60px
+                    height: 71px
+                    background-image: url(../assets/images/puzzles/puzzle-2-right-4.png)
+                    transform: translateY(-50%)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    z-index: 110
+                    +max-screen($breakpoint-xxl)
+                        width: 50px
+                        height: 59px
+                        right: -47px
+                    +max-screen($breakpoint-xl)
+                        width: 44px
+                        height: 52px
+                    +max-screen($breakpoint-md)
+                        width: 59px
+                        height: 71px
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    left: -57px
+                    width: 60px
+                    height: 71px
+                    background-image: url(../assets/images/puzzles/puzzle-2-left-4.png)
+                    transform: translateY(-50%)
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    z-index: 110
+                    .dark_mode &
+                        // right: -16.4px
+                        background-image: url(../assets/images/puzzles/puzzle-2-left-dark.png)
+                    +max-screen($breakpoint-xxl)
+                        width: 50px
+                        height: 59px
+                        left: -47px
                         .dark_mode &
-                            right: -16.4px
-                            background-image: url(../assets/images/card_puzzle_new_dark.svg)
-                        +max-screen($breakpoint-xxs)
-                            width: 66px
-                            height: 75px
                             // right: -14px
-                            .dark_mode &
-                                right: -14px
-                        +max-screen($breakpoint-xl)
-                            width: 49px
-                            height: 55px
-                            // right: -9.4px
-                            opacity: 1
-                            // border-radius: 10px
-                            .dark_mode &
-                                right: -9.4px
-                        +max-screen(1200px)
+                    +max-screen($breakpoint-xl)
+                        width: 44px
+                        height: 52px
+                        left: -41px
+                        // .dark_mode &
+                        //     right: -9.4px
+                    +max-screen(1200px)
 
-                        +max-screen($breakpoint-lg)
-                            --size: 114px
-                            width: var(--size)
-                            height: var(--size)
-                            right: calc( 50% - (var(--size)/2) )
-                            top: auto
-                            bottom: -33.5px
-                            border-radius: 0
-                            transform: none
-                            opacity: 1
-                            background-image: url(../assets/images/mobile_puzzle_1.svg)
-                            background-size: 101%
-                            .dark_mode &
-                                right: calc( 50% - (var(--size)/2) )
-                                background-size: 101%
-                                background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
-                                bottom: -38.5px
-                        +max-screen($breakpoint-md)
-                        +max-screen($breakpoint-sm)
-                            --size: 95px
-                            bottom: -28px
-                            .dark_mode &
-                                bottom: -32px
+                    // +max-screen($breakpoint-lg)
+                    //     --size: 114px
+                    //     width: var(--size)
+                    //     height: var(--size)
+                    //     right: calc( 50% - (var(--size)/2) )
+                    //     top: auto
+                    //     bottom: -33.5px
+                    //     border-radius: 0
+                    //     transform: none
+                    //     opacity: 1
+                    //     background-image: url(../assets/images/mobile_puzzle_1.svg)
+                    //     background-size: 101%
+                    //     // .dark_mode &
+                    //     //     right: calc( 50% - (var(--size)/2) )
+                    //     //     background-size: 101%
+                    //     //     background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
+                    //     //     bottom: -38.5px
+                    +max-screen($breakpoint-md)
+                        left: 50%
+                        top: -63px
+                        transform: translate(-50%, 0) rotate(90deg)
+                        width: 59px
+                        height: 71px
 
-                    &::before
-                        +max-screen($breakpoint-sm)
-                            content: none
-
+                &:first-child
+                    margin-left: 0
+                    z-index: 15
+                    +max-screen($breakpoint-md)
+                        margin-left: auto
                     .services__cardsItem
-                        background: $new-vizual-background-main
-                        box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
+                        border-color: $light-lila
+                        background-color: transparentize($light-lila, 0.9)
                         .dark_mode &
-                            background: $dark-mode-background
-                            box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                        +max-screen($breakpoint-sm)
+                            border-color: $light-gold
+                            background-color: transparentize($border-color, 0.9)
+                    &::before
+                        display: none
+                    &::after
+                        display: none
+                &:nth-child(2)
+                    &::before
+                        .dark_mode &
+                            background-image: url(../assets/images/puzzles/puzzle-2-right-dark.png)
+                        +max-screen($breakpoint-xl) 
+                            display: none
+                        +max-screen($breakpoint-md)
+                            display: block
+                            left: 50%
+                            top: unset
+                            bottom: -63px
+                            transform: translateX(-50%) translateY(0) rotate(90deg)
+                    .services__cardsItem
+                        border-color: $s-pink
+                        background-color: transparentize($s-pink, 0.9)
+                        z-index: 10
+                        .dark_mode &
+                            border-color: $gold
+                            background-color: transparentize($gold, 0.9)
+                        +max-screen($breakpoint-md)
                             padding-left: 24px
                             padding-right: 16px
-                        &::before
-
-                        &::after
-                            content: ""
-                            width: 68px
-                            height: 68px
-                            -webkit-transform: translateY(-50%)
-                            transform: translateY(-50%)
-                            top: 50%
-                            right: -7px
-                            border-radius: 50%
-                            position: absolute
-                            background: $new-vizual-background-main
-                            box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
-                            .dark_mode &
-                                content: none
-                            +max-screen($breakpoint-xxs)
-                                width: 50px
-                                height: 50px
-                            +max-screen($breakpoint-xl)
-                                width: 48px
-                                height: 48px
-                            +max-screen(1200px)
-                                width: 36px
-                                height: 36px
-                            +max-screen($breakpoint-lg)
-                                display: none
-                            +max-screen($breakpoint-md)
-                            +max-screen($breakpoint-sm)
-
-                &:nth-child(4n + 2)
-                    .services__cardsItem__title
+                &:nth-child(3)
+                    z-index: 5
                     .services__cardsItem
-                        background: $new-vizual-background-main
-                        box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
+                        border-color: $space-lila
+                        background-color: transparentize($space-lila, 0.9)
                         .dark_mode &
-                            background: $dark-mode-background
-                            box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-
-                &:nth-child(4n + 3)
-                    +max-screen($breakpoint-sm)
-                        z-index: 1
-                    .services__cardsItem__title
+                            border-color: $dark-gold
+                            background-color: transparentize($dark-gold, 0.9)
                     &::after
-                        content: ""
-                        position: absolute
-                        top: 50%
-                        // left: -21.5px
-                        // width: 95px
-                        // height: 108px
-                        // background-image: url(../assets/images/card_puzzle_new_right.svg)
-                        width: 75px
-                        height: 85px
-                        left: 0
-                        background-image: url(../assets/images/puzzles/puzzle_light_2.svg)
-                        transform: translateY(-50%)
-                        background-size: cover
-                        background-repeat: no-repeat
-                        background-position: center
-                        z-index: 1
-                        border-radius: 25px
+                        right: 0
+                        left: unset
+                        background-image: url(../assets/images/puzzles/puzzle-3-right.png)
+                        z-index: 110
                         .dark_mode &
-                            background-image: url(../assets/images/card_puzzle_new_right_dark.svg)
-                            z-index: 4
-                        +max-screen($breakpoint-xxs)
-                            width: 66px
-                            height: 75px
-                            // left: -16px
-                        +max-screen($breakpoint-xl)
-                            width: 49px
-                            height: 55px
-                            left: -1.2px
-                        +max-screen(1200px)
-                            opacity: 0.7
-                        +max-screen($breakpoint-lg)
-                            --size: 115px
-                            width: var(--size)
-                            height: var(--size)
-                            left: auto
-                            right: calc( 50% - (var(--size)/2) )
-                            top: -82px
-                            border-radius: 0
-                            transform: none
-                            opacity: 1
-                            background-image: url(../assets/images/mobile_puzzle_2_top.svg)
-                            background-size: 101%
-                            .dark_mode &
-                                background-size: 101%
-                                background-image: url(../assets/images/mobile_puzzle_1_dark.svg)
-                                top: -75.8px
+                            background-image: url(../assets/images/puzzles/puzzle-3-right-dark.png)
                         +max-screen($breakpoint-md)
-                        +max-screen($breakpoint-sm)
-                            --size: 95px
-                            top: -66.5px
-                            .dark_mode &
-                                top: -63px
-
+                            right: unset
+                            left: 50%
+                            top: unset
+                            bottom: -6px
+                        .dark_mode &
+                            // background-image: url(../assets/images/card_puzzle_new_dark.svg)
+    
                     &::before
-                        position: absolute
-                        content: ""
-                        top: 50%
-                        transform: translateY(-50%)
-                        // width: 82px
-                        // height: 90px
-                        // right: -2.5px
-                        // border-radius: 15px
-                        // background-image: url(../assets/images/card_puzzle_new_left_2.svg)
-
-                        width: 75px
-                        height: 100px
-                        right: 1px
-                        background-image: url(../assets/images/puzzles/puzzle_light_3.svg)
-                        background-size: cover
-                        background-repeat: no-repeat
-                        background-position: center
-                        z-index: 1
-                        .dark_mode &
-                            background-image: url(../assets/images/card_puzzle_new_left_2_dark.svg)
-                            right: -5px
-                            z-index: 4
-                        +max-screen($breakpoint-xxs)
-                            right: 4px
-                            width: 60px
-                            height: 85px
-                            .dark_mode &
-                                right: -4px
-                        +max-screen($breakpoint-xl)
-                            width: 49px
-                            height: 65px
-                            right: 2px
-                            .dark_mode &
-                                right: -3px
-                        +max-screen(1200px)
-
-                        +max-screen($breakpoint-lg)
-                            --size: 115px
-                            width: var(--size)
-                            height: var(--size)
-                            left: auto
-                            right: calc( 50% - (var(--size)/2) )
-                            bottom: -80px
-                            top: auto
-                            border-radius: 0
-                            transform: none
-                            opacity: 0.9
-                            background-image: url(../assets/images/mobile_puzzle_2_bottom.svg)
-                            background-size: 101%
-                            .dark_mode &
-                                background-size: 101%
-                                background-image: url(../assets/images/mobile_puzzle_2_bottom_dark.svg)
-                                right: calc( 50% - (var(--size)/2) )
-                                bottom: -84px
-                                border: none
-                        +max-screen($breakpoint-md)
-                        +max-screen($breakpoint-sm)
-                            --size: 95px
-                            bottom: -67px
-                            .dark_mode &
-                                bottom: -69.5px
-
-                    .services__cardsItem
-                        background: $new-vizual-background-main
-                        box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.20) inset, -5px -5px 20px 0px #FFF inset
-                        position: relative
-                        border-radius: 25px
-                        overflow: hidden
-                        +max-screen($breakpoint-lg)
-                            box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
-                        .dark_mode &
-                            position: relative
-                            z-index: 2
-                            background: $dark-mode-background
-                            box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                            +max-screen($breakpoint-lg)
-                                box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                        &::before
-
-                        &::after
-                            content: ""
-                            width: 64px
-                            height: 64px
-                            -webkit-transform: translateY(-50%)
-                            transform: translateY(-50%)
-                            top: 50%
-                            left: -7px
-                            border-radius: 50%
-                            position: absolute
-                            background: $new-vizual-background-main
-                            box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
-                            .dark_mode &
-                                background: $dark-mode-background
-                                box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                                z-index: 3
-                            +max-screen($breakpoint-xxs)
-                                width: 50px
-                                height: 50px
-                            +max-screen($breakpoint-xl)
-                                width: 48px
-                                height: 48px
-                                .dark_mode &
-                                    width: 44px
-                                    height: 44px
-                                    box-shadow: -5px -5px 10px 0px #354153 inset, 4px 4px 10px 0px #141414 inset
-                            +max-screen(1200px)
-                                width: 36px
-                                height: 36px
-                                .dark_mode &
-                                    display: none
-                            +max-screen($breakpoint-lg)
-                                display: none
-                            +max-screen($breakpoint-md)
-                            +max-screen($breakpoint-sm)
-                &:nth-child(4n + 4)
+                        display: none
+                &:nth-child(4)
                     padding-left: 60px
                     margin-top: -30px
                     max-width: 28.6%
                     flex: 0 0 28.6%
                     transform: translateX(10px)
                     height: 100%
-                    +max-screen(1660px)
-                        transform: none
-                    +max-screen($breakpoint-xl)
-                        padding-left: 34px
-                        transform: translateX(10px)
-                    +max-screen(1200px)
-                        padding-left: 32px
-                        transform: none
-                        height: auto
-                    +max-screen($breakpoint-lg)
-                        flex: 0 0 100%
-                        max-width: 381px
-                        padding-left: 0
-                        margin-left: auto
-                        margin-right: auto
-                        margin-top: 110px
-                        z-index: 3
-                        transform: translateX(62px)
-                    +max-screen($breakpoint-md)
-                        transform: translateX(12px)
-                    +max-screen($breakpoint-sm)
-                        max-width: 80%
-                    +max-screen(425px)
-                        max-width: 94%
-                    .services__cardsItem__title
-                        text-align: center
-                        margin-top: 18px
-                        +max-screen($breakpoint-lg)
-                            padding: 0 5px
-                        +max-screen($breakpoint-md)
-                            margin-top: 9px
-                            padding: 0 5px
-                        +max-screen($breakpoint-sm)
-                            padding: 0 4.5px
-                    .services__cardsItem__text
-                        margin-top: 5.4px
-                        padding-left: 12px
-                        +max-screen($breakpoint-lg)
-                            padding-left: 5px
-                        +max-screen($breakpoint-md)
-                            padding-left: 0
-                            br
-                                display: none
-                        +max-screen($breakpoint-sm)
-                            padding-left: 9px
                     &::before
-                        +max-screen($breakpoint-sm)
-
-                    &::after
-                        content: ""
-                        position: absolute
-                        left: -7.0px
-                        top: 50%
-                        // width: 115px
-                        // height: 115px
-                        // background-image: url(../assets/images/card_puzzle_4_new_2.svg)
-                        width: 75px
-                        height: 100px
-                        background-image: url(../assets/images/puzzles/puzzle_light_4.svg)
-                        background-size: cover
-                        background-repeat: no-repeat
-                        background-position: center
-                        z-index: 1
-                        transform: rotate(-8.87deg) translateY(-25%)
-                        .dark_mode &
-                            background-image: url(../assets/images/card_puzzle_4_new_2_dark.svg)
-                            opacity: 1
-                            left: -12.6px
-
-                        +max-screen($breakpoint-xxs)
-                            width: 60px
-                            height: 85px
-                            left: 0
-                            .dark_mode &
-                                width: 95px
-                                height: 95px
-                                left: -0.6px
-                        +max-screen($breakpoint-xl)
-                            width: 49px
-                            height: 55px
-                            left: -11px
-                            .dark_mode &
-                                width: 72px
-                                height: 72px
-                                left: -11.8px
-                        +max-screen(1200px)
-                            // left: -5px
-                            .dark_mode &
-                                left: -13.2px
-                        +max-screen($breakpoint-lg)
-                            --size: 115px
-                            width: var(--size)
-                            height: var(--size)
-                            left: auto
-                            right: calc( 65% - (var(--size)/2) )
-                            top: -24.8px
-                            bottom: auto
-                            border-radius: 0
-                            transform: rotate(-14deg)
-                            opacity: 1
-                            background-image: url(../assets/images/mobile_puzzle_3_top.svg)
-                            background-size: 101%
-                            .dark_mode &
-                                width: var(--size)
-                                height: var(--size)
-                                left: auto
-                                top: -27.5px
-                                background-size: cover
-                                // background-image: url(../assets/images/mobile_puzzle_3_top_dark.svg)
-                                background-image: url(../assets/images/mobile_puzzle_3_top_dark__new.png)
-                                border-top-left-radius: 0
-                                border-bottom-left-radius: 0
-                                background-color: transparent
-                        +max-screen($breakpoint-md)
-                        +max-screen($breakpoint-sm)
-                            --size: 95px
-                            transform: rotate(-8.87deg)
-                            right: calc( 58% - (var(--size)/2) )
-                            top: -24.7px
-                            .dark_mode &
-                                top: -26.5px
-                        +max-screen(425px)
-                            top: -24.7px
-                            .dark_mode &
-                                top: -27px
-
+                        display: none
+                    +max-screen($breakpoint-xl)
+                        max-width: 50%
+                        flex: 1 1 auto
+                        margin-top: 65px
+                    +max-screen($breakpoint-md)
+                        padding-left: 0
+                    +max-screen($breakpoint-md)
+                        max-width: 350px
                     .services__cardsItem
+                        border-color: $lila
+                        background-color: transparentize($lila, 0.9)
                         background: $new-vizual-background-main
-                        box-shadow: -5px -5px 20px 0px #FFF inset, 4px 4px 20px 0px rgba(20, 31, 56, 0.20) inset
-                        transform: rotate(-8.87deg)
-                        .dark_mode &
-                            background: $dark-mode-background
-                            // box-shadow: -5px -5px 20px 0px #354153 inset, 4px 4px 20px 0px #141414 inset
-                            box-shadow: inset -5px -5px 20px 0 #354153, inset 4px 4px 15px 0 #0d0c0c
-                        +max-screen(1200px)
-                            height: 97%
+                        transform: rotate(-9deg)
                         +max-screen($breakpoint-lg)
-                            height: 100%
-                            transform: rotate(-14deg)
-                            padding: 77px 31px 70px
-                            box-shadow: 4px 4px 20px 0px rgba(20, 31, 56, 0.15) inset, -5px -5px 20px 0px #FFF inset
-                        +max-screen($breakpoint-sm)
-                            transform: rotate(-8.87deg)
-                            padding: 67px 21px 60px
-
-                &:nth-child(4n + 1),
-                &:nth-child(4n + 2),
-                &:nth-child(4n + 3)
-                    +max-screen($breakpoint-lg)
-                        flex: 0 0 100%
-                        max-width: 381px
-                        margin-left: auto
-                        margin-right: auto
-                    +max-screen($breakpoint-sm)
-                        flex: 0 0 100%
-                        max-width: 80%
-                    +max-screen(425px)
-                        max-width: 94%
+                            transform: rotate(-3deg) translate(0)
+                        .dark_mode &
+                            border-color: #D2C390
+                            background-color: transparentize(#D2C390, 0.9)
+                        &__title
+                            margin-top: 15px
+                            text-align: center
+                    &::after
+                        left: 4px
+                        background-image: url(../assets/images/puzzles/puzzle-2-left-4.png)
+                        transform: translateY(calc(-50% + 30px)) rotate(-9deg)
+                        z-index: 110
+                        .dark_mode &
+                            // right: -16.4px
+                            // background-image: url(../assets/images/card_puzzle_new_dark.svg)
+                        +max-screen($breakpoint-xxl)
+                            left: 15px
+                        +max-screen($breakpoint-xl)
+                            left: 16px
+                            transform: translateY(-50%) rotate(-9deg)
+                        +max-screen($breakpoint-lg)
+                            left: 18px
+                            transform: translateY(-50%) rotate(-3deg)
+                        +max-screen($breakpoint-md)
+                            left: 50%
+                            transform: translateX(-50%) rotate(87deg)
+                                
             &__text
-                font-size: 18px
+                font-size: 20px
                 line-height: 1.4
-                margin-top: 26px
+                margin-top: 36px
                 z-index: 2
                 position: relative
                 +max-screen($breakpoint-xxl)
@@ -598,12 +350,10 @@
                     font-size: 14px
                 +max-screen($breakpoint-xl)
                     margin-top: 28px
-                    font-size: 12px
+                    font-size: 16px
                 +max-screen($breakpoint-lg)
-                    font-size: 20px
+                    font-size: 16px
                     margin-top: 26px
-                +max-screen($breakpoint-md)
-                    font-size: 18px
                 +max-screen($breakpoint-sm)
                     font-size: 16px
                     line-height: 1.4
@@ -612,28 +362,27 @@
             &__image
                 z-index: 1
                 position: relative
+                padding-bottom: 47%
+                height: 0
+                width: 100%
+                +max-screen($breakpoint-xl)
+                    max-width: 150px
                 img
-                    max-width: 120px
+                    max-width: 100%
+                    height: 100%
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-50%)
                     .dark_mode &
                         display: none
                     &.dark
                         display: none
                         .dark_mode &
                             display: block
-                    +max-screen($breakpoint-xxl)
-                        max-width: 100px
-                    +max-screen($breakpoint-xxs)
-                        max-width: 80px
-                    +max-screen($breakpoint-xl)
-                        max-width: 71px
-                    +max-screen($breakpoint-lg)
-                        max-width: 150px
-                    +max-screen($breakpoint-sm)
-                        max-width: 100px
             &__title
                 font-size: 30px
                 line-height: 1.05
-                margin-top: 40px
+                margin-top: 42px
                 z-index: 1
                 position: relative
                 +max-screen($breakpoint-xxl)
