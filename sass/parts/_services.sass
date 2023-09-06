@@ -306,10 +306,9 @@
                     .services__cardsItem
                         border-color: $lila
                         background-color: transparentize($lila, 0.9)
-                        background: $new-vizual-background-main
                         transform: rotate(-9deg)
                         +max-screen($breakpoint-lg)
-                            transform: rotate(-3deg) translate(0)
+                            transform: rotate(-9deg) translate(0)
                         .dark_mode &
                             border-color: #D2C390
                             background-color: transparentize(#D2C390, 0.9)
@@ -317,24 +316,26 @@
                             margin-top: 15px
                             text-align: center
                     &::after
-                        left: 4px
-                        background-image: url(../assets/images/puzzles/puzzle-2-left-4.png)
-                        transform: translateY(calc(-50% + 30px)) rotate(-9deg)
+                        left: 12px
+                        background-image: url(../assets/images/puzzles/puzzle-4-left.png)
+                        transform: translateY(calc(-50% + 30px)) rotate(0)
                         z-index: 110
                         .dark_mode &
                             // right: -16.4px
-                            // background-image: url(../assets/images/card_puzzle_new_dark.svg)
+                            background-image: url(../assets/images/puzzles/puzzle-4-left-dark.png)
                         +max-screen($breakpoint-xxl)
                             left: 15px
                         +max-screen($breakpoint-xl)
-                            left: 16px
-                            transform: translateY(-50%) rotate(-9deg)
+                            left: 22px
+                            transform: translateY(-50%) rotate(0)
                         +max-screen($breakpoint-lg)
-                            left: 18px
-                            transform: translateY(-50%) rotate(-3deg)
+                            left: 22px
+                            // top: -58px
+                            // transform: translateY(-50%) rotate(-3deg)
                         +max-screen($breakpoint-md)
                             left: 50%
-                            transform: translateX(-50%) rotate(87deg)
+                            top: -58px
+                            transform: translateX(-50%) rotate(90deg)
                                 
             &__text
                 font-size: 20px
