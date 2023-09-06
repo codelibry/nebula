@@ -100,7 +100,7 @@ function appearence() {
       elem,
       { x: x, y: y, autoAlpha: 0 },
       {
-        duration: 4.25,
+        duration: 3.55,
         x: 0,
         y: 0,
         autoAlpha: 1,
@@ -125,15 +125,10 @@ function appearence() {
         markers: false,
         start: "top 90%",
         end: "bottom 10%",
+        once: true,
         onEnter: function () {
           animateFrom(elem);
         },
-        onEnterBack: function () {
-          animateFrom(elem, -1);
-        },
-        onLeave: function () {
-          hide(elem);
-        }, // assure that the element is hidden when scrolled into view
       });
     });
   });
