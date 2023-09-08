@@ -20,15 +20,16 @@
                 margin-left: auto
                 margin-right: auto
         +max-screen(1660px)
-            max-width: 85%
+            // max-width: 85%
         +max-screen($breakpoint-xl)
             max-width: 85%
         +max-screen(1200px)
             max-width: 1685px
         +max-screen($breakpoint-lg)
-            max-width: 830px
+            width: 830px
+            max-width: 100%
         +max-screen($breakpoint-md)
-            max-width: 768px
+            width: 768px
             // padding-left: 15px
             // padding-right: 15px
     &__inner
@@ -93,17 +94,19 @@
         +max-screen(1660px)
             // margin-left: -5%
             // margin-right: -5%
-        +max-screen(1300px)
-            margin-left: -3%
-            margin-right: -3%
-        +max-screen(1200px)
-            margin-top: 72px
-            margin-left: 0
-            margin-right: 0
+        // +max-screen(1300px)
+        //     margin-left: -3%
+        //     margin-right: -3%
+        // +max-screen(1200px)
+        //     margin-top: 72px
+        //     margin-left: 0
+        //     margin-right: 0
         +max-screen($breakpoint-lg)
             margin-top: 92px
             margin-bottom: 92px
+            max-width: 80%
         +max-screen($breakpoint-md)
+            max-width: 100%
         +max-screen($breakpoint-sm)
 
         &Item
@@ -126,13 +129,15 @@
             +max-screen($breakpoint-xxl)
                 padding: 42px 23px 42px
             +max-screen($breakpoint-xxs)
-                padding: 32px 18px 32px
+                // padding: 32px 18px 32px
             +max-screen($breakpoint-xl)
                 padding: 42px 30px
+            +max-screen($breakpoint-lg)
+                padding: 20px
             +max-screen($breakpoint-md)
                 padding: 43px 31px 70px 31px
             +max-screen($breakpoint-sm)
-                padding: 65px 21px 65px 21px
+                padding: 43px 21px 43px 21px
             &__wrapper
                 padding: 0
                 position: relative
@@ -232,6 +237,12 @@
                     .services__cardsItem
                         border-color: $light-lila
                         background-color: transparentize($light-lila, 0.9)
+                        +max-screen($breakpoint-md)
+                            padding-top: 71px
+                            padding-bottom: 71px
+                        +max-screen($breakpoint-sm)
+                            padding-top: 43px
+                            // padding-bottom: 43px
                         .dark_mode &
                             border-color: $light-gold
                             background-color: transparentize($border-color, 0.9)
@@ -255,6 +266,8 @@
                         border-color: $s-pink
                         background-color: transparentize($s-pink, 0.9)
                         z-index: 10
+                        +max-screen($breakpoint-md)
+                            padding-bottom: 43px
                         .dark_mode &
                             border-color: $gold
                             background-color: transparentize($gold, 0.9)
@@ -266,6 +279,9 @@
                     .services__cardsItem
                         border-color: $space-lila
                         background-color: transparentize($space-lila, 0.9)
+                        +max-screen($breakpoint-md)
+                            padding-top: 71px
+                            padding-bottom: 71px
                         .dark_mode &
                             border-color: $dark-gold
                             background-color: transparentize($dark-gold, 0.9)
@@ -288,11 +304,12 @@
                         display: none
                 &:nth-child(4)
                     padding-left: 60px
-                    margin-top: -30px
                     max-width: 28.6%
                     flex: 0 0 28.6%
                     transform: translateX(10px)
                     height: 100%
+                    +max-screen($breakpoint-lg)
+                        transform: translateX(0)
                     &::before
                         display: none
                     +max-screen($breakpoint-xl)
@@ -307,8 +324,18 @@
                         border-color: $lila
                         background-color: transparentize($lila, 0.9)
                         transform: rotate(-9deg)
+                        +max-screen($breakpoint-xl)
+                            width: calc(100% + 60px)
                         +max-screen($breakpoint-lg)
                             transform: rotate(-9deg) translate(0)
+                            margin-bottom: -65px
+                            
+                        +max-screen($breakpoint-md)
+                            width: 100%
+                            margin-bottom: 0
+                            padding-bottom: 43px
+                        +max-screen(500px)
+                            transform: rotate(0deg) translate(0)
                         .dark_mode &
                             border-color: #D2C390
                             background-color: transparentize(#D2C390, 0.9)
@@ -323,19 +350,29 @@
                         .dark_mode &
                             // right: -16.4px
                             background-image: url(../assets/images/puzzles/puzzle-4-left-dark.png)
+                            +max-screen(500px)
+                                background-image: url(../assets/images/puzzles/puzzle-4-straight-dark.png)
                         +max-screen($breakpoint-xxl)
-                            left: 15px
-                        +max-screen($breakpoint-xl)
-                            left: 22px
+                            left: 17px
                             transform: translateY(-50%) rotate(0)
-                        +max-screen($breakpoint-lg)
+                        +max-screen($breakpoint-xl)
                             left: 22px
                             // top: -58px
                             // transform: translateY(-50%) rotate(-3deg)
+                        +max-screen($breakpoint-lg)
+                            transform: translateY(calc(-50% + 65px)) rotate(0)
+                            left: 27px
                         +max-screen($breakpoint-md)
-                            left: 50%
-                            top: -58px
+                            left: 39%
+                            top: -52px
                             transform: translateX(-50%) rotate(90deg)
+                        +max-screen(500px)
+                            left: 50%
+                            transform: translateX(-50%) rotate(0) scale(1.3)
+                            top: -60px
+                            background-size: contain
+                            background-image: url(../assets/images/puzzles/puzzle-4-straight.png)
+
                                 
             &__text
                 font-size: 20px
@@ -348,10 +385,9 @@
                     font-size: 16px
                 +max-screen($breakpoint-xxs)
                     margin-top: 38px
-                    font-size: 14px
                 +max-screen($breakpoint-xl)
                     margin-top: 28px
-                    font-size: 16px
+                    font-size: 18px
                 +max-screen($breakpoint-lg)
                     font-size: 16px
                     margin-top: 26px
@@ -366,6 +402,8 @@
                 padding-bottom: 47%
                 height: 0
                 width: 100%
+                +min-screen($breakpoint-xl)
+                    padding-bottom: 58%
                 +max-screen($breakpoint-xl)
                     max-width: 150px
                 img
@@ -387,13 +425,13 @@
                 z-index: 1
                 position: relative
                 +max-screen($breakpoint-xxl)
-                    font-size: 28px
+                    font-size: 36px
                     margin-top: 30px
                 +max-screen($breakpoint-xl)
-                    font-size: 24px
+                    font-size: 36px
                     margin-top: 26px
                 +max-screen($breakpoint-lg)
-                    font-size: 36px
+                    font-size: 24px
                     margin-top: 48px
                 +max-screen($breakpoint-md)
                     font-size: 32px
