@@ -290,7 +290,7 @@
 
     &__image
         position: absolute
-        left: -25%
+        left: calc(-420px + 85px + 50px)
         top: 53%
         transform: translateY(-50%)
         img
@@ -305,12 +305,12 @@
             img
                 width: 420px
         +max-screen($breakpoint-xl)
-            left: -25%
+            left: calc(-390px + 85px + 50px)
             img
                 width: 390px
         +max-screen(1200px)
             width: 350px
-            left: -16%
+            left: calc(-350px + 50px + 50px)
             img
                 width: 100%
         +max-screen($breakpoint-lg)
