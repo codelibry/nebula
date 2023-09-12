@@ -113,6 +113,15 @@
             +max-screen(1200px)
                 margin-left: 15px
                 margin-right: 15px
+            &:hover
+                a
+                    color: $s-pink
+                    .dark_mode &
+                        color: $gold
+            .dark_mode &
+                &:hover
+                    a
+                        color: $gold
             a
                 font-size: clamp(16px, 1vw , 20px)
                 text-transform: uppercase
