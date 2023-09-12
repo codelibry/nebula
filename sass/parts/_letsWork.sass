@@ -12,9 +12,9 @@
         // max-width: 76.8%
         position: relative
         z-index: 1
-        +max-screen($breakpoint-xxl)
-            +min-screen(1660px)
-                max-width: 74.8%
+        // +max-screen($breakpoint-xxl)
+        //     +min-screen(1660px)
+        //         max-width: 74.8%
         // +max-screen($breakpoint-lg)
         //     max-width: 830px
         // +max-screen($breakpoint-md)
@@ -38,26 +38,13 @@
         +max-screen($breakpoint-sm)
             margin-bottom: 20px
     &__text
-        font-size: 20px
-        line-height: 1.4
-        font-weight: 400
         &.opened
             max-height: 100%
-        +max-screen(1200px)
-            font-size: 18px
         +max-screen($breakpoint-sm)
-            font-size: 16px
-            line-height: 1.45
+            // font-size: 16px
+            // line-height: 1.45
             // max-height: 8.6em
             overflow: hidden
-        p
-            margin-bottom: 22px
-            &:last-child
-                margin-bottom: 0
-        strong
-            color: $s-pink
-            .dark_mode &
-                color: $gold
         &__readMore
             display: none
             +max-screen($breakpoint-sm)

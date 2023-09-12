@@ -11,25 +11,25 @@
     // &::before
 
     .container
-        max-width: calc(1739px + 60px)
+        // max-width: calc(1739px + 60px)
         position: relative
         z-index: 1
-        +max-screen($breakpoint-xxl)
-            +min-screen(1660px)
-                max-width: 1400px
-                margin-left: auto
-                margin-right: auto
-        +max-screen(1660px)
-            // max-width: 85%
-        +max-screen($breakpoint-xl)
-            max-width: 85%
-        +max-screen(1200px)
-            max-width: 1685px
-        +max-screen($breakpoint-lg)
-            width: 830px
-            max-width: 100%
-        +max-screen($breakpoint-md)
-            width: 768px
+        // +max-screen($breakpoint-xxl)
+        //     +min-screen(1660px)
+        //         max-width: 1400px
+        //         margin-left: auto
+        //         margin-right: auto
+        // +max-screen(1660px)
+        //     // max-width: 85%
+        // +max-screen($breakpoint-xl)
+        //     max-width: 85%
+        // +max-screen(1200px)
+        //     max-width: 1685px
+        // +max-screen($breakpoint-lg)
+        //     width: 830px
+        //     max-width: 100%
+        // +max-screen($breakpoint-md)
+        //     width: 768px
             // padding-left: 15px
             // padding-right: 15px
     &__inner
@@ -63,24 +63,6 @@
             +max-screen($breakpoint-sm)
                 margin-bottom: 20px
                 text-align: left
-        &Text
-            font-size: 20px
-            line-height: 1.4
-            +max-screen($breakpoint-xl)
-                font-size: 18px
-            +max-screen(1200px)
-                font-size: 18px
-            +max-screen($breakpoint-sm)
-                font-size: 16px
-                line-height: 1.45
-            p
-                margin-bottom: 20px
-                &:last-child
-                    margin-bottom: 0
-            strong
-                color: $s-pink
-                .dark_mode &
-                    color: $gold
     &__cards
         margin-top: 109px
         margin-left: 0
@@ -129,9 +111,10 @@
             +max-screen($breakpoint-xxl)
                 padding: 42px 23px 42px
             +max-screen($breakpoint-xxs)
-                // padding: 32px 18px 32px
+                padding: 32px 23px 32px
             +max-screen($breakpoint-xl)
                 padding: 42px 30px
+                padding-right: 42px
             +max-screen($breakpoint-lg)
                 padding: 20px
             +max-screen($breakpoint-md)
@@ -375,25 +358,20 @@
 
                                 
             &__text
-                font-size: 20px
-                line-height: 1.4
+                
                 margin-top: 36px
                 z-index: 2
                 position: relative
                 +max-screen($breakpoint-xxl)
                     margin-top: 36px
-                    font-size: 16px
                 +max-screen($breakpoint-xxs)
                     margin-top: 38px
+                    font-size: 15px
                 +max-screen($breakpoint-xl)
                     margin-top: 28px
-                    font-size: 18px
                 +max-screen($breakpoint-lg)
-                    font-size: 16px
                     margin-top: 26px
                 +max-screen($breakpoint-sm)
-                    font-size: 16px
-                    line-height: 1.4
                     margin-top: 10px
 
             &__image
@@ -406,8 +384,13 @@
                     padding-bottom: 58%
                 +max-screen($breakpoint-xl)
                     max-width: 150px
+                    padding-bottom: 40%
+                +max-screen(1240px)
+                    padding-bottom: 35%
+                +max-screen($breakpoint-lg)
+                    padding-bottom: 47%
                 img
-                    max-width: 100%
+                    max-width: 150px
                     height: 100%
                     position: absolute
                     left: 50%
@@ -424,11 +407,8 @@
                 margin-top: 42px
                 z-index: 1
                 position: relative
-                +max-screen($breakpoint-xxl)
-                    font-size: 36px
-                    margin-top: 30px
                 +max-screen($breakpoint-xl)
-                    font-size: 36px
+                    font-size: 24px
                     margin-top: 26px
                 +max-screen($breakpoint-lg)
                     font-size: 24px
@@ -441,22 +421,18 @@
                     // margin-top: 18px
     &__text
         max-width: 1235px
-        margin: 0 auto
-        font-size: 20px
+        margin: 0 auto    
         margin-top: 112px
-        line-height: 1.4
         &.opened
             max-height: 100%
         +max-screen($breakpoint-xxl)
             margin-top: 92px
         +max-screen($breakpoint-xl)
-            font-size: 18px
             margin-top: 82px
         +max-screen(1200px)
             padding-left: 80px
             padding-right: 80px
             margin-top: 62px
-            font-size: 20px
         +max-screen($breakpoint-lg)
             margin-top: 50px
             padding-left: 0
@@ -467,17 +443,9 @@
             margin-left: auto
             margin-right: auto
         +max-screen($breakpoint-sm)
-            font-size: 16px
-            line-height: 1.45
             margin-top: 20px
             // max-height: 8.6em
             overflow: hidden
-        p
-            margin-bottom: 24px
-            +max-screen($breakpoint-sm)
-                margin-bottom: 22px
-            &:last-child
-                margin-bottom: 0
         &__readMore
             display: none
             +max-screen($breakpoint-sm)

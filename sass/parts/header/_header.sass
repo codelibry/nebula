@@ -7,6 +7,8 @@
     width: 100%
     overflow: hidden
     background: var(--new-vizual-background-main,#ececec)
+    .admin-bar &
+        top: 32px
     .dark_mode &
         background: $dark-mode-background
     +min-screen($breakpoint-lg)
@@ -14,6 +16,9 @@
             top: 0
             position: fixed
             z-index: 7
+        &.top-scroll
+            .admin-bar &
+                top: 32px
 
     +max-screen($breakpoint-lg)
         position: static
@@ -39,11 +44,11 @@
         display: flex
         position: relative
         // justify-content: space-between
-        height: 84px
+        // height: 84px
         +max-screen($breakpoint-xl)
-            height: 72px
+            // height: 72px
         +max-screen(1200px)
-            height: 72px
+            // height: 72px
         +max-screen($breakpoint-lg)
             display: none
     &__logo
@@ -52,10 +57,27 @@
         // top: 50%
         // transform: translate(-50%, -50%)
         margin-right: 25px
+        position: relative
+        +min-screen($breakpoint-lg)
+            width: 15%
         +max-screen($breakpoint-xl)
             margin-right: 15px
+        a
+            position: relative
+            width: 100%
+            height: 100%
+            display: block
+            +min-screen($breakpoint-lg)
+                padding-bottom: 47%
         img
-            height: 74px
+            // height: 74px
+            // display: none
+            position: absolute
+            height: 100%
+            width: 100%
+            inset: 0
+            object-fit: contain
+
             .dark_mode &
                 display: none
             &.dark
@@ -92,7 +114,7 @@
                 margin-left: 15px
                 margin-right: 15px
             a
-                font-size: 20px
+                font-size: clamp(16px, 1vw , 20px)
                 text-transform: uppercase
                 +max-screen($breakpoint-xl)
                     font-size: 16px
@@ -137,9 +159,7 @@
             margin-left: 15px
             margin-right: 15px
         a
-            font-size: 20px
-            +max-screen($breakpoint-xl)
-                font-size: 16px
+            font-size: clamp(16px, 1vw , 20px)
             +max-screen(1200px)
                 font-size: 16px
                 height: auto

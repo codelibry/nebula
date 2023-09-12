@@ -46,7 +46,7 @@ $testimonial_text = get_field('guidelines_testimonial_text');
 $testimonial_owner = get_field('guidelines_testimonial_owner');
 ?>
 <section class="guidelines">
-    <div class="container">
+    <div class="container container--sm">
         <div class="guidelines__main">
             <?php if ($title || $text) : ?>
                 <div class="guidelines__top gs_reveal gs_reveal_fromLeft">
@@ -54,7 +54,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                         <h2 class="guidelines__title h1 font--weight--100 "><?php echo $title; ?></h2>
                     <?php endif; ?>
                     <?php if ($text) : ?>
-                        <div class="guidelines__text"><?php echo $text; ?></div>
+                        <div class="guidelines__text body-text"><?php echo $text; ?></div>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -70,7 +70,7 @@ $testimonial_owner = get_field('guidelines_testimonial_owner');
                         <h3 class="guidelines__testimonialTitle h2 font--weight--100"><?php echo $testimonial_title; ?></h3>
                     <?php endif; ?>
                     <?php if ($testimonial_text) : ?>
-                        <div class="guidelines__testimonialText"><?php echo $testimonial_text; ?></div>
+                        <div class="guidelines__testimonialText body-text"><?php echo $testimonial_text; ?></div>
                     <?php endif; ?>
                     <!-- <div class="guidelines__readMore">Read more...</div> -->
                     <?php if ($testimonial_owner) : ?>
@@ -97,7 +97,7 @@ $button = get_field('about_services_btn');
 ?>
 
 <section class="services gs_reveal gs_reveal_fromLeft" id="solutions">
-    <div class="container">
+    <div class="container container--lg">
         <div class="services__inner">
             <?php if ($title || $text) : ?>
                 <div class="services__top ">
@@ -105,7 +105,7 @@ $button = get_field('about_services_btn');
                         <h2 class="services__topTitle h1 font--weight--100"><?php echo $title; ?></h2>
                     <?php endif; ?>
                     <?php if ($text) : ?>
-                        <div class="services__topText">
+                        <div class="services__topText body-text">
                             <?php echo $text; ?>
                         </div>
                     <?php endif; ?>
@@ -132,14 +132,14 @@ $button = get_field('about_services_btn');
                                     <h3 class="services__cardsItem__title font--weight--400"><?php echo $title; ?></h3>
                                 <?php endif; ?>
                                 <?php if ($text) : ?>
-                                    <div class="services__cardsItem__text"><?php echo $text; ?></div>
+                                    <div class="services__cardsItem__text body-text"><?php echo $text; ?></div>
                                 <?php endif; ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
                 </div>
             <?php endif; ?>
-            <div class="services__text">
+            <div class="services__text body-text">
                 <?php echo $under_cards_text ?>
             </div>
             <!-- <div class="services__text__readMore">Read more...</div> -->
@@ -197,7 +197,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
                         <div class="pain__solutionTitle"><?php echo $pain_title; ?></div>
                     <?php endif; ?>
                     <?php if ($pain_text) : ?>
-                        <div class="pain__solutionText"><?php echo $pain_text; ?></div>
+                        <div class="pain__solutionText body-text"><?php echo $pain_text; ?></div>
                     <?php endif; ?>
                 </div>
             </div>
@@ -229,7 +229,7 @@ $solution_tablet_image_dark = $solution['tablet_image_dark'];
                         <div class="pain__solutionTitle"><?php echo $solution_title; ?></div>
                     <?php endif; ?>
                     <?php if ($solution_text) : ?>
-                        <div class="pain__solutionText"><?php echo $solution_text; ?></div>
+                        <div class="pain__solutionText body-text"><?php echo $solution_text; ?></div>
                     <?php endif; ?>
                 </div>
             </div>
@@ -248,7 +248,7 @@ $button = get_field('lets_work_button');
                 <h2 class="letsWork__title h1"><?php echo $title; ?></h2>
             <?php endif; ?>
             <?php if ($text) : ?>
-                <div class="letsWork__text"><?php echo $text; ?></div>
+                <div class="letsWork__text body-text"><?php echo $text; ?></div>
                 <!-- <div class="letsWork__text__readMore">Read more...</div> -->
             <?php endif; ?>
             <?php if ($button) : ?>
@@ -268,7 +268,7 @@ $list_section_button = get_field('list_section__button');
 
 if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
     <section class="list_section" id="about">
-        <div class="container">
+        <div class="container container--lg">
             <div class="list_section__wrapper gs_reveal">
                 <div class="list_section__top ">
                     <?php if ($title) : ?>
@@ -288,7 +288,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                                     </div>
                                 <?php endif; ?>
                                 <div class="content-block_main">
-                                    <div class="content-block text--size--20">
+                                    <div class="body-text">
                                         <?php echo $text ?>
                                     </div>
                                     <?php if ($subtitle) : ?>
@@ -317,9 +317,9 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
                                         $subtitle = get_sub_field('subtitle'); ?>
                                         <li class="inner_block">
                                             <div class="subtitle">
-                                                <h3 class="text--size--20"><?php echo $subtitle ?></h3>
+                                                <h3 class="mb-2"><?php echo $subtitle ?></h3>
                                             </div>
-                                            <div class="content-block text--size--20">
+                                            <div class="body-text">
                                                 <?php echo $text ?>
                                             </div>
                                         </li>
@@ -344,6 +344,7 @@ if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows
 $testimonials_title = get_field('testimonials_text');
 $testimonials_row = get_field('testimonials')
 ?>
+<?php if ($testimonials_row) : ?>
 <section class="testimonials">
     <div class="container">
         <div class="testimonials__main">
@@ -352,7 +353,7 @@ $testimonials_row = get_field('testimonials')
                     <?php if ($testimonials_title) : ?>
                         <h2 class="testimonials__title h1 font--weight--100 text--center"><?php echo $testimonials_title; ?></h2>
                     <?php endif; ?>
-                    <?php if ($testimonials_row) : ?>
+                    
                         <div class="testimonials__rows">
                             <?php foreach ($testimonials_row as $item) :
                                 $output = apply_filters('the_content', $item->post_content); ?>
@@ -362,12 +363,13 @@ $testimonials_row = get_field('testimonials')
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                    <?php endif; ?>
+                    
                 </div>
             <?php endif; ?>
 
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -26,29 +26,26 @@
             max-width: 65vw
     &::after
 
-    .container
-        max-width: calc(1384px + 60px)
-        position: relative
-        z-index: 1
-        +max-screen($breakpoint-xxl)
-            +min-screen(1660px)
-                max-width: 74.3125%
-        +max-screen(1660px)
-            max-width: 80%
-        +max-screen($breakpoint-xl)
-            max-width: 85%
-        +max-screen(1200px)
-            max-width: 1350px
-        +max-screen($breakpoint-lg)
-            max-width: 932px
-            padding-left: 80px
-            padding-right: 80px
-        +max-screen($breakpoint-md)
-            padding-left: 20px
-            padding-right: 20px
-        +max-screen($breakpoint-sm)
-            padding-left: 22.5px
-            padding-right: 22.5px
+    // .container
+    //     max-width: calc(1384px + 60px)
+    //     position: relative
+    //     z-index: 1
+    //     +max-screen($breakpoint-xxl)
+    //         max-width: 75%
+    //     +max-screen($breakpoint-xl)
+    //         max-width: 85%
+    //     +max-screen(1200px)
+    //         max-width: 1350px
+    //     +max-screen($breakpoint-lg)
+    //         max-width: 932px
+    //         padding-left: 80px
+    //         padding-right: 80px
+    //     +max-screen($breakpoint-md)
+    //         padding-left: 20px
+    //         padding-right: 20px
+    //     +max-screen($breakpoint-sm)
+    //         padding-left: 22.5px
+    //         padding-right: 22.5px
     &Block
         padding: 60px 88px
         border-radius: 25px
@@ -90,53 +87,10 @@
             line-height: 1.2
             margin-bottom: 20px
     &Text
-        font-size: 20px
-        line-height: 1.4
-        +max-screen($breakpoint-xxs)
-            font-size: 18px
-        +max-screen(1200px)
-            font-size: 18px
-        +max-screen($breakpoint-lg)
-            font-size: 16px
         +max-screen($breakpoint-sm)
-            font-size: 16px
-            line-height: 1.5
             padding-right: 11px
-        p
-            margin-bottom: 20px
-            +max-screen($breakpoint-md)
-                margin-bottom: 10px
-            &:last-child
-                margin-bottom: 0
-        li
-            padding-left: 31px
-            position: relative
-            margin-bottom: 14px
-            +max-screen($breakpoint-lg)
-                padding-left: 15.5px
-            +max-screen($breakpoint-md)
-                margin-bottom: 10px
-            +max-screen($breakpoint-sm)
-                padding-left: 15px
-                br
-                    display: none
-            &:last-child
-                margin-bottom: 0
-            &::before
-                content: ""
-                width: 10px
-                height: 10px
-                background: $default-text-color
-                position: absolute
-                left: 0
-                top: 12px
-                border-radius: 50%
-                .dark_mode &
-                    background: $light-text
-                +max-screen($breakpoint-lg)
-                    width: 5px
-                    height: 5px
-                    top: 9px
+        strong
+            color: inherit
 .pain
     // background: $space-lila
     padding-right: 250px
