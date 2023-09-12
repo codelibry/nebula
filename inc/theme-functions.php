@@ -119,6 +119,14 @@
         endif;
         return '';
     }
+
+    function get_inline_svg_by_path($path)
+    {
+        if ($path) :
+            return file_get_contents(esc_url($path));
+        endif;
+        return '';
+    }
     
     /**
      *

@@ -52,8 +52,10 @@ $copywriting = get_field('footer_copywriting', 'options');
                             ?>
                                 <div class="footer__icon">
                                     <a href="<?php echo $link['url']; ?>" target="_blank">
-                                        <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['title']; ?>">
-                                        <img class="dark" src="<?php echo $icon_dark['url'] ?>" alt="<?php echo $icon_dark['title'] ?>">
+                                        <?php echo get_inline_svg_by_path($icon['url']);?>
+                                        <div class="dark">
+                                            <?php echo get_inline_svg_by_path($icon_dark['url']);?>
+                                        </div>
                                     </a>
                                 </div>
                             <?php endif; ?>

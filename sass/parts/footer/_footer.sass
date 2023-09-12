@@ -204,18 +204,29 @@
             margin: 0 6.8px
         +max-screen($breakpoint-sm)
             margin-top: 14px
-        img
+        // img
+        //     width: 48px
+        //     .dark_mode &
+        //         display: none
+        //     &.dark
+        //         display: none
+        //         .dark_mode &
+        //             display: block
+        svg
             width: 48px
+            transition: .3s
             .dark_mode &
                 display: none
-            &.dark
+            path
+                transition: .3s
+            &:hover
+                path
+                    fill: $s-pink
+        .dark
+            svg
                 display: none
                 .dark_mode &
                     display: block
-            +max-screen($breakpoint-lg)
-                width: 48px
-                height: 48px
-            +max-screen($breakpoint-sm)
 
         a
             +max-screen($breakpoint-md)
@@ -243,6 +254,8 @@
             +max-screen($breakpoint-md)
                 font-size: 16px
                 line-height: 1.6
+            &:hover
+                color: $s-pink
     &__phone
         font-size: 14px
         position: relative
@@ -323,6 +336,11 @@
             margin: 0 auto
             width: 100%
             max-width: 22px
+            transition: .3s
             path
+                transition: .3s
                 .dark_mode &
                     stroke: $gold
+            &:hover
+                path
+                    stroke: $s-pink

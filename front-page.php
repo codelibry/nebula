@@ -268,7 +268,7 @@ $list_section_button = get_field('list_section__button');
 
 if ($title || have_rows('list_section__blocks') || have_rows('list_section__rows')) : ?>
     <section class="list_section" id="about">
-        <div class="container container--lg">
+        <div class="container">
             <div class="list_section__wrapper gs_reveal">
                 <div class="list_section__top ">
                     <?php if ($title) : ?>
