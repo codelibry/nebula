@@ -73,6 +73,8 @@
             margin-top: 10px
     .container
         max-width: 1400px
+        +min-screen($breakpoint-xxs)
+            width: 100%
         +max-screen($breakpoint-xxs)
         +max-screen($breakpoint-lg)
             max-width: 829px
